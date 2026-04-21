@@ -16,15 +16,15 @@
 
 | Task ID | Task Name | Status | Task PRD | Dependencies | Estimated Effort | Created     | Updated     |
 |---------|-----------|--------|----------|--------------|------------------|-------------|-------------|
-| TASK-001 | 设计预约数据模型 | TODO | NOT GENERATED | NONE | 1 hour | 2026-04-21 | 2026-04-21 |
-| TASK-002 | 创建预约相关数据类型和模拟数据 | TODO | NOT GENERATED | TASK-001 | 1 hour | 2026-04-21 | 2026-04-21 |
-| TASK-003 | 实现预约 Store 状态管理 | TODO | NOT GENERATED | TASK-002 | 2 hours | 2026-04-21 | 2026-04-21 |
-| TASK-004 | 开发预约列表页面 | TODO | NOT GENERATED | TASK-003 | 2 hours | 2026-04-21 | 2026-04-21 |
-| TASK-005 | 开发预约表单页面 | TODO | NOT GENERATED | TASK-003 | 2 hours | 2026-04-21 | 2026-04-21 |
-| TASK-006 | 开发预约详情页面 | TODO | NOT GENERATED | TASK-004 | 1 hour | 2026-04-21 | 2026-04-21 |
-| TASK-007 | 开发医生门诊管理页面 | TODO | NOT GENERATED | TASK-002 | 2 hours | 2026-04-21 | 2026-04-21 |
-| TASK-008 | 开发医生预约管理功能 | TODO | NOT GENERATED | TASK-003 | 1 hour | 2026-04-21 | 2026-04-21 |
-| TASK-009 | 配置预约相关路由 | TODO | NOT GENERATED | TASK-004, TASK-005, TASK-006, TASK-007, TASK-008 | 1 hour | 2026-04-21 | 2026-04-21 |
+| TASK-001 | 设计预约数据模型 | TODO | GENERATED | NONE | 1 hour | 2026-04-21 | 2026-04-21 |
+| TASK-002 | 创建预约相关数据类型和模拟数据 | TODO | GENERATED | TASK-001 | 1 hour | 2026-04-21 | 2026-04-21 |
+| TASK-003 | 实现预约 Store 状态管理 | TODO | GENERATED | TASK-002 | 2 hours | 2026-04-21 | 2026-04-21 |
+| TASK-004 | 开发预约列表页面 | TODO | GENERATED | TASK-003 | 2 hours | 2026-04-21 | 2026-04-21 |
+| TASK-005 | 开发预约表单页面 | TODO | GENERATED | TASK-003 | 2 hours | 2026-04-21 | 2026-04-21 |
+| TASK-006 | 开发预约详情页面 | TODO | GENERATED | TASK-004 | 1 hour | 2026-04-21 | 2026-04-21 |
+| TASK-007 | 开发医生门诊管理页面 | TODO | GENERATED | TASK-002 | 2 hours | 2026-04-21 | 2026-04-21 |
+| TASK-008 | 开发医生预约管理功能 | TODO | GENERATED | TASK-003 | 1 hour | 2026-04-21 | 2026-04-21 |
+| TASK-009 | 配置预约相关路由 | TODO | GENERATED | TASK-004, TASK-005, TASK-006, TASK-007, TASK-008 | 1 hour | 2026-04-21 | 2026-04-21 |
 
 ## Task Dependencies
 
