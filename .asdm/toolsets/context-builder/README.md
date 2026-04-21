@@ -6,196 +6,123 @@ version: 0.0.2
 updated-date: 2026-1-19
 toolset-description: A toolset for building context for a workspace.
 
+
 ## Overview
 
-Context Builder (toolset-id `context-builder`) 是一个用于构建工作空间上下文的工具集。上下文对于任何AI模型都至关重要，它为模型提供了生成所需输出所需的信息。
+Context Builder (toolset-id `context-builder`) is a toolset for building context for a workspace. Context is essential for any AI model to work with, it provides the model with the necessary information to generate the desired output. 
 
-本工具集通过使用预定义的模板和提示，帮助用户自动为工作空间构建上下文，从而降低构建上下文的复杂性，使AI模型更易于使用。用户可以将此工具集安装到工作空间中，并使用AI指导安装来初始化工具集。
+Context Builder will assist the user to build such context for a workspace automatically by using pre-defined templates and prompts, this will reduce the complexity of building context for a workspace and make it easier to use AI models.
+
+User can install this `toolset` into a workspace and run `INSTALL.md` document using `AI Guided Installation` to initialize the toolset for the workspace. Just simply copy and paste the following prompt into your `AI Coding` tool's chat window and hit enter:
+
+```shell
+Follow instructions in .asdm/toolsets/context-builder/INSTALL.md
+```
 
 ## Features
 
-### 主要功能特性
+Main features of Context Builder:
 
-**自动化上下文构建**
-- 提供用户友好的快捷命令，通过提供商的入口点简化工作空间上下文构建过程
-- 提供标准化的上下文构建规范，允许用户管理员自定义模板
-- 支持多种AI模型提供商（Claude Code、GitHub Copilot、Tencent CodeBuddy等）
+- Provide user friendly shortcuts `actions` using provider's entry point to ease the process of building context for a workspace
+- Provide standard `spec` for building context for a workspace, and allow user admin (Project Manager, Product Manager, Product Owner) to define their own process by customize the templates
+- Act as a provider for other toolsets to use the context for working with **AI Models**, this is what is called `context injection` process, refer to [ASDM Documentation for Contenxt Injection](https://asdm.ai/docs/concepts/context-injection) for more details.
 
-**上下文注入支持**
-- 作为其他工具集的提供者，为AI模型提供上下文，实现上下文注入过程
-- 支持上下文更新和同步，保持与项目代码的一致性
+## Toolset Installation Process
 
-**模板化架构**
-- 预定义多种上下文模板，涵盖项目结构、编码风格、数据模型等
-- 支持Mermaid图表可视化，增强AI模型的理解能力
-- 提供标准化的文档结构，便于团队协作和维护
+`INSTALL.md` will setup the toolset with the following steps:
 
-### 功能阶段
+- Create `.asdm/contexts` directory for Context Builder's workspace
+- Detect the current `Agentic Engine` provider, e.g. Claude Code, GitHub Copilot, Tencent CodeBuddy etc. （Use hard-coded provider name for now, e.g. CodeBuddy ）
+- Create shortcuts commands for `Context Builder` in provider's entry point, e.g. `.claude/commands`, `.github/prompts`, `.codebuddy/commands` etc.
 
-**第一阶段：基础上下文构建**
-- 项目索引和文件系统分析
-- 技术栈和依赖关系识别
-- 业务领域和流程理解
+## Toolset Workflow
 
-**第二阶段：架构和设计文档**
-- 系统架构和组件关系
-- 数据模型和API接口定义
-- 部署配置和流程说明
+Once `Context Builder` is installed, user can use the following commands to build or update context for the current workspace
 
-**第三阶段：维护和更新**
-- 上下文文档的智能更新
-- 变更检测和同步机制
-- 版本控制和历史记录
+- `/asdm-context-build`: build context for the current workspace
+- `/asdm-context-update`: update context for the current workspace
 
-## Directory Structure
+The `INSTALL.md` should also include instructions for initializing the toolset for the current workspace, e.g. running `/asdm.content.build` to build context for the current workspace. This is as simple as the following prompt:
 
-### 工具集目录结构
-
-```
-.asdm/toolsets/context-builder/
-├── INSTALL.md                     # 工具集安装说明，包含AI指导安装的提示
-├── README.md                      # 当前文档（工具集说明和指南）
-├── actions                        # Context Builder的操作指令目录
-│   ├── asdm-context-build.md     # 构建/初始化工作空间上下文的指令
-│   └── asdm-context-update.md    # 更新工作空间上下文的指令
-└── spec                          # Context Builder的模板目录
-    ├── index.md                   # 构建当前工作空间上下文内容索引的模板
-    ├── standard-project-structure.md  # 构建标准项目结构的模板
-    ├── standard-coding-style.md   # 构建标准编码风格的模板
-    ├── data-models.md             # 构建数据模型相关上下文的模板
-    ├── deployment.md              # 构建部署相关上下文的模板
-    ├── api.md                     # 构建API相关上下文的模板
-    └── architecture.md            # 构建架构相关上下文的模板
-```
-
-### 工作空间上下文目录结构
-
-```
-.asdm/contexts/
-├── index.md                      # 当前工作空间上下文内容的索引和指南
-├── standard-project-structure.md # 当前工作空间的标准项目结构规范
-├── standard-coding-style.md      # 当前工作空间的标准编码风格指南
-├── data-models.md                # 当前工作空间的数据模型相关上下文
-├── deployment.md                 # 当前工作空间的部署相关上下文
-├── api.md                        # 当前工作空间的API相关上下文
-└── architecture.md               # 当前工作空间的架构相关上下文
-```
-
-## Actions
-
-### asdm-context-build - 构建上下文
-
-**输入参数**
-- 当前工作空间的代码和配置文件
-- 项目依赖和包管理文件
-- 构建配置和脚本文件
-
-**输出结果**
-- 完整的上下文文档集（包含7个核心文档）
-- 项目索引和指南
-- 标准化的项目结构和编码规范
-- 数据模型和API接口定义
-- 系统架构和部署配置
-
-**主要用途**
-- 为AI模型提供全面的项目理解能力
-- 建立团队统一的文档标准
-- 支持后续开发工作的上下文注入
-- 提高AI辅助开发的准确性和效率
-
-**使用方式**
 ```shell
 Follow the instructions in .asdm/toolsets/context-builder/actions/asdm-context-build.md
 ```
 
-### asdm-context-update - 更新上下文
+## Toolset Structure
 
-**输入参数**
-- 现有的上下文文档集
-- 更新的代码和配置文件
-- 变更检测结果
+The structure of the toolset is as follows:
 
-**输出结果**
-- 更新后的上下文文档集
-- 变更日志和版本记录
-- 同步的状态报告
-
-**主要用途**
-- 保持上下文文档与项目代码的同步
-- 智能检测和更新变更内容
-- 维护文档的时效性和准确性
-- 支持增量更新，提高效率
-
-**使用方式**
-```shell
-Follow the instructions in .asdm/toolsets/context-builder/actions/asdm-context-update.md
+```
+.asdm/toolsets/context-builder/
+├── INSTALL.md                                  ## Installation instructions for the toolset, contains prompts for AI Guided Installation
+├── README.md                                   ## Current docuent
+├── actions                                     ## Instructions for Context Builder
+│   ├── asdm-context-build.md                        ## Instruction for building/initializing context for a workspace
+│   └── asdm-context-update.md                       ## Instruction for updating context for a workspace
+├──spec                                         ## Templates for Context Builder
+│   ├── index.md                           ## Template for building Index for current workspace's context content
+│   ├── standard-project-structure.md      ## Template for building Standard Project Structure for current workspace
+│   ├── standard-coding-style.md           ## Template for building Standard Coding Style for current workspace
+│   ├── data-models.md                     ## Template for building Data Models related context for current workspace
+│   ├── deployment.md                      ## Template for building Deployment related context for current workspace
+│   └── api.md                             ## Template for building API related context for current workspace
+│   └── architecture.md                    ## Template for building Architecture related context for current workspace
 ```
 
-## 上下文文档模板说明
+Additional Explaination of the structure:
 
-### index.md - 工作空间索引
-- 提供当前工作空间文件系统的树状视图和分析
-- 包含技术栈、框架、库、工具等详细技术细节
-- 包含业务领域、业务流程、业务规则等业务信息
-- 提供编译、构建、调试和测试的完整说明
-- 包含到其他上下文文件的导航链接
+- `index.md`: act as a index/guide for **AI Model** to follow in order to find the related context according to the current job, including: 
+    - a `tree-view` of the current workspace's file system and make sure each node of tree has necessary comments to guide the **AI Model** to find the related context. 
+    - necessary technical details of the current workspace, e.g. technology stack, frameworks, libraries, tools etc.
+    - necessary business details of the current workspace, e.g. business domain, business process, business rules etc.
+    - necessary instructions for compiling, buiding, debugging and testing the current workspace, this is for **AI Model** to know how to work with the current workspace.
+    - files links for other context files in `.asdm/contexts/` directory
+- `standard-project-structure.md`: this is the proposed standard project structure for a software project, it should be related to specific technology stack, e.g. Java, Python, Go, TypeScript, C# etc and also related to the frameworks used, e.g. Spring Boot, Flask, Django, Express, FastAPI etc.
+- `context.standard-coding-style.md`: this is the proposed standard coding style for a software project, it should be related to specific technology stack, e.g. Java, Python, Go, TypeScript, C# etc and also related to the frameworks used, e.g. Spring Boot, Flask, Django, Express, FastAPI etc.
+- `data-models.md`: this is the current data models for the current workspace, it should include necessary information for **AI Models** to understand, design, modify and implement the data models, including:
+    - data models' definitions, e.g. table schema, class definitions, object definitions, data structures etc.
+    - data models' relationships, e.g. table relationships, class relationships, object relationships, data structures relationships etc.
+    - data models' constraints, e.g. table constraints, class constraints, object constraints, data structures constraints etc.
+    - data model & flow diagrams using mermaid, e.g.
+        - entity relationship diagram, 
+        - class diagram, 
+        - object diagram, 
+        - data structure diagram
+        - sequence diagram
+        - state diagram etc.
+- `deployment.md`: this is the current deployment related context for the current workspace, it should include necessary information for **AI Models** to understand, design, modify and implement the deployment process, including:
+    - deployment process, e.g. deployment pipeline, deployment process, deployment strategy etc.
+    - deployment environment, e.g. development environment, staging environment, production environment etc.
+    - deployment configuration, e.g. deployment configuration, deployment variables etc.
+    - use `mermaid` to draw deployment diagrams, e.g. deployment diagram, deployment process diagram, deployment environment diagram etc.
+- `api.md`: this is the current API related context for the current workspace, it should include necessary information for **AI Models** to understand, design, modify and implement the API, including:
+    - API meta data, including endpoint url
+    - API definitions in a table format, e.g. API endpoints, API methods, API parameters, API responses, API status codes, API security and a description for each API.
+    - API testing, e.g. API testing, API testing tools, API testing strategies etc.
+    - make sure `sample data` is included in the API testing section, e.g. sample data for API parameters, sample data for API responses etc.
+    - make sure necessary links to the source code file is included so that **AI Models** can find the source code file to understand more details when required.
+- `architecture.md`: this is the current architecture related context for the current workspace, it should include necessary information for **AI Models** to understand, design, modify and implement the architecture, including:
+    - architecture diagrams using mermaid, e.g. component diagram, container diagram, deployment diagram etc.
+    - architecture components, e.g. services, databases, message brokers, load balancers etc.
+    - architecture relationships, e.g. service relationships, database relationships, message broker relationships etc.
 
-### standard-project-structure.md - 标准项目结构
-- 针对特定技术栈（Java、Python、TypeScript等）的项目结构建议
-- 针对特定框架（Spring Boot、Flask、Express等）的项目组织规范
-- 目录结构的最佳实践和命名约定
-- 模块化设计和组件分离的指导原则
+## Toolset Workspace
 
-### standard-coding-style.md - 标准编码风格
-- 针对特定技术栈的编码规范和要求
-- 代码格式化、命名约定、注释标准的详细说明
-- 代码审查和质量控制的标准
-- 团队协作和代码维护的最佳实践
+Here is an example of the toolset workspace to be initialized by `asdm-context-build.md`, the worksapce should be created under `.asdm/contexts/` directory and used by `context-builder` toolset to build context for the current workspace, also allow other toolsets to use the context for working with **AI Models**, which is called `context injection` process.
 
-### data-models.md - 数据模型
-- 数据模型定义（表结构、类定义、对象定义等）
-- 数据模型关系（表关系、类关系、对象关系等）
-- 数据模型约束（表约束、类约束、对象约束等）
-- 使用Mermaid绘制数据模型图（ER图、类图、序列图等）
+```
+.asdm/contexts/
+├── index.md                               ## Index for current workspace's context content
+├── standard-project-structure.md          ## Standard Project Structure for current workspace
+├── standard-coding-style.md               ## Standard Coding Style for current workspace
+├── data-models.md                         ## Data Models related context for current workspace
+├── deployment.md                          ## Deployment related context for current workspace
+├── api.md                                 ## API related context for current workspace
+├── architecture.md                        ## Architecture related context for current workspace
+```
 
-### deployment.md - 部署配置
-- 部署流程（部署流水线、部署策略等）的详细说明
-- 部署环境（开发、预生产、生产环境等）的配置要求
-- 部署配置（配置变量、环境设置等）的标准化
-- 使用Mermaid绘制部署图和流程示意图
 
-### api.md - API文档
-- API元数据（端点URL、方法、参数等）的完整定义
-- API定义表格格式，便于AI模型理解和使用
-- API测试策略和示例数据的详细说明
-- 源代码文件链接，支持深入的代码分析
-
-### architecture.md - 系统架构
-- 架构图（组件图、容器图、部署图等）的可视化展示
-- 架构组件（服务、数据库、消息代理等）的详细说明
-- 架构关系（服务关系、数据库关系等）的分析和描述
-- 系统扩展性和性能考虑的架构指导
-
-## 安装和使用流程
-
-### 安装步骤
-1. 将工具集安装到工作空间中
-2. 运行AI指导安装来初始化工具集
-3. 创建`.asdm/contexts`目录作为上下文工作空间
-4. 在AI模型提供商的入口点创建快捷命令
-
-### 使用流程
-1. 使用`/asdm-context-build`命令构建初始上下文
-2. 使用生成的上下文文档指导AI模型工作
-3. 项目变更后使用`/asdm-context-update`更新上下文
-4. 维护上下文文档的时效性和准确性
-
-### 集成支持
-- 支持多种AI模型提供商的集成
-- 提供标准化的上下文注入接口
-- 支持自定义模板和扩展功能
-
-## 版权与许可
+## Copyright & License
 
 Copyright (c) 2026 LeansoftX.com & iSoftStone. All rights reserved.
 
