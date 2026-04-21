@@ -1,9 +1,31 @@
 # 任务列表：预约挂号功能
 
 **Feature ID**: FEAT-001-appointment-booking  
+**父文档**: [feature-prd.md](./feature-prd.md)  
 **状态**: PLANNED  
 **创建时间**: 2026-04-21  
 **预计任务数**: 8个
+
+## 📋 层次分解结构
+
+```
+FEAT-001-预约挂号功能 (Feature Level)
+├── TASK-001-设计预约数据模型 (Task Level)
+├── TASK-002-实现医生排班管理界面
+├── TASK-003-实现患者预约界面
+├── TASK-004-开发预约冲突检测逻辑
+├── TASK-005-实现预约记录管理功能
+├── TASK-006-集成预约功能到主应用
+├── TASK-007-实现预约统计功能
+└── TASK-008-测试和优化预约功能
+```
+
+## 🔗 文档间可追踪性
+
+- **向下追踪**: Feature文档引用所有Task文档
+- **向上追踪**: 每个Task文档引用父Feature文档  
+- **横向追踪**: Task文档间依赖关系明确标注
+- **上下文加载**: [context-loading-guide.md](./context-loading-guide.md)
 
 ## 任务概览
 

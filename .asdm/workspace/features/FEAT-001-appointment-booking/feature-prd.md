@@ -1,9 +1,31 @@
 # Feature PRD: 预约挂号功能
 
-**Feature ID**: FEAT-001-appointment-booking
-**Created Date**: 2026-04-21
-**Status**: PLANNED
-**Language**: zh
+**Feature ID**: FEAT-001-appointment-booking  
+**Created Date**: 2026-04-21  
+**Status**: PLANNED  
+**Language**: zh  
+**Parent Document**: 无（顶层功能）
+
+---
+
+## 📋 层次结构概览
+
+```
+FEAT-001-预约挂号功能 (Feature Level)
+├── TASK-001-设计预约数据模型 (Task Level)
+├── TASK-002-实现医生排班管理界面
+├── TASK-003-实现患者预约界面
+├── TASK-004-开发预约冲突检测逻辑
+├── TASK-005-实现预约记录管理功能
+├── TASK-006-集成预约功能到主应用
+├── TASK-007-实现预约统计功能
+└── TASK-008-测试和优化预约功能
+```
+
+## 🔗 相关文档链接
+- **任务列表**: [task-list.md](./task-list.md)
+- **实现设计**: [implementation-prd.md](./implementation-prd.md)
+- **各任务PRD**: [TASK-001](./TASK-001-设计预约数据模型-prd.md) | [TASK-002](./TASK-002-实现医生排班管理界面-prd.md) | [TASK-003](./TASK-003-实现患者预约界面-prd.md) | [TASK-004](./TASK-004-开发预约冲突检测逻辑-prd.md) | [TASK-005](./TASK-005-实现预约记录管理功能-prd.md) | [TASK-006](./TASK-006-集成预约功能到主应用-prd.md) | [TASK-007](./TASK-007-实现预约统计功能-prd.md) | [TASK-008](./TASK-008-测试和优化预约功能-prd.md)
 
 ## 1. Overview
 
