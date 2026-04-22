@@ -23,6 +23,21 @@ const routes: RouteRecordRaw[] = [
     component: Consultation,
   },
   {
+    path: '/appointment',
+    name: 'Appointment',
+    component: () => import('../views/Appointment.vue'),
+  },
+  {
+    path: '/appointment/:doctorUsername',
+    name: 'AppointmentWithDoctor',
+    component: () => import('../views/Appointment.vue'),
+  },
+  {
+    path: '/my-appointments',
+    name: 'MyAppointments',
+    component: () => import('../views/MyAppointments.vue'),
+  },
+  {
     path: '/doctors',
     name: 'Doctors',
     component: Doctors,

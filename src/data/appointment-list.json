@@ -1,0 +1,67 @@
+[
+  {
+    "id": "apt001",
+    "patientId": "patient001",
+    "patientName": "赵明",
+    "doctorId": "doc001",
+    "doctorName": "张伟医生",
+    "appointmentDate": "2025-11-10",
+    "appointmentTime": "09:00-10:00",
+    "status": "pending",
+    "symptoms": "血压偏高，想复查并咨询用药方案",
+    "createdAt": "2025-11-02T10:00:00",
+    "updatedAt": "2025-11-02T10:00:00"
+  },
+  {
+    "id": "apt002",
+    "patientId": "patient002",
+    "patientName": "孙丽",
+    "doctorId": "doc002",
+    "doctorName": "李娜医生",
+    "appointmentDate": "2025-11-11",
+    "appointmentTime": "14:00-15:00",
+    "status": "confirmed",
+    "symptoms": "孩子咳嗽，想让医生检查一下",
+    "createdAt": "2025-11-01T15:30:00",
+    "updatedAt": "2025-11-01T16:00:00"
+  },
+  {
+    "id": "apt003",
+    "patientId": "patient003",
+    "patientName": "周杰",
+    "doctorId": "doc003",
+    "doctorName": "王强医生",
+    "appointmentDate": "2025-11-12",
+    "appointmentTime": "10:00-11:00",
+    "status": "pending",
+    "symptoms": "之前脚踝扭伤，想复查恢复情况",
+    "createdAt": "2025-11-02T09:00:00",
+    "updatedAt": "2025-11-02T09:00:00"
+  },
+  {
+    "id": "apt004",
+    "patientId": "patient004",
+    "patientName": "吴芳",
+    "doctorId": "doc005",
+    "doctorName": "陈杰医生",
+    "appointmentDate": "2025-11-08",
+    "appointmentTime": "11:00-12:00",
+    "status": "confirmed",
+    "symptoms": "胃部不适，想做胃镜检查",
+    "createdAt": "2025-10-30T11:00:00",
+    "updatedAt": "2025-10-30T14:00:00"
+  },
+  {
+    "id": "apt005",
+    "patientId": "patient005",
+    "patientName": "郑浩",
+    "doctorId": "doc001",
+    "doctorName": "张伟医生",
+    "appointmentDate": "2025-11-05",
+    "appointmentTime": "15:00-16:00",
+    "status": "cancelled",
+    "symptoms": "体检发现心律不齐，想详细检查",
+    "createdAt": "2025-10-28T10:00:00",
+    "updatedAt": "2025-10-29T08:00:00"
+  }
+]
