@@ -200,14 +200,79 @@ interface AppointmentData {
 
 const appointmentListData = appointmentData as AppointmentData;
 
+// ============================================================
+// localStorage 持久化工具
+// ============================================================
+const STORAGE_KEYS = {
+  APPOINTMENTS: 'qa_live_appointments',
+  CLINIC_SCHEDULES: 'qa_live_clinic_schedules',
+  CURRENT_DOCTOR: 'qa_live_current_doctor',
+  CURRENT_PATIENT: 'qa_live_current_patient',
+};
+
+/**
+ * 从 localStorage 加载数据
+ */
+function loadFromStorage<T>(key: string, defaultValue: T): T {
+  try {
+    const stored = localStorage.getItem(key);
+    if (stored) {
+      return JSON.parse(stored) as T;
+    }
+  } catch (error) {
+    console.warn(`Failed to load ${key} from localStorage:`, error);
+  }
+  return defaultValue;
+}
+
+/**
+ * 保存数据到 localStorage
+ */
+function saveToStorage<T>(key: string, value: T): void {
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+  } catch (error) {
+    console.warn(`Failed to save ${key} to localStorage:`, error);
+  }
+}
+
+/**
+ * 合并初始数据与本地存储数据
+ * 优先使用本地存储数据（新预约不会被覆盖）
+ */
+function mergeAppointments(initialAppointments: Appointment[]): Appointment[] {
+  const storedAppointments = loadFromStorage<Appointment[]>(STORAGE_KEYS.APPOINTMENTS, []);
+  
+  // 创建 ID 映射，用于合并
+  const mergedMap = new Map<string, Appointment>();
+  
+  // 先添加初始数据
+  for (const apt of initialAppointments) {
+    mergedMap.set(apt.id, apt);
+  }
+  
+  // 合并本地存储的数据（新预约会覆盖初始数据中的相同 ID，或添加新预约）
+  for (const apt of storedAppointments) {
+    mergedMap.set(apt.id, apt);
+  }
+  
+  return Array.from(mergedMap.values());
+}
+
+// 初始化状态，从 localStorage 恢复数据
+const initialAppointments = mergeAppointments(appointmentListData.appointments || []);
+const storedSchedules = loadFromStorage<ClinicSchedule[]>(STORAGE_KEYS.CLINIC_SCHEDULES, []);
+const storedDoctor = loadFromStorage<Doctor | null>(STORAGE_KEYS.CURRENT_DOCTOR, null);
+const storedPatient = loadFromStorage<Patient | null>(STORAGE_KEYS.CURRENT_PATIENT, null);
+
 const state = reactive<State>({
   doctors: doctorData as Doctor[],
   patients: patientData as Patient[],
   questions: questionData as Question[],
-  appointments: appointmentListData.appointments || [],
-  clinicSchedules: [],
-  currentDoctor: null,
-  currentPatient: null,
+  appointments: initialAppointments,
+  clinicSchedules: storedSchedules,
+  currentDoctor: storedDoctor,
+  currentPatient: storedPatient,
 });
 
 export const store = {
@@ -219,6 +284,7 @@ export const store = {
     );
     if (doctor) {
       state.currentDoctor = doctor;
+      saveToStorage(STORAGE_KEYS.CURRENT_DOCTOR, doctor);
       return doctor;
     }
     return null;
@@ -226,6 +292,7 @@ export const store = {
 
   logoutDoctor() {
     state.currentDoctor = null;
+    localStorage.removeItem(STORAGE_KEYS.CURRENT_DOCTOR);
   },
 
   verifyPatient(name: string, birthday: string): Patient {
@@ -245,11 +312,13 @@ export const store = {
     }
 
     state.currentPatient = patient;
+    saveToStorage(STORAGE_KEYS.CURRENT_PATIENT, patient);
     return patient;
   },
 
   logoutPatient() {
     state.currentPatient = null;
+    localStorage.removeItem(STORAGE_KEYS.CURRENT_PATIENT);
   },
 
   getQuestionsByDoctor(doctorId: string): Question[] {
@@ -333,6 +402,8 @@ export const store = {
       updatedAt: new Date().toISOString(),
     };
     state.appointments.push(newAppointment);
+    // 持久化到 localStorage
+    saveToStorage(STORAGE_KEYS.APPOINTMENTS, state.appointments);
     return newAppointment;
   },
 
@@ -372,6 +443,8 @@ export const store = {
       appointment.cancelReason = reason;
     }
 
+    // 持久化到 localStorage
+    saveToStorage(STORAGE_KEYS.APPOINTMENTS, state.appointments);
     return appointment;
   },
 
@@ -395,6 +468,8 @@ export const store = {
     appointment.updatedAt = new Date().toISOString();
     appointment.confirmedAt = new Date().toISOString();
 
+    // 持久化到 localStorage
+    saveToStorage(STORAGE_KEYS.APPOINTMENTS, state.appointments);
     return appointment;
   },
 
@@ -419,6 +494,8 @@ export const store = {
     appointment.updatedAt = new Date().toISOString();
     appointment.rejectReason = reason;
 
+    // 持久化到 localStorage
+    saveToStorage(STORAGE_KEYS.APPOINTMENTS, state.appointments);
     return appointment;
   },
 
@@ -442,6 +519,8 @@ export const store = {
     appointment.updatedAt = new Date().toISOString();
     appointment.completedAt = new Date().toISOString();
 
+    // 持久化到 localStorage
+    saveToStorage(STORAGE_KEYS.APPOINTMENTS, state.appointments);
     return appointment;
   },
 
@@ -604,5 +683,27 @@ export const store = {
       cancelledCount,
       rejectedCount,
     };
+  },
+
+  /**
+   * 保存医生门诊排班到 localStorage
+   * @param schedule 门诊时间表
+   */
+  saveClinicSchedule(schedule: ClinicSchedule): void {
+    const index = state.clinicSchedules.findIndex(s => s.doctorId === schedule.doctorId);
+    if (index >= 0) {
+      state.clinicSchedules[index] = schedule;
+    } else {
+      state.clinicSchedules.push(schedule);
+    }
+    saveToStorage(STORAGE_KEYS.CLINIC_SCHEDULES, state.clinicSchedules);
+  },
+
+  /**
+   * 清除所有预约数据（用于调试或重置）
+   */
+  clearAllAppointments(): void {
+    state.appointments = appointmentListData.appointments || [];
+    localStorage.removeItem(STORAGE_KEYS.APPOINTMENTS);
   },
 };
