@@ -1,265 +1,161 @@
-# Task PRD: 预约表单页面
+# Task PRD: TASK-008 - 预约表单页面
+
+## 任务概述
+
+**任务ID:** TASK-008  
+**任务名称:** 预约表单页面  
+**所属功能:** FEAT-001-预约挂号功能  
+**优先级:** P0  
+**预估工时:** 8小时  
+**依赖:** TASK-006（时段选择组件）
+
+## 任务目标
+
+开发预约挂号的核心表单页面，实现患者信息填写、预约时段选择、就诊类型选择等功能。
+
+## 功能需求
+
+### 核心功能
+- 患者信息填写（姓名、身份证号、手机号）
+- 预约时段选择（基于TASK-006组件）
+- 就诊类型选择（初诊/复诊）
+- 症状描述（可选）
+- 表单验证和错误提示
+
+### 用户交互
+- 实时表单验证
+- 错误信息提示
+- 加载状态显示
+- 提交按钮状态管理
+
+## 技术实现方案
+
+### 前端实现
+1. **组件结构**
+   ```
+   AppointmentForm.vue
+   ├── 患者信息区域
+   ├── 时段选择区域（复用TASK-006组件）
+   ├── 就诊类型选择
+   ├── 症状描述区域
+   └── 操作按钮区域
+   ```
+
+2. **状态管理**
+   - 使用Vue 3 Composition API
+   - 表单数据响应式管理
+   - 验证状态管理
+
+### 数据模型
+```typescript
+interface AppointmentFormData {
+  patientName: string
+  patientIdCard: string
+  patientPhone: string
+  appointmentTime: string
+  visitType: 'first' | 'followup'
+  symptoms?: string
+}
+```
+
+## 实现步骤
+
+### 阶段1：基础框架搭建 (2h)
+- 创建AppointmentForm.vue组件
+- 设置基础路由和页面布局
+- 实现基础样式和响应式设计
+
+### 阶段2：表单字段开发 (3h)
+- 患者信息字段（姓名、身份证、手机号）
+- 就诊类型选择器
+- 症状描述文本框
+
+### 阶段3：表单验证和交互 (2h)
+- 实时表单验证
+- 错误提示和样式
+- 提交按钮状态管理
+
+### 阶段4：集成和测试 (1h)
+- 集成时段选择组件
+- 端到端测试
+- 性能优化
+
+## 验收标准
+
+### 功能验证
+- [ ] 患者信息字段可正常输入和验证
+- [ ] 时段选择组件正常集成
+- [ ] 就诊类型选择正常
+- [ ] 表单验证提示准确
+- [ ] 提交按钮状态正确
+
+### 用户体验
+- [ ] 页面加载时间 < 2秒
+- [ ] 移动端适配良好
+- [ ] 错误提示清晰易懂
+- [ ] 表单填写流程顺畅
+
+### 技术质量
+- [ ] 代码通过TypeScript编译
+- [ ] 无控制台错误
+- [ ] 组件可复用性良好
+- [ ] 性能指标达标
 
-**Feature ID**: FEAT-001
-**Feature Name**: 预约挂号功能
-**Sub-Feature**: SUB-003 预约流程
-**Task ID**: TASK-008
-**Created Date**: 2026-04-22
-**Status**: TODO
-**Language**: zh
+## 测试策略
 
----
+### 单元测试
+- 表单验证逻辑测试
+- 组件props和events测试
+- 状态管理测试
 
-## 1. Task Overview
+### 集成测试
+- 与时段选择组件集成测试
+- 路由跳转测试
+- API调用测试
 
-### 1.1 Task Summary
-
-开发预约表单页面，收集患者预约所需的信息，包括就诊人信息、预约时段、病情描述等，为提交预约做准备。
-
-### 1.2 Task Objectives
-
-- 展示预约信息摘要（医生、时间）
-- 收集就诊人信息
-- 收集病情/症状描述
-- 表单数据校验
-- 提交预约前的信息确认
-
-### 1.3 Related Feature Requirements
-
-- Feature PRD: `feature-prd.md`
-- User Story: US-002 (选择具体的日期和时间进行预约)
-- Functional Requirement: FR-004 (患者端：预约信息提交)
-- **Blocked by**: TASK-006 (时段选择组件)
-
----
-
-## 2. Detailed Requirements
-
-### 2.1 Functional Requirements
-
-| ID | 需求描述 | 优先级 |
-|----|---------|--------|
-| FR-008-01 | 显示预约信息摘要（医生、时间、地点） | Must |
-| FR-008-02 | 就诊人选择/新增表单 | Must |
-| FR-008-03 | 病情描述文本框 | Should |
-| FR-008-04 | 就诊卡/医保卡信息（可选） | Should |
-| FR-008-05 | 表单必填项校验 | Must |
-| FR-008-06 | 提交前确认弹窗 | Must |
-| FR-008-07 | 历史就诊人快速选择 | Should |
-
-### 2.2 Technical Requirements
-
-| ID | 技术要求 |
-|----|---------|
-| TR-008-01 | 表单数据持久化（防止刷新丢失） | Should |
-| TR-008-02 | 移动端表单适配 | Must |
-| TR-008-03 | 键盘导航支持 | Should |
-
-### 2.3 Constraints and Limitations
-
-- 需要从URL或路由获取预约信息
-- 登录用户可直接选择本人信息
-- 未登录用户需先登录或填写完整信息
-
----
-
-## 3. Implementation Approach
-
-### 3.1 Recommended Methodology
-
-1. **页面路由**：
-   - 路由：`/appointment/book?slotId=xxx`
-
-2. **组件结构**：
-   - `AppointmentForm.vue` - 表单主组件
-   - `AppointmentSummary.vue` - 预约摘要组件
-   - `PatientSelector.vue` - 就诊人选择组件
-   - `PatientForm.vue` - 新增就诊人表单
-
-3. **表单设计**：
-   - 使用 VeeValidate + Yup 进行表单校验
-   - Pinia Store 管理表单状态
-
-### 3.2 Implementation Steps
-
-1. **Step 1: 页面路由配置**
-   - 定义路由和参数
-   - 路由守卫处理
-
-2. **Step 2: 预约摘要组件**
-   - 显示医生信息
-   - 显示预约时间
-
-3. **Step 3: 就诊人选择组件**
-   - 历史就诊人列表
-   - 新增就诊人表单
-
-4. **Step 4: 预约表单主组件**
-   - 表单布局
-   - 字段定义和校验
-
-5. **Step 5: 确认和提交逻辑**
-   - 确认弹窗
-   - 提交处理
-
-6. **Step 6: 验证实现**
-   - **Validation Step**: 运行 `npm run build` 确保编译通过
-   - 运行 `npm run lint` 确保代码风格符合规范
-
-### 3.3 Technical Considerations
-
-- 表单状态使用 localStorage 持久化
-- 考虑使用 VueUse 的 useStorage
-- 敏感信息加密存储
-
-### 3.4 Reference to Project Context
-
-- `.asdm/contexts/standard-coding-style.md`: Vue组件编码规范
-- `.asdm/contexts/api.md`: API接口规范
-
----
-
-## 4. Acceptance Criteria
-
-### 4.1 Primary Criteria
-
-| 验收标准 | 测试方法 | 验证工具 |
-|---------|---------|----------|
-| 预约摘要正确显示 | 验证各字段渲染 | 功能测试 |
-| 就诊人选择正常 | 测试选择和新增 | 功能测试 |
-| 表单校验正常 | 测试各种错误输入 | 边界测试 |
-| 提交成功跳转正确 | 完成提交验证跳转 | 功能测试 |
-| **代码编译无错误** | 运行构建命令 | `npm run build` |
-| **代码风格符合规范** | 运行lint检查 | `npm run lint` |
-
-### 4.2 Edge Cases
-
-| 边界情况 | 预期行为 |
-|---------|---------|
-| 无可选就诊人 | 显示新增就诊人表单 |
-| 时段已满 | 提示并返回选择页 |
-| 未登录用户访问 | 跳转登录页 |
-
-### 4.3 Negative Tests
-
-| 负向测试用例 | 预期行为 |
-|------------|---------|
-| 必填项为空提交 | 显示校验错误 |
-| 提交时网络断开 | 显示错误提示，可重试 |
-
----
-
-## 5. Dependencies
-
-### 5.1 Task Dependencies
-
-| 类型 | 依赖任务 | 说明 |
-|------|---------|------|
-| Blocked by | TASK-006 | 依赖时段选择数据 |
-
-### 5.2 External Dependencies
-
-| 依赖类型 | 依赖内容 | 说明 |
-|---------|---------|------|
-| 表单库 | VeeValidate + Yup | 表单验证 |
-| API | 就诊人相关接口 | 获取就诊人列表 |
-
-### 5.3 Prerequisites
-
-- TASK-006 已完成
-- 用户认证系统可用
-
----
-
-## 6. Estimated Effort
-
-### 6.1 Effort Estimate
-
-| 指标 | 值 |
-|------|---|
-| 预估工时 | 8小时 |
-| Story Points | 5 |
-| 复杂度 | Medium |
-| 风险 | Low |
-
-### 6.2 Effort Factors
-
-| 影响因素 | 影响说明 |
-|---------|---------|
-| 表单复杂度 | 就诊人信息字段数量 |
-| 校验规则 | 校验规则复杂度 |
-
----
-
-## 7. Testing Strategy
-
-### 7.1 Automated Validation (Required)
-
-| 验证类型 | 命令 | 成功标准 |
-|---------|------|---------|
-| 构建验证 | `npm run build` | Exit code 0 |
-| 代码质量 | `npm run lint` | Exit code 0 |
-| 类型检查 | `npm run type-check` | Exit code 0 |
-
-### 7.2 Unit Testing
-
-- 表单渲染测试
-- 校验逻辑测试
-- 提交逻辑测试
-- **Validation command**: `npm run test:unit`
-- **Success criteria**: 所有测试通过
-
-### 7.3 Integration Testing
-
+### E2E测试
 - 完整预约流程测试
-- **Validation command**: `npm run test:e2e`
-- **Success criteria**: E2E测试通过
+- 不同设备兼容性测试
+- 错误处理流程测试
 
-### 7.4 Manual Testing
+## 依赖关系
 
-- 多种设备测试
-- 无障碍测试
+### 前端依赖
+- TASK-006: 时段选择组件
+- Vue Router: 页面路由
+- Ant Design Vue: UI组件库
 
----
+### 后端依赖
+- 患者信息验证API
+- 时段可用性检查API
 
-## 8. Implementation Notes
+## 风险评估
 
-- 使用 `<script setup lang="ts">` 语法
-- 表单字段使用 TypeScript 类型定义
-- 敏感信息不持久化到 localStorage
+### 技术风险
+- **时段选择组件集成问题**：已通过TASK-006解决
+- **表单验证复杂性**：使用成熟的验证库降低风险
 
----
+### 业务风险
+- **患者信息敏感度**：确保数据加密传输
+- **时段冲突问题**：后端接口保证数据一致性
 
-## 9. Risks and Mitigations
+## 交付物
 
-### Risk 1: 时效性信息过期
+1. AppointmentForm.vue组件
+2. 相关类型定义文件
+3. 单元测试文件
+4. 集成测试用例
+5. 文档更新
 
-- **Impact**: Medium
-- **Mitigation**: 提交前校验时段有效性
+## 成功指标
 
-### Risk 2: 重复提交
-
-- **Impact**: Medium
-- **Mitigation**: 提交按钮防抖+后端幂等校验
-
----
-
-## 10. Deliverables
-
-| 交付物 | 说明 |
-|-------|------|
-| 预约表单页面 | `src/views/AppointmentForm.vue` |
-| 预约摘要组件 | `src/components/AppointmentSummary.vue` |
-| 就诊人选择组件 | `src/components/PatientSelector.vue` |
-| 新增就诊人表单 | `src/components/PatientForm.vue` |
-| 单元测试 | `__tests__/AppointmentForm.test.ts` |
-
-### Mandatory Deliverable: Validation Results
-
-- **Build output**: 编译成功日志
-- **Test results**: 单元测试通过率 100%
+- 预约表单页面可用性100%
+- 用户完成预约时间 < 3分钟
+- 表单提交成功率 > 95%
+- 用户满意度评分 > 4.5/5
 
 ---
 
-**Document Owner:** AI Assistant
-**Last Updated:** 2026-04-22
+**创建时间:** 2026-04-22  
+**最后更新:** 2026-04-22  
+**PRD状态:** ✅ 完成

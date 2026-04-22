@@ -17,10 +17,10 @@
 | P0 Tasks | 15 |
 | P1 Tasks | 4 |
 | P2 Tasks | 2 |
-| Pending | 14 |
+| Pending | 9 |
 | In Progress | 0 |
-| PRD Ready | 7 |
-| Completed | 0 |
+| PRD Ready | 11 |
+| Completed | 1 |
 
 ---
 
@@ -28,21 +28,21 @@
 
 | ID | Task | Feature | Priority | Status | Estimate | Assignee | Dependencies |
 |----|------|---------|----------|--------|----------|----------|---------------|
-| TASK-001 | 医生排班列表页面开发 | FEAT-001 | P0 | PRD Ready | 4h | - | - |
+| TASK-001 | 医生排班列表页面开发 | FEAT-001 | P0 | DONE | 4h | - | - |
 | TASK-002 | 医生详情页排班展示 | FEAT-001 | P0 | PRD Ready | 6h | - | TASK-001 |
 | TASK-003 | 排班日历视图组件 | FEAT-001 | P0 | PRD Ready | 8h | - | TASK-001 |
 | TASK-004 | 号源实时查询API | FEAT-001 | P0 | PRD Ready | 8h | - | - |
 | TASK-005 | 号源状态颜色标识UI | FEAT-001 | P0 | PRD Ready | 4h | - | TASK-004 |
 | TASK-006 | 时段选择组件 | FEAT-001 | P0 | PRD Ready | 6h | - | TASK-004 |
 | TASK-007 | 号源余量更新机制 | FEAT-001 | P0 | PRD Ready | 12h | - | TASK-004 |
-| TASK-008 | 预约表单页面 | FEAT-001 | P0 | Pending | - | - | TASK-006 |
-| TASK-009 | 预约人选择/新增 | FEAT-001 | P0 | Pending | - | - | TASK-008 |
-| TASK-010 | 预约信息确认页 | FEAT-001 | P0 | Pending | - | - | TASK-008 |
-| TASK-011 | 预约提交与号源锁定 | FEAT-001 | P0 | Pending | - | - | TASK-010, TASK-007 |
-| TASK-012 | 预约成功页与凭证展示 | FEAT-001 | P0 | Pending | - | - | TASK-011 |
-| TASK-013 | 预约记录列表页 | FEAT-001 | P0 | Pending | - | - | - |
-| TASK-014 | 预约详情页 | FEAT-001 | P0 | Pending | - | - | TASK-013 |
-| TASK-015 | 取消预约功能 | FEAT-001 | P0 | Pending | - | - | TASK-014 |
+| TASK-008 | 预约表单页面 | FEAT-001 | P0 | PRD Ready | 8h | - | TASK-006 |
+| TASK-009 | 预约人选择/新增 | FEAT-001 | P0 | PRD Ready | 6h | - | TASK-008 |
+| TASK-010 | 预约信息确认页 | FEAT-001 | P0 | PRD Ready | 6h | - | TASK-008 |
+| TASK-011 | 预约提交与号源锁定 | FEAT-001 | P0 | PRD Ready | 12h | - | TASK-010, TASK-007 |
+| TASK-012 | 预约成功页与凭证展示 | FEAT-001 | P0 | PRD Ready | 6h | - | TASK-011 |
+| TASK-013 | 预约记录列表页 | FEAT-001 | P0 | PRD Ready | 8h | - | - |
+| TASK-014 | 预约详情页 | FEAT-001 | P0 | PRD Ready | 6h | - | TASK-013 |
+| TASK-015 | 取消预约功能 | FEAT-001 | P0 | PRD Ready | 6h | - | TASK-014 |
 | TASK-016 | 医生排班管理页面 | FEAT-001 | P1 | Pending | - | - | - |
 | TASK-017 | 常规排班模板设置 | FEAT-001 | P1 | Pending | - | - | TASK-016 |
 | TASK-018 | 临时排班调整 | FEAT-001 | P1 | Pending | - | - | TASK-016 |
@@ -58,11 +58,11 @@
 
 | ID | Task | Priority | Status | Dependencies |
 |----|------|----------|--------|--------------|
-| TASK-001 | 医生排班列表页面开发 | P0 | PRD Ready | - |
+| TASK-001 | 医生排班列表页面开发 | P0 | DONE | - |
 | TASK-002 | 医生详情页排班展示 | P0 | PRD Ready | TASK-001 |
 | TASK-003 | 排班日历视图组件 | P0 | PRD Ready | TASK-001 |
 
-**Module Progress:** 100% (3/3) - PRD Ready
+**Module Progress:** 33% (1/3) - 1 DONE
 
 ---
 
@@ -83,13 +83,13 @@
 
 | ID | Task | Priority | Status | Dependencies |
 |----|------|----------|--------|--------------|
-| TASK-008 | 预约表单页面 | P0 | Pending | TASK-006 |
-| TASK-009 | 预约人选择/新增 | P0 | Pending | TASK-008 |
-| TASK-010 | 预约信息确认页 | P0 | Pending | TASK-008 |
-| TASK-011 | 预约提交与号源锁定 | P0 | Pending | TASK-010, TASK-007 |
-| TASK-012 | 预约成功页与凭证展示 | P0 | Pending | TASK-011 |
+| TASK-008 | 预约表单页面 | P0 | PRD Ready | TASK-006 |
+| TASK-009 | 预约人选择/新增 | P0 | PRD Ready | TASK-008 |
+| TASK-010 | 预约信息确认页 | P0 | PRD Ready | TASK-008 |
+| TASK-011 | 预约提交与号源锁定 | P0 | PRD Ready | TASK-010, TASK-007 |
+| TASK-012 | 预约成功页与凭证展示 | P0 | PRD Ready | TASK-011 |
 
-**Module Progress:** 0% (0/5)
+**Module Progress:** 100% (5/5) - PRD Ready
 
 ---
 
@@ -97,11 +97,11 @@
 
 | ID | Task | Priority | Status | Dependencies |
 |----|------|----------|--------|--------------|
-| TASK-013 | 预约记录列表页 | P0 | Pending | - |
-| TASK-014 | 预约详情页 | P0 | Pending | TASK-013 |
-| TASK-015 | 取消预约功能 | P0 | Pending | TASK-014 |
+| TASK-013 | 预约记录列表页 | P0 | PRD Ready | - |
+| TASK-014 | 预约详情页 | P0 | PRD Ready | TASK-013 |
+| TASK-015 | 取消预约功能 | P0 | PRD Ready | TASK-014 |
 
-**Module Progress:** 0% (0/3)
+**Module Progress:** 100% (3/3) - PRD Ready
 
 ---
 

@@ -1,262 +1,179 @@
-# Task PRD: 预约信息确认页
+# Task PRD: TASK-010 - 预约信息确认页
 
-**Feature ID**: FEAT-001
-**Feature Name**: 预约挂号功能
-**Sub-Feature**: SUB-003 预约流程
-**Task ID**: TASK-010
-**Created Date**: 2026-04-22
-**Status**: TODO
-**Language**: zh
+## 任务概述
 
----
+**任务ID:** TASK-010  
+**任务名称:** 预约信息确认页  
+**所属功能:** FEAT-001-预约挂号功能  
+**优先级:** P0  
+**预估工时:** 6小时  
+**依赖:** TASK-008（预约表单页面）
 
-## 1. Task Overview
+## 任务目标
 
-### 1.1 Task Summary
+开发预约信息确认页面，展示用户填写的预约信息供确认，并提供修改和提交功能。
 
-开发预约信息确认页面，在用户提交预约前展示完整的预约信息供用户核对，确保信息准确无误后进行提交。
+## 功能需求
 
-### 1.2 Task Objectives
+### 核心功能
+- 预约信息汇总展示（医生、时间、就诊人、就诊类型）
+- 信息确认和修改入口
+- 预约规则和注意事项展示
+- 提交预约按钮
 
-- 展示完整的预约信息摘要
-- 医生信息（姓名、科室、职称）
-- 预约时间（日期、时段）
-- 就诊人信息
-- 费用信息（如有）
-- 确认和返回修改功能
+### 用户交互
+- 信息卡片式展示
+- 修改信息跳转链接
+- 规则说明展开/收起
+- 提交前的最终确认
 
-### 1.3 Related Feature Requirements
+## 技术实现方案
 
-- Feature PRD: `feature-prd.md`
-- User Story: US-002 (选择具体的日期和时间进行预约)
-- Functional Requirement: FR-004 (患者端：预约信息提交)
-- **Blocked by**: TASK-008 (预约表单页面)
+### 前端实现
+1. **组件结构**
+   ```
+   AppointmentConfirm.vue
+   ├── 预约信息汇总区域
+   │   ├── 医生信息卡片
+   │   ├── 时间信息卡片
+   │   ├── 就诊人信息卡片
+   │   └── 就诊类型卡片
+   ├── 预约规则说明区域
+   ├── 操作按钮区域
+   └── 修改信息入口
+   ```
 
----
+2. **状态管理**
+   - 预约信息数据传递
+   - 确认状态管理
+   - 规则说明展开状态
 
-## 2. Detailed Requirements
+### 数据模型
+```typescript
+interface AppointmentConfirmData {
+  doctorInfo: {
+    id: string
+    name: string
+    title: string
+    department: string
+    avatar?: string
+  }
+  timeSlot: {
+    date: string
+    time: string
+    slotId: string
+  }
+  patientInfo: {
+    id: string
+    name: string
+    idCard: string
+    phone: string
+  }
+  appointmentInfo: {
+    visitType: 'first' | 'followup'
+    symptoms?: string
+  }
+  rules: string[] // 预约规则列表
+}
+```
 
-### 2.1 Functional Requirements
+## 实现步骤
 
-| ID | 需求描述 | 优先级 |
-|----|---------|--------|
-| FR-010-01 | 显示医生信息 | Must |
-| FR-010-02 | 显示预约时间 | Must |
-| FR-010-03 | 显示就诊人信息 | Must |
-| FR-010-04 | 显示就诊地点 | Must |
-| FR-010-05 | 显示费用信息 | Should |
-| FR-010-06 | 显示预约须知 | Should |
-| FR-010-07 | 确认提交按钮 | Must |
-| FR-010-08 | 返回修改入口 | Must |
-| FR-010-09 | 取消预约提示 | Should |
+### 阶段1：信息展示组件 (2h)
+- 创建AppointmentConfirm.vue组件
+- 实现信息卡片式展示
+- 添加样式和响应式设计
 
-### 2.2 Technical Requirements
+### 阶段2：规则说明和交互 (2h)
+- 预约规则展示组件
+- 展开/收起交互实现
+- 修改信息跳转逻辑
 
-| ID | 技术要求 |
-|----|---------|
-| TR-010-01 | 页面加载速度 < 1s | Must |
-| TR-010-02 | 数据完整性校验 | Must |
-| TR-010-03 | 订单号生成 | Must |
+### 阶段3：确认流程和集成 (1.5h)
+- 提交确认对话框
+- 与预约表单页面集成
+- 数据传递和验证
 
-### 2.3 Constraints and Limitations
+### 阶段4：优化和测试 (0.5h)
+- 性能优化
+- 用户体验测试
+- 边界情况处理
 
-- 页面数据从预约表单传递
-- 需要校验时段是否仍可预约
-- 确认页应有防误操作设计
+## 验收标准
 
----
+### 功能验证
+- [ ] 预约信息完整准确展示
+- [ ] 修改信息跳转功能正常
+- [ ] 规则说明展示正确
+- [ ] 提交确认流程完整
+- [ ] 数据传递无丢失
 
-## 3. Implementation Approach
+### 用户体验
+- [ ] 信息展示清晰易读
+- [ ] 操作流程简单直观
+- [ ] 移动端适配良好
+- [ ] 加载速度满足要求
 
-### 3.1 Recommended Methodology
+### 技术质量
+- [ ] 组件结构清晰
+- [ ] 代码可维护性强
+- [ ] 性能指标达标
+- [ ] 错误处理完善
 
-1. **页面路由**：
-   - 路由：`/appointment/confirm`
+## 测试策略
 
-2. **数据来源**：
-   - 从 AppointmentForm Store 获取数据
-   - 校验数据完整性
+### 单元测试
+- 信息展示逻辑测试
+- 规则说明组件测试
+- 数据格式验证测试
 
-3. **组件设计**：
-   - `AppointmentConfirm.vue` - 确认页主组件
-   - `ConfirmSummary.vue` - 信息摘要组件
+### 集成测试
+- 与预约表单页面集成测试
+- 数据传递完整性测试
+- 路由跳转功能测试
 
-### 3.2 Implementation Steps
+### E2E测试
+- 完整预约确认流程测试
+- 修改信息流程测试
+- 不同设备兼容性测试
 
-1. **Step 1: 路由和数据校验**
-   - 定义路由参数
-   - 数据完整性校验
+## 依赖关系
 
-2. **Step 2: 预约摘要组件开发**
-   - 医生信息展示
-   - 时间信息展示
-   - 就诊人信息展示
+### 前端依赖
+- TASK-008: 预约表单页面
+- Vue Router: 页面路由管理
+- Ant Design Vue: UI组件库
 
-3. **Step 3: 费用和须知展示**
-   - 费用明细
-   - 预约注意事项
+### 后端依赖
+- 无直接后端依赖（纯前端展示页面）
 
-4. **Step 4: 确认操作开发**
-   - 确认按钮
-   - 返回修改
-   - 取消操作
+## 风险评估
 
-5. **Step 5: 验证实现**
-   - **Validation Step**: 运行 `npm run build` 确保编译通过
-   - 运行 `npm run lint` 确保代码风格符合规范
+### 技术风险
+- **数据传递丢失问题**：使用路由参数和状态管理保障
+- **信息展示不一致**：严格的格式验证降低风险
 
-### 3.3 Technical Considerations
+### 业务风险
+- **用户误操作**：清晰的确认流程和提示
+- **信息误解**：详细的信息展示和说明
 
-- 使用 computed 计算费用
-- 预约须知从配置获取
-- 考虑使用骨架屏提升体验
+## 交付物
 
-### 3.4 Reference to Project Context
+1. AppointmentConfirm.vue组件
+2. 相关类型定义文件
+3. 单元测试文件
+4. 集成测试用例
+5. 使用文档
 
-- `.asdm/contexts/standard-coding-style.md`: Vue组件编码规范
-- UI设计规范文档
+## 成功指标
 
----
-
-## 4. Acceptance Criteria
-
-### 4.1 Primary Criteria
-
-| 验收标准 | 测试方法 | 验证工具 |
-|---------|---------|----------|
-| 所有信息正确展示 | 核对每项数据 | 功能测试 |
-| 返回修改功能正常 | 点击返回验证 | 功能测试 |
-| 确认提交跳转正确 | 确认后验证跳转 | 功能测试 |
-| 数据校验正常 | 测试异常数据 | 边界测试 |
-| **代码编译无错误** | 运行构建命令 | `npm run build` |
-| **代码风格符合规范** | 运行lint检查 | `npm run lint` |
-
-### 4.2 Edge Cases
-
-| 边界情况 | 预期行为 |
-|---------|---------|
-| 数据不完整 | 跳转回表单页 |
-| 时段已过期 | 提示并跳转选择页 |
-| 直接访问确认页 | 跳转表单页 |
-
-### 4.3 Negative Tests
-
-| 负向测试用例 | 预期行为 |
-|------------|---------|
-| 无数据访问 | 重定向到表单页 |
-| 数据被篡改 | 校验失败，提示错误 |
-
----
-
-## 5. Dependencies
-
-### 5.1 Task Dependencies
-
-| 类型 | 依赖任务 | 说明 |
-|------|---------|------|
-| Blocked by | TASK-008 | 依赖表单数据 |
-| 关联 | TASK-011 | 为提交提供入口 |
-
-### 5.2 External Dependencies
-
-| 依赖类型 | 依赖内容 | 说明 |
-|---------|---------|------|
-| Store | AppointmentStore | 获取预约数据 |
-| 配置 | 预约须知配置 | 就诊提醒信息 |
-
-### 5.3 Prerequisites
-
-- TASK-008 已完成
-- 预约Store已定义
-
----
-
-## 6. Estimated Effort
-
-### 6.1 Effort Estimate
-
-| 指标 | 值 |
-|------|---|
-| 预估工时 | 4小时 |
-| Story Points | 2 |
-| 复杂度 | Low |
-| 风险 | Low |
-
-### 6.2 Effort Factors
-
-| 影响因素 | 影响说明 |
-|---------|---------|
-| 信息项数量 | 影响布局时间 |
-| 样式复杂度 | 与设计稿匹配度 |
+- 用户信息确认准确率 > 99%
+- 确认页面平均停留时间 < 30秒
+- 修改信息操作率 < 10%
+- 用户满意度评分 > 4.5/5
 
 ---
 
-## 7. Testing Strategy
-
-### 7.1 Automated Validation (Required)
-
-| 验证类型 | 命令 | 成功标准 |
-|---------|------|---------|
-| 构建验证 | `npm run build` | Exit code 0 |
-| 代码质量 | `npm run lint` | Exit code 0 |
-| 类型检查 | `npm run type-check` | Exit code 0 |
-
-### 7.2 Unit Testing
-
-- 数据渲染测试
-- 路由守卫测试
-- **Validation command**: `npm run test:unit`
-- **Success criteria**: 所有测试通过
-
-### 7.3 Integration Testing
-
-- 完整预约流程测试
-- **Validation command**: `npm run test:e2e`
-- **Success criteria**: E2E测试通过
-
-### 7.4 Manual Testing
-
-- 信息核对测试
-- 交互流程测试
-
----
-
-## 8. Implementation Notes
-
-- 确认页应有明显的视觉区分
-- 费用信息应清晰展示
-- 预约须知应完整显示
-
----
-
-## 9. Risks and Mitigations
-
-### Risk 1: 用户误操作提交
-
-- **Impact**: Medium
-- **Mitigation**: 添加二次确认弹窗
-
-### Risk 2: 信息展示不清晰
-
-- **Impact**: Low
-- **Mitigation**: 与UI设计师确认布局
-
----
-
-## 10. Deliverables
-
-| 交付物 | 说明 |
-|-------|------|
-| 确认页主组件 | `src/views/AppointmentConfirm.vue` |
-| 信息摘要组件 | `src/components/ConfirmSummary.vue` |
-| 单元测试 | `__tests__/AppointmentConfirm.test.ts` |
-
-### Mandatory Deliverable: Validation Results
-
-- **Build output**: 编译成功日志
-- **Test results**: 单元测试通过率 100%
-
----
-
-**Document Owner:** AI Assistant
-**Last Updated:** 2026-04-22
+**创建时间:** 2026-04-22  
+**最后更新:** 2026-04-22  
+**PRD状态:** ✅ 完成
