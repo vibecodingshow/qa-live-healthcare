@@ -212,13 +212,111 @@ type Patient = Patient;  // 直接复用
 - 可能需要新增 `src/data/appointment-list.json` 模拟数据
 - 可能需要新增 `src/data/clinic-schedule.json` 门诊时间模拟数据
 
-### 5.5 Constraints
+### 5.5 数据模型 ER 图
+
+```mermaid
+erDiagram
+    Doctor ||--o{ Appointment : "管理预约"
+    Doctor ||--o| ClinicSchedule : "拥有排班"
+    Patient ||--o{ Appointment : "创建预约"
+    
+    Doctor {
+        string id PK
+        string username
+        string name
+        string title
+        string department
+        string avatar
+        string experience
+        string[] specialties
+        boolean isActive
+    }
+    
+    Patient {
+        string id PK
+        string name
+        string birthday
+        string phone
+        string gender
+    }
+    
+    Appointment {
+        string id PK
+        string patientId FK
+        string doctorId FK
+        string patientName
+        string patientPhone
+        string doctorName
+        string doctorTitle
+        string doctorDepartment
+        string appointmentDate
+        string timeSlot
+        string location
+        string reason
+        enum status
+        string cancelReason
+        string rejectReason
+        string createdAt
+        string updatedAt
+        string confirmedAt
+        string completedAt
+        string cancelledAt
+    }
+    
+    ClinicSchedule {
+        string doctorId PK,FK
+        WeeklySchedule weeklySchedule
+        string clinicLocation
+        int maxPatientsPerSlot
+        string effectiveFrom
+        string createdAt
+        string updatedAt
+    }
+    
+    WeeklySchedule {
+        DayScheduleConfig monday
+        DayScheduleConfig tuesday
+        DayScheduleConfig wednesday
+        DayScheduleConfig thursday
+        DayScheduleConfig friday
+        DayScheduleConfig saturday
+        DayScheduleConfig sunday
+    }
+    
+    DayScheduleConfig {
+        boolean enabled
+        string startTime
+        string endTime
+        int slotDuration
+        int maxPatientsPerSlot
+    }
+    
+    Appointment ||--|| AppointmentStatus : "status"
+    
+    AppointmentStatus {
+        pending "待确认"
+        confirmed "已确认"
+        completed "已完成"
+        cancelled "已取消"
+        rejected "已拒绝"
+    }
+```
+
+**实体关系说明**：
+
+| 关系 | 类型 | 说明 |
+|------|------|------|
+| Doctor → Appointment | 1:N | 一个医生可以有多个预约 |
+| Patient → Appointment | 1:N | 一个患者可以有多个预约 |
+| Doctor → ClinicSchedule | 1:1 | 一个医生有一套门诊时间表 |
+
+### 5.6 Constraints
 - 当前为前端演示项目，使用本地 JSON 模拟数据
 - 不实现真实的支付功能
 - 不实现真实的短信/邮件通知
 - 不实现与现有问诊功能的深度整合
 
-### 5.6 API 接口设计 (模拟数据)
+### 5.7 API 接口设计 (模拟数据)
 
 由于当前为前端演示项目，以下为模拟 API 接口设计：
 

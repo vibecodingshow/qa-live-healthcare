@@ -32,14 +32,22 @@
             </div>
           </div>
           <div class="card-footer">
-            <a-button
-              type="primary"
-              block
-              :disabled="!doctor.isActive"
-              @click="goToConsultation(doctor)"
-            >
-              {{ doctor.isActive ? '进入诊室' : '暂未开放' }}
-            </a-button>
+            <a-space direction="vertical" style="width: 100%;" :size="8">
+              <a-button
+                type="primary"
+                block
+                @click="goToBookAppointment(doctor)"
+              >
+                预约挂号
+              </a-button>
+              <a-button
+                block
+                :disabled="!doctor.isActive"
+                @click="goToConsultation(doctor)"
+              >
+                {{ doctor.isActive ? '进入诊室' : '暂未开放' }}
+              </a-button>
+            </a-space>
           </div>
         </a-card>
       </div>
@@ -58,6 +66,10 @@ const allDoctors = computed(() => store.state.doctors);
 
 const goToConsultation = (doctor: Doctor) => {
   router.push(`/consultation/${doctor.username}`);
+};
+
+const goToBookAppointment = (doctor: Doctor) => {
+  router.push(`/book/${doctor.id}`);
 };
 </script>
 

@@ -4,7 +4,7 @@
 **Feature Name**: 预约挂号
 **Task ID**: TASK-003
 **Created Date**: 2026-04-21
-**Status**: TODO
+**Status**: DONE
 **Language**: zh
 
 ## 1. Task Overview
@@ -291,9 +291,63 @@ export const store = {
 
 | Current Status | 说明 |
 |----------------|------|
-| TODO | 任务尚未开始 |
+| DONE | 任务已完成并通过验证 |
 
 ### Status Transitions
 
 - `TODO` → `IN PROGRESS`: 开始任务执行
 - `IN PROGRESS` → `DONE`: 任务完成并通过验证
+
+---
+
+## Implementation Summary
+
+### 完成内容
+
+1. **addAppointment()** - 创建新预约
+   - 生成唯一 ID (apt- 时间戳)
+   - 设置初始状态为 PENDING
+   - 自动设置创建/更新时间
+
+2. **getAppointmentById()** - 根据 ID 获取预约
+
+3. **cancelAppointment()** - 取消预约
+   - 支持填写取消原因
+   - 只能取消 pending/confirmed 状态
+
+4. **confirmAppointment()** - 确认预约
+   - 只能确认 pending 状态
+   - 记录确认时间
+
+5. **rejectAppointment()** - 拒绝预约
+   - 必须填写拒绝原因
+   - 只能拒绝 pending 状态
+
+6. **completeAppointment()** - 完成预约
+   - 只能完成 confirmed 状态
+   - 记录完成时间
+
+7. **getAppointmentsByPatient()** - 获取患者预约
+   - 支持按状态筛选
+
+8. **getAppointmentsByDoctor()** - 获取医生预约
+   - 支持按状态筛选
+
+9. **getDoctorSchedule()** - 获取医生门诊时间表
+
+10. **getAvailableSlots()** - 获取可预约时段
+    - 根据医生排班生成时段
+    - 计算每个时段的剩余容量
+
+11. **getAppointmentStatistics()** - 获取预约统计
+
+### 验证结果
+
+- ✅ TypeScript 类型检查通过
+- ✅ 构建成功 (`npm run build`)
+
+### 下一步
+
+- TASK-004: 开发预约列表页面
+- TASK-005: 开发预约表单页面
+- TASK-008: 开发医生预约管理功能

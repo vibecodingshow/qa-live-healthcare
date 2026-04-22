@@ -22,6 +22,9 @@
           <a-button type="primary" size="large" @click="navigateTo('/consultation')">
             立即问诊
           </a-button>
+          <a-button type="default" size="large" @click="navigateTo('/appointments')">
+            <CalendarOutlined /> 我的预约
+          </a-button>
           <a-button size="large" @click="navigateTo('/doctors')">
             查看医生
           </a-button>
@@ -71,6 +74,21 @@
       </div>
     </section>
 
+    <section class="appointment-banner">
+      <div class="appointment-content">
+        <div class="appointment-info">
+          <CalendarOutlined class="appointment-icon" />
+          <div>
+            <h2>预约挂号</h2>
+            <p>选择合适的时间，预约专家门诊</p>
+          </div>
+        </div>
+        <a-button type="primary" size="large" @click="navigateTo('/doctors')">
+          立即预约
+        </a-button>
+      </div>
+    </section>
+
     <section class="active-rooms">
       <h2>开放诊室</h2>
       <p class="section-subtitle">以下医生诊室正在开放,欢迎咨询</p>
@@ -113,7 +131,8 @@ import {
   TeamOutlined,
   FileTextOutlined,
   ClockCircleOutlined,
-  UserOutlined
+  UserOutlined,
+  CalendarOutlined
 } from '@ant-design/icons-vue';
 
 const router = useRouter();
@@ -261,6 +280,45 @@ const navigateTo = (path: string) => {
   margin: 4px 0 0;
 }
 
+.appointment-banner {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  padding: 48px 24px;
+  margin: 0 auto;
+}
+
+.appointment-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.appointment-info {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.appointment-icon {
+  font-size: 64px;
+  color: #fff;
+}
+
+.appointment-info h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 8px;
+}
+
+.appointment-info p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
 .active-rooms {
   max-width: 1200px;
   margin: 0 auto;
@@ -365,8 +423,29 @@ const navigateTo = (path: string) => {
     font-size: 16px;
   }
 
+  .hero-actions {
+    flex-direction: column;
+  }
+
   .statistics {
     grid-template-columns: 1fr;
+  }
+
+  .appointment-banner {
+    padding: 32px 24px;
+  }
+
+  .appointment-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .appointment-info {
+    flex-direction: column;
+  }
+
+  .appointment-info h2 {
+    font-size: 24px;
   }
 
   .active-rooms h2 {

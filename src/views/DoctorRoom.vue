@@ -29,6 +29,20 @@
         />
       </div>
 
+      <!-- 预约管理入口 -->
+      <div class="appointment-nav">
+        <a-card class="appointment-nav-card" @click="goToSchedule">
+          <div class="appointment-nav-content">
+            <CalendarOutlined class="appointment-nav-icon" />
+            <div>
+              <h3>预约管理</h3>
+              <p>查看和管理患者的预约记录</p>
+            </div>
+            <RightOutlined class="arrow-icon" />
+          </div>
+        </a-card>
+      </div>
+
       <div class="questions-section">
         <div class="section-header">
           <h2>待响应问题 ({{ pendingQuestions.length }})</h2>
@@ -124,7 +138,9 @@ import {
   ReloadOutlined,
   UserOutlined,
   EditOutlined,
-  CheckOutlined
+  CheckOutlined,
+  CalendarOutlined,
+  RightOutlined
 } from '@ant-design/icons-vue';
 import { store, Question } from '../store';
 
@@ -168,6 +184,10 @@ const logout = () => {
   store.logoutDoctor();
   message.success('已退出登录');
   router.push('/');
+};
+
+const goToSchedule = () => {
+  router.push('/doctor/schedule');
 };
 
 const refreshQuestions = () => {
@@ -271,6 +291,51 @@ const markAsAnswered = (questionId: string) => {
 
 .room-url {
   margin-bottom: 24px;
+}
+
+.appointment-nav {
+  margin-bottom: 24px;
+}
+
+.appointment-nav-card {
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 2px solid #e8e8e8;
+}
+
+.appointment-nav-card:hover {
+  border-color: #1890ff;
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.2);
+}
+
+.appointment-nav-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.appointment-nav-icon {
+  font-size: 40px;
+  color: #1890ff;
+}
+
+.appointment-nav-content h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.appointment-nav-content p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.arrow-icon {
+  margin-left: auto;
+  font-size: 20px;
+  color: #999;
 }
 
 .questions-section,

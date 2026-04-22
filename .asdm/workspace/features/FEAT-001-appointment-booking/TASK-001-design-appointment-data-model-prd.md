@@ -4,7 +4,7 @@
 **Feature Name**: 预约挂号
 **Task ID**: TASK-001
 **Created Date**: 2026-04-21
-**Status**: TODO
+**Status**: DONE
 **Language**: zh
 
 ## 1. Task Overview
@@ -246,9 +246,54 @@ interface Doctor {
 
 | Current Status | 说明 |
 |----------------|------|
-| TODO | 任务尚未开始 |
+| DONE | 任务已完成并通过验证 |
 
 ### Status Transitions
 
 - `TODO` → `IN PROGRESS`: 开始任务执行
 - `IN PROGRESS` → `DONE`: 任务完成并通过验证
+
+---
+
+## Implementation Summary
+
+### 完成内容
+
+1. **定义了完整的 Appointment 接口**
+   - 包含患者、医生、时间、状态等所有必要字段
+   - 使用 `apt-` 前缀作为 ID 规范
+
+2. **定义了 AppointmentStatus 枚举**
+   - PENDING: 待确认
+   - CONFIRMED: 已确认
+   - COMPLETED: 已完成
+   - CANCELLED: 已取消
+   - REJECTED: 已拒绝
+
+3. **定义了 ClinicSchedule 接口**
+   - 支持按周配置门诊时间
+   - 包含 WeeklySchedule 和 DayScheduleConfig
+
+4. **定义了 TimeSlotCapacity 接口**
+   - 包含时间范围和容量信息
+   - 支持可用/已满/关闭状态
+
+5. **定义了 AvailableSlot 接口**
+   - 用于患者选择可预约时段
+
+6. **绘制了 ER 图 (Mermaid)**
+   - 添加到 feature-prd.md 的 5.5 节
+   - 展示 Doctor、Patient、Appointment、ClinicSchedule 的关系
+
+7. **更新了 Store State 接口**
+   - 添加 appointments 数组
+   - 添加 clinicSchedules 数组
+
+### 验证结果
+
+- ✅ TypeScript 类型检查通过 (`tsc --noEmit`)
+- ✅ 构建成功 (`npm run build`)
+
+### 下一步
+
+- TASK-002: 创建预约相关数据类型和模拟数据

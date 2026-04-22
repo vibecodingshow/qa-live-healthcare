@@ -4,7 +4,7 @@
 **Feature Name**: 预约挂号
 **Task ID**: TASK-002
 **Created Date**: 2026-04-21
-**Status**: TODO
+**Status**: DONE
 **Language**: zh
 
 ## 1. Task Overview
@@ -271,9 +271,42 @@ export interface Appointment {
 
 | Current Status | 说明 |
 |----------------|------|
-| TODO | 任务尚未开始 |
+| DONE | 任务已完成并通过验证 |
 
 ### Status Transitions
 
 - `TODO` → `IN PROGRESS`: 开始任务执行
 - `IN PROGRESS` → `DONE`: 任务完成并通过验证
+
+---
+
+## Implementation Summary
+
+### 完成内容
+
+1. **创建预约模拟数据** `src/data/appointment-list.json`
+   - 包含 7 条预约记录
+   - 覆盖所有预约状态 (pending, confirmed, completed, cancelled, rejected)
+   - 包含不同科室的预约
+
+2. **扩展医生数据** `src/data/doctor-user-list.json`
+   - 为每个医生添加 `clinicSchedule` 字段
+   - 配置每周的门诊时间
+   - 设置每时段可预约人数
+   - 配置门诊地点
+
+3. **扩展 Doctor 类型**
+   - 添加 `clinicSchedule?: ClinicSchedule` 可选字段
+
+4. **更新 Store 数据加载**
+   - 导入 `appointment-list.json`
+   - 初始化 `appointments` 状态
+
+### 验证结果
+
+- ✅ TypeScript 类型检查通过
+- ✅ 构建成功 (`npm run build`)
+
+### 下一步
+
+- TASK-003: 实现预约 Store 状态管理
