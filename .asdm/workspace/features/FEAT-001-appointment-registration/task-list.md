@@ -12,20 +12,6 @@
 |-------------|------|-------------|------|---------|-----------|
 | 9           | 9    | 0           | 0    | 0       | 0         |
 
-## Task Registry
-
-| Task ID | Task Name | Status | Task PRD | Dependencies | Estimated Effort | Created     | Updated     |
-|---------|-----------|--------|----------|--------------|------------------|-------------|-------------|
-| TASK-001 | 数据模型和类型定义 | TODO | NOT GENERATED | NONE | 2 hours | 2026-04-22 | 2026-04-22 |
-| TASK-002 | 预约状态枚举和工具函数 | TODO | NOT GENERATED | TASK-001 | 1 hour | 2026-04-22 | 2026-04-22 |
-| TASK-003 | 患者端 - 医生列表页面 | TODO | NOT GENERATED | TASK-001, TASK-002 | 2 hours | 2026-04-22 | 2026-04-22 |
-| TASK-004 | 患者端 - 医生详情和预约页面 | TODO | NOT GENERATED | TASK-001, TASK-002, TASK-003 | 2 hours | 2026-04-22 | 2026-04-22 |
-| TASK-005 | 患者端 - 我的预约页面 | TODO | NOT GENERATED | TASK-001, TASK-002, TASK-006 | 2 hours | 2026-04-22 | 2026-04-22 |
-| TASK-006 | 患者端 - API 接口实现 | TODO | NOT GENERATED | TASK-001, TASK-002 | 2 hours | 2026-04-22 | 2026-04-22 |
-| TASK-007 | 医生端 - 预约管理页面 | TODO | NOT GENERATED | TASK-001, TASK-002, TASK-009 | 2 hours | 2026-04-22 | 2026-04-22 |
-| TASK-008 | 医生端 - 排班设置页面 | TODO | NOT GENERATED | TASK-001, TASK-002, TASK-009 | 2 hours | 2026-04-22 | 2026-04-22 |
-| TASK-009 | 医生端 - API 接口实现 | TODO | NOT GENERATED | TASK-001, TASK-002 | 2 hours | 2026-04-22 | 2026-04-22 |
-
 ## Task Summary
 
 ### TASK-001: 数据模型和类型定义
@@ -119,9 +105,23 @@
 
 ---
 
-**Document Version**: 1.0
+**Document Version**: 1.1
 **Last Updated**: 2026-04-22
 **Created by**: ASDM PRD Builder
+
+## Task PRD Status
+
+| Task ID | Task Name | Status | Task PRD | Created Date |
+|---------|-----------|--------|----------|--------------|
+| TASK-001 | 数据模型和类型定义 | TODO | ✅ Generated | 2026-04-22 |
+| TASK-002 | 预约状态枚举和工具函数 | TODO | ✅ Generated | 2026-04-22 |
+| TASK-003 | 患者端 - 医生列表页面 | TODO | ✅ Generated | 2026-04-22 |
+| TASK-004 | 患者端 - 医生详情和预约页面 | TODO | ✅ Generated | 2026-04-22 |
+| TASK-005 | 患者端 - 我的预约页面 | TODO | ✅ Generated | 2026-04-22 |
+| TASK-006 | 患者端 - API 接口实现 | TODO | ✅ Generated | 2026-04-22 |
+| TASK-007 | 医生端 - 预约管理页面 | TODO | ✅ Generated | 2026-04-22 |
+| TASK-008 | 医生端 - 排班设置页面 | TODO | ✅ Generated | 2026-04-22 |
+| TASK-009 | 医生端 - API 接口实现 | TODO | ✅ Generated | 2026-04-22 |
 
 ## 下一步行动
 
