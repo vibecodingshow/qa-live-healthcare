@@ -3,7 +3,11 @@
 **Toolset ID:** `prd-builder`
 
 ## Overview
+<<<<<<< HEAD
 This document provides instructions for installing and setting up the PRD Builder toolset in a workspace. PRD Builder helps plan and execute tasks for features in a workspace, generating feature PRDs and task lists, and managing task execution status.
+=======
+PRD Builder is an AI-powered toolset for creating, planning, and managing Product Requirement Documents through structured workflows.
+>>>>>>> experiment01
 
 ## AI Guided Installation
 To install this toolset using AI Guided Installation, copy and paste the following prompt into your AI Coding tool's chat window:
@@ -14,6 +18,7 @@ Follow instructions in .asdm/toolsets/prd-builder/INSTALL.md
 
 ## Installation Steps
 
+<<<<<<< HEAD
 ### 1. Create `.asdm/workspace/features` directory for PRD Builder's workspace
 
 Create the directory structure for storing feature and task files:
@@ -37,10 +42,36 @@ Create shortcut commands in the appropriate location based on the detected provi
 
 #### For Claude Code (`.claude/commands/`):
 Claude Code uses Markdown files with Frontmatter metadata for slash commands. Create commands by concatenating Claude-specific frontmatter with instruction content:
+=======
+### Step 1: Create PRD Working Directory
+
+Create the directory structure for storing PRD files:
+
+```bash
+mkdir -p .asdm/prds
+mkdir -p .asdm/prds/features
+mkdir -p .asdm/prds/tasks
+mkdir -p .asdm/prds/planning
+mkdir -p .asdm/prds/execution
+```
+
+### Step 2: Detect the current `Agentic Engine` provider
+
+Detect the current AI coding assistant provider:
+
+- If `.claude` directory exists → Claude Code
+- If `.github` directory exists → GitHub Copilot
+- If `.codebuddy` directory exists → Tencent CodeBuddy
+
+### Step 3: Create shortcut commands
+
+#### For Claude Code (`.claude/commands/`):
+>>>>>>> experiment01
 
 ```bash
 mkdir -p .claude/commands/
 
+<<<<<<< HEAD
 # Task Planning command
 cat > .claude/commands/asdm-prd-planning.md << 'EOF'
 ---
@@ -68,16 +99,46 @@ description: "Execute tasks for a workspace feature"
 argument-hint: "[task ID]"
 ---
 
+=======
+# Planning command
+cat > .claude/commands/asdm-prd-planning.md << 'EOF'
+---
+description: "Plan PRD structure and requirements"
+argument-hint: "[product name]"
+---
+EOF
+cat .asdm/toolsets/prd-builder/actions/asdm-prd-planning.md >> .claude/commands/asdm-prd-planning.md
+
+# Breakdown command
+cat > .claude/commands/asdm-prd-breakdown.md << 'EOF'
+---
+description: "Break down PRD into features and tasks"
+argument-hint: "[PRD name]"
+---
+EOF
+cat .asdm/toolsets/prd-builder/actions/asdm-prd-breakdown.md >> .claude/commands/asdm-prd-breakdown.md
+
+# Execution command
+cat > .claude/commands/asdm-prd-execution.md << 'EOF'
+---
+description: "Execute and track PRD implementation"
+argument-hint: "[PRD name]"
+---
+>>>>>>> experiment01
 EOF
 cat .asdm/toolsets/prd-builder/actions/asdm-prd-execution.md >> .claude/commands/asdm-prd-execution.md
 ```
 
 #### For GitHub Copilot (`.github/prompts/`):
+<<<<<<< HEAD
 GitHub Copilot uses `.prompt.md` files with YAML frontmatter. Create prompt files by concatenating GitHub-specific frontmatter with instruction content:
+=======
+>>>>>>> experiment01
 
 ```bash
 mkdir -p .github/prompts/
 
+<<<<<<< HEAD
 # Task Planning prompt
 cat > .github/prompts/asdm-prd-planning.prompt.md << 'EOF'
 ---
@@ -109,10 +170,16 @@ argument-hint: 'Enter task ID'
 ---
 
 EOF
+=======
+# Copy prompt files with appropriate frontmatter
+cat .asdm/toolsets/prd-builder/actions/asdm-prd-planning.md >> .github/prompts/asdm-prd-planning.prompt.md
+cat .asdm/toolsets/prd-builder/actions/asdm-prd-breakdown.md >> .github/prompts/asdm-prd-breakdown.prompt.md
+>>>>>>> experiment01
 cat .asdm/toolsets/prd-builder/actions/asdm-prd-execution.md >> .github/prompts/asdm-prd-execution.prompt.md
 ```
 
 #### For Tencent CodeBuddy (`.codebuddy/commands/`):
+<<<<<<< HEAD
 CodeBuddy doesn't support frontmatter, so simply copy the instruction files as-is:
 
 ```bash
@@ -299,3 +366,48 @@ Licensed under the PROPRIETARY SOFTWARE LICENSE. See [LICENSE](LICENSE) in the p
 ---
 
 *This installation document is part of the PRD Builder toolset. Use the task planning instruction to create feature and task plans for your workspace.*
+=======
+
+```bash
+mkdir -p .codebuddy/commands/
+cp .asdm/toolsets/prd-builder/actions/*.md .codebuddy/commands/
+```
+
+## Available Commands
+
+After installation, use these commands:
+
+1. **`/asdm-prd-planning`** - Plan PRD structure and requirements
+2. **`/asdm-prd-breakdown`** - Break down PRD into features and tasks
+3. **`/asdm-prd-execution`** - Execute and track implementation
+
+## Directory Structure
+
+```
+.asdm/prds/
+├── index.md              # PRD index
+├── features/             # Feature specifications
+│   └── feature-list.md
+├── tasks/                # Task specifications
+│   └── task-list.md
+├── planning/             # Planning documents
+└── execution/            # Execution tracking
+```
+
+## Verification
+
+1. `.asdm/toolsets/prd-builder/` exists with all files
+2. `.asdm/prds/` directory created
+3. Shortcut commands created in provider directory
+
+## Getting Started
+
+```shell
+# Start planning a new PRD
+Follow the instructions in .asdm/toolsets/prd-builder/actions/asdm-prd-planning.md
+```
+
+---
+
+*This installation document is part of the PRD Builder toolset.*
+>>>>>>> experiment01

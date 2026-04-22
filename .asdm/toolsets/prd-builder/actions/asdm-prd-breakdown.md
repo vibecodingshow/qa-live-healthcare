@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Instructions for asdm-prd-breakdown action
 
 ## Purpose
@@ -234,3 +235,142 @@ These documents serve as the foundation for the execution phase (asdm-task-execu
 #### Feature PRD Incomplete
 - **Error**: Feature PRD doesn't provide enough information to break down tasks
 - **Solution**: Ask the user to provide more details in the feature PRD or provide additional context directly
+=======
+# PRD Breakdown Action
+
+**Action ID:** `asdm-prd-breakdown.md`  
+**Toolset:** `prd-builder`
+
+## Purpose
+Break down planning documents into detailed features and tasks.
+
+## Usage
+
+```
+Follow the instructions in .asdm/toolsets/prd-builder/actions/asdm-prd-breakdown.md
+```
+
+## Prerequisites
+
+- Planning document exists: `.asdm/prds/planning/{product-name}-planning.md`
+
+## Steps
+
+### Step 1: Read Planning Document
+
+Read the planning document to understand:
+- Product vision
+- User personas
+- Key requirements
+- Success metrics
+
+### Step 2: Identify Features
+
+Break down requirements into features:
+
+| Feature ID | Feature Name | Related Requirement | Priority | Status |
+|------------|--------------|-------------------|----------|--------|
+| FEAT-001 | {Feature name} | REQ-001 | P0/P1/P2 | Identified |
+| FEAT-002 | {Feature name} | REQ-002 | P0/P1/P2 | Identified |
+
+### Step 3: Define Feature Specifications
+
+For each feature, define:
+
+```markdown
+### FEAT-001: {Feature Name}
+
+**Priority:** P0
+**Status:** Identified
+**Related Requirements:** REQ-001
+
+**Description:**
+{Detailed feature description}
+
+**User Stories:**
+- As a {user}, I want {goal} so that {benefit}
+
+**Acceptance Criteria:**
+- [ ] {Criteria 1}
+- [ ] {Criteria 2}
+
+**Dependencies:**
+- {Dependency 1}
+
+**Effort Estimate:** {T-shirt size or story points}
+```
+
+### Step 4: Decompose Features into Tasks
+
+For each feature, create tasks:
+
+| Task ID | Task Name | Feature | Priority | Estimate |
+|---------|-----------|---------|----------|----------|
+| TASK-001 | {Task name} | FEAT-001 | P0/P1/P2 | {Estimate} |
+| TASK-002 | {Task name} | FEAT-001 | P0/P1/P2 | {Estimate} |
+
+### Step 5: Define Task Specifications
+
+For each task, define:
+
+```markdown
+### TASK-001: {Task Name}
+
+**Feature:** FEAT-001
+**Priority:** P0
+**Status:** Pending
+**Estimate:** {Hours/Points}
+
+**Description:**
+{Detailed task description}
+
+**Acceptance Criteria:**
+- [ ] {Criteria 1}
+
+**Dependencies:**
+- TASK-000 (blocked by)
+```
+
+### Step 6: Identify Task Relationships
+
+| Relationship | Task A | Task B |
+|--------------|--------|--------|
+| Blocks | TASK-001 | TASK-002 |
+| Related to | TASK-001 | TASK-003 |
+| Similar to | TASK-001 | TASK-004 |
+
+### Step 7: Save Outputs
+
+Save feature list to: `.asdm/prds/features/{product-name}-feature-list.md`
+
+Save task list to: `.asdm/prds/tasks/{product-name}-task-list.md`
+
+### Step 8: Summary Report
+
+Provide:
+- Total features identified
+- Total tasks created
+- Effort summary
+- Critical path
+
+## Output
+
+| File | Location |
+|------|----------|
+| Feature List | `.asdm/prds/features/{product-name}-feature-list.md` |
+| Task List | `.asdm/prds/tasks/{product-name}-task-list.md` |
+
+## Next Step
+
+After breakdown, use:
+```shell
+Follow the instructions in .asdm/toolsets/prd-builder/actions/asdm-prd-execution.md
+```
+
+## Notes
+
+- Ensure all requirements are covered by features
+- Ensure all features have acceptance criteria
+- Identify dependencies early
+- Estimate effort consistently
+>>>>>>> experiment01

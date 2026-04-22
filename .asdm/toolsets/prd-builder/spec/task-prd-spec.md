@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Task PRD Template
 
 ## Language Guidelines
@@ -401,3 +402,163 @@ This spec template is used by the following actions:
 - **/asdm-task-planning**: Generates the feature PRD and task list (task PRDs are generated later)
 - **/asdm-task-breakdown**: Generates task PRDs using this template
 - **/asdm-task-execution**: Executes tasks based on the task PRDs generated from this template
+=======
+# Task PRD Specification
+
+**Spec ID:** task-prd-spec  
+**Toolset:** prd-builder
+
+## Overview
+
+This specification defines the structure and format for task documentation within the PRD Builder toolset.
+
+## Task Document Structure
+
+```markdown
+# Task: {Task Name}
+
+**Task ID:** TASK-{Number}
+**Feature:** FEAT-{Number}
+**Product:** {Product Name}
+**Priority:** P0/P1/P2
+**Status:** Pending/In Progress/Testing/Done/Cancelled
+**Assignee:** {Name}
+**Estimate:** {Hours/Points}
+**Created:** {Date}
+**Updated:** {Date}
+**Started:** {Date or TBD}
+**Completed:** {Date or TBD}
+
+---
+
+## Summary
+
+{Brief one-sentence description}
+
+## Description
+
+{Detailed task description (what needs to be done)}
+
+## Context
+
+{Why this task is needed and how it relates to the feature}
+
+## Requirements
+
+- [ ] {Requirement 1}
+- [ ] {Requirement 2}
+
+## Acceptance Criteria
+
+- [ ] {Criteria 1 - verifiable outcome}
+- [ ] {Criteria 2 - verifiable outcome}
+
+## Implementation Notes
+
+{Technical implementation details, if applicable}
+
+## Dependencies
+
+| Type | ID | Description |
+|------|-----|-------------|
+| Blocked by | TASK-000 | {Why blocked} |
+| Blocks | TASK-000 | {What it blocks} |
+| Related to | TASK-000 | {Relationship} |
+
+## Test Plan
+
+{How to test this task}
+
+| Test Case | Steps | Expected Result |
+|-----------|-------|-----------------|
+| TC-001 | {Steps} | {Result} |
+
+## Time Tracking
+
+| Date | Hours | Activity |
+|------|-------|----------|
+| {Date} | {Hours} | {Activity} |
+
+**Total Hours:** {N}
+
+## Files to Modify
+
+| File | Action |
+|------|--------|
+| {File} | Create/Modify/Delete |
+
+## Files to Create
+
+| File | Purpose |
+|------|--------|
+| {File} | {Purpose} |
+
+## Notes
+
+{Additional notes, decisions, questions}
+
+## Comments
+
+{Discussion thread or comments}
+
+---
+
+**Last Updated:** {Date} by {Name}
+```
+
+## Task States
+
+| State | Description |
+|-------|-------------|
+| Pending | Not yet started |
+| In Progress | Currently being worked on |
+| Testing | Completed, under testing |
+| Done | Fully completed and verified |
+| Cancelled | Task cancelled |
+
+## Priority Levels
+
+| Level | Description | SLA |
+|-------|-------------|-----|
+| P0 | Critical - Immediate | 4 hours |
+| P1 | High - ASAP | 1 day |
+| P2 | Medium - Normal | 3 days |
+| P3 | Low - When possible | 1 week |
+
+## Task Types
+
+| Type | Description |
+|------|-------------|
+| Development | Code implementation |
+| Design | UI/UX design |
+| Testing | QA testing |
+| Documentation | Documentation |
+| Review | Code/design review |
+| Research | Investigation |
+| Setup | Environment/configuration |
+
+## Effort Estimation
+
+| Unit | Description |
+|------|-------------|
+| Hours | Hours of work |
+| Story Points | Relative effort (1, 2, 3, 5, 8, 13) |
+| T-Shirt | Size estimate (XS, S, M, L, XL) |
+
+## Validation
+
+A valid task document must have:
+- [ ] Unique Task ID
+- [ ] Linked Feature ID
+- [ ] Clear description
+- [ ] Acceptance criteria
+- [ ] Effort estimate
+- [ ] Valid status
+
+## Best Practices
+
+1. **Atomic Tasks** - Each task should be small enough to complete in 1-2 days
+2. **Clear Acceptance Criteria** - How do we know when it's done?
+3. **Dependencies Listed** - What blocks this? What does this block?
+4. **Time Tracking** - Record actual time spent
+>>>>>>> experiment01

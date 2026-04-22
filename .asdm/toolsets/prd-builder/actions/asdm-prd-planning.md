@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Instructions for asdm-prd-planning action
 
 ## Purpose
@@ -155,3 +156,105 @@ After completing the planning phase, the following artifacts will be generated:
 - Updated features list
 
 These documents serve as the foundation for the task breakdown phase (asdm-prd-breakdown action), where a comprehensive task list and individual task PRDs will be generated.
+=======
+# PRD Planning Action
+
+**Action ID:** `asdm-prd-planning`  
+**Toolset:** `prd-builder`
+
+## Purpose
+Plan and structure a Product Requirement Document by defining product vision, goals, and requirements.
+
+## Usage
+
+```
+Follow the instructions in .asdm/toolsets/prd-builder/actions/asdm-prd-planning.md
+```
+
+## Input
+
+- Product name
+- Product description
+- Target users (optional)
+- Business context (optional)
+
+## Steps
+
+### Step 1: Gather Product Information
+
+Ask the user for:
+
+1. **Product Name** - Official name of the product
+2. **Product Description** - What problem does it solve?
+3. **Target Users** - Who will use this?
+4. **Business Goals** - What business objectives?
+5. **Success Metrics** - How to measure success?
+
+### Step 2: Define Product Vision
+
+Create a clear vision statement:
+
+```markdown
+## Product Vision
+
+{2-3 sentence vision that describes the end state}
+```
+
+### Step 3: Identify User Personas
+
+Define 1-3 user personas:
+
+| Attribute | Value |
+|-----------|-------|
+| Name | {Persona name} |
+| Role | {Job/Role} |
+| Goals | {What they want to achieve} |
+| Pain Points | {Current frustrations} |
+
+### Step 4: Outline Key Requirements
+
+List high-level requirements:
+
+| ID | Requirement | Priority | Category |
+|----|-------------|----------|----------|
+| REQ-001 | {Requirement} | Must/Should/Could | {Category} |
+| REQ-002 | {Requirement} | Must/Should/Could | {Category} |
+
+### Step 5: Define Success Metrics
+
+| Metric | Target | Measurement |
+|--------|--------|-------------|
+| {Metric 1} | {Target} | {Method} |
+| {Metric 2} | {Target} | {Method} |
+
+### Step 6: Save Planning Document
+
+Save to: `.asdm/prds/planning/{product-name}-planning.md`
+
+### Step 7: Create Feature List Template
+
+Initialize: `.asdm/prds/features/{product-name}-feature-list.md`
+
+### Step 8: Create Task List Template
+
+Initialize: `.asdm/prds/tasks/{product-name}-task-list.md`
+
+### Step 9: Update Index
+
+Update: `.asdm/prds/index.md`
+
+## Output
+
+| File | Location |
+|------|----------|
+| Planning Document | `.asdm/prds/planning/{product-name}-planning.md` |
+| Feature List | `.asdm/prds/features/{product-name}-feature-list.md` |
+| Task List | `.asdm/prds/tasks/{product-name}-task-list.md` |
+
+## Next Step
+
+After planning, use:
+```shell
+Follow the instructions in .asdm/toolsets/prd-builder/actions/asdm-prd-breakdown.md
+```
+>>>>>>> experiment01

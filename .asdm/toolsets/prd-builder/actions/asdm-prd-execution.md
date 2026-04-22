@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Instructions for asdm-task-execution action
 
 ## Purpose
@@ -615,3 +616,159 @@ When execution fails or is blocked:
 - Reference project context from `.asdm/contexts/`
 - Ensure task execution aligns with project standards and architecture
 - Use context files for implementation guidance
+=======
+# PRD Execution Action
+
+**Action ID:** `asdm-prd-execution`  
+**Toolset:** `prd-builder`
+
+## Purpose
+Execute, track, and monitor PRD implementation progress.
+
+## Usage
+
+```
+Follow the instructions in .asdm/toolsets/prd-builder/actions/asdm-prd-execution.md
+```
+
+## Prerequisites
+
+- Feature list exists: `.asdm/prds/features/{product-name}-feature-list.md`
+- Task list exists: `.asdm/prds/tasks/{product-name}-task-list.md`
+
+## Steps
+
+### Step 1: Read Planning Documents
+
+Read:
+- Feature list
+- Task list
+- Planning document (for context)
+
+### Step 2: Initialize Execution Tracking
+
+Create execution directory:
+```bash
+mkdir -p .asdm/prds/execution
+```
+
+### Step 3: Update Task Status
+
+Track task progress:
+
+| Task ID | Task Name | Status | Assignee | Started | Completed |
+|---------|-----------|--------|----------|---------|-----------|
+| TASK-001 | {Name} | Pending/In Progress/Done | {Name} | {Date} | {Date} |
+| TASK-002 | {Name} | Pending/In Progress/Done | {Name} | {Date} | {Date} |
+
+### Step 4: Track Feature Progress
+
+Calculate feature completion:
+
+| Feature ID | Feature Name | Tasks | Completed | Progress |
+|------------|--------------|-------|-----------|----------|
+| FEAT-001 | {Name} | 5 | 3 | 60% |
+| FEAT-002 | {Name} | 3 | 0 | 0% |
+
+### Step 5: Identify Blockers
+
+Document blockers:
+
+| Blocker ID | Description | Impact | Resolution | Status |
+|------------|-------------|--------|------------|--------|
+| BLOCK-001 | {Description} | {Impact} | {Solution} | Open/Resolved |
+
+### Step 6: Generate Progress Report
+
+```markdown
+# Execution Progress Report
+
+**Product:** {Product Name}
+**Generated:** {Date}
+**Report Period:** {Start} - {End}
+
+## Summary
+
+| Metric | Value |
+|--------|-------|
+| Total Features | {N} |
+| Features Completed | {N} |
+| Features In Progress | {N} |
+| Total Tasks | {N} |
+| Tasks Completed | {N} |
+| Tasks In Progress | {N} |
+| Overall Progress | {X%} |
+
+## Feature Progress
+
+{Feature completion table}
+
+## Recent Activity
+
+| Date | Task | Action | By |
+|------|------|--------|-----|
+| {Date} | TASK-001 | Started | {Name} |
+
+## Blockers
+
+{Blocker list or "No blockers"}
+
+## Upcoming Milestones
+
+| Milestone | Target Date | Status |
+|-----------|-------------|--------|
+| {Milestone} | {Date} | {Status} |
+
+## Notes
+
+{Additional notes}
+```
+
+### Step 7: Update Task and Feature Lists
+
+Update status in:
+- `.asdm/prds/tasks/{product-name}-task-list.md`
+- `.asdm/prds/features/{product-name}-feature-list.md`
+
+### Step 8: Save Execution Report
+
+Save to: `.asdm/prds/execution/{product-name}-execution-{date}.md`
+
+### Step 9: Update Index
+
+Update: `.asdm/prds/index.md`
+
+## Metrics
+
+Track these metrics:
+
+| Metric | Current | Target | Status |
+|--------|---------|--------|--------|
+| Completion % | {X%} | 100% | On Track/At Risk |
+| Tasks/day | {N} | {N} | On Track/At Risk |
+| Blocker Count | {N} | 0 | At Risk |
+
+## Commands
+
+### Update Single Task
+```markdown
+Update task TASK-001 status to [In Progress/Done]
+```
+
+### Report Blockers
+```markdown
+Report blocker: {description}
+```
+
+### Generate Report
+```shell
+Follow the instructions in .asdm/toolsets/prd-builder/actions/asdm-prd-execution.md
+```
+
+## Notes
+
+- Update status regularly
+- Document blockers immediately
+- Keep team aligned on priorities
+- Review progress with stakeholders
+>>>>>>> experiment01

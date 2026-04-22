@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Feature PRD Template
 
 ## Language Guidelines
@@ -218,3 +219,146 @@ This spec template is used by the following actions:
 - **/asdm-task-planning**: Generates the Feature PRD using this template
 - **/asdm-task-breakdown**: Breaks down tasks based on the Feature PRD generated from this template
 - **/asdm-task-execution**: Executes tasks based on the Feature PRD and task PRDs
+=======
+# Feature PRD Specification
+
+**Spec ID:** feature-prd-spec  
+**Toolset:** prd-builder
+
+## Overview
+
+This specification defines the structure and format for feature documentation within the PRD Builder toolset.
+
+## Feature Document Structure
+
+```markdown
+# Feature: {Feature Name}
+
+**Feature ID:** FEAT-{Number}
+**Product:** {Product Name}
+**Priority:** P0/P1/P2
+**Status:** Identified/Planned/In Development/Completed
+**Created:** {Date}
+**Updated:** {Date}
+
+---
+
+## Summary
+
+{Brief one-sentence description}
+
+## Description
+
+{Detailed feature description (2-3 paragraphs)}
+
+## Related Requirements
+
+| Requirement ID | Requirement |
+|----------------|-------------|
+| REQ-001 | {Description} |
+
+## User Stories
+
+| ID | User Story | Acceptance |
+|----|------------|------------|
+| US-001 | As a {user}, I want {goal} so that {benefit} | [ ] |
+
+## Functional Requirements
+
+| ID | Requirement | Priority | Status |
+|----|-------------|----------|--------|
+| FR-001 | {Requirement} | Must/Should/Could | {Status} |
+
+## Non-Functional Requirements
+
+| ID | Requirement | Target |
+|----|-------------|--------|
+| NFR-001 | {Requirement} | {Target} |
+
+## Specifications
+
+### UI/UX
+{UI/UX specifications}
+
+### Data
+{Data requirements}
+
+### API
+{API specifications}
+
+### Business Logic
+{Business rules}
+
+## Acceptance Criteria
+
+- [ ] {Criteria 1}
+- [ ] {Criteria 2}
+- [ ] {Criteria 3}
+
+## Dependencies
+
+| Dependency | Type | Description |
+|------------|------|-------------|
+| FEAT-000 | Internal | {Description} |
+| EXT-001 | External | {Description} |
+
+## Risks
+
+| Risk | Impact | Probability | Mitigation |
+|------|--------|-------------|------------|
+| {Risk} | {Impact} | {Prob} | {Mitigation} |
+
+## Effort Estimate
+
+| Metric | Value |
+|--------|-------|
+| Story Points | {N} |
+| T-Shirt Size | {S/M/L/XL} |
+| Days | {N} |
+
+## Tasks
+
+| Task ID | Task | Status |
+|---------|------|--------|
+| TASK-001 | {Task} | Pending |
+
+## Files
+
+| File | Purpose |
+|------|---------|
+| {File} | {Purpose} |
+
+## Notes
+
+{Additional notes}
+```
+
+## Feature States
+
+| State | Description |
+|-------|-------------|
+| Identified | Feature identified from requirements |
+| Planned | Feature planned for development |
+| In Development | Feature being implemented |
+| Testing | Feature under testing |
+| Completed | Feature delivered |
+| Cancelled | Feature cancelled |
+
+## Priority Levels
+
+| Level | Description | Criteria |
+|-------|-------------|----------|
+| P0 | Critical | Must have for MVP |
+| P1 | High | Important for launch |
+| P2 | Medium | Nice to have |
+
+## Validation
+
+A valid feature document must have:
+- [ ] Unique Feature ID
+- [ ] Clear description
+- [ ] At least one user story
+- [ ] Acceptance criteria
+- [ ] Effort estimate
+- [ ] Related tasks
+>>>>>>> experiment01

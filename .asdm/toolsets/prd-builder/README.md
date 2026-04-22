@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ASDM Toolset - PRD Builder
 
 toolset-id: prd-builder
@@ -96,3 +97,98 @@ The PRD Builder toolset has the following workspace structure:
 Copyright (c) 2026 LeansoftX.com & iSoftStone. All rights reserved.
 
 Licensed under the PROPRIETARY SOFTWARE LICENSE. See [LICENSE](LICENSE) in the project root for license information.
+=======
+# PRD Builder Toolset
+
+**Toolset ID:** `prd-builder`  
+**Version:** 1.0.0
+
+## Overview
+
+PRD Builder provides a structured workflow for creating, planning, breaking down, and executing Product Requirement Documents.
+
+## Workflow
+
+```
+Planning → Breakdown → Execution
+    ↓          ↓           ↓
+asdm-prd-   asdm-prd-   asdm-prd-
+planning    breakdown   execution
+```
+
+## Actions
+
+### 1. Planning (`asdm-prd-planning.md`)
+- Define product vision and goals
+- Identify user personas
+- Outline key requirements
+- Create planning document
+
+### 2. Breakdown (`asdm-prd-breakdown.md`)
+- Break down requirements into features
+- Decompose features into tasks
+- Estimate effort and priority
+- Generate feature and task lists
+
+### 3. Execution (`asdm-prd-execution.md`)
+- Track implementation progress
+- Update task status
+- Monitor completion metrics
+- Generate execution reports
+
+## Directory Structure
+
+```
+.asdm/toolsets/prd-builder/
+├── INSTALL.md
+├── README.md
+├── actions/
+│   ├── asdm-prd-planning.md
+│   ├── asdm-prd-breakdown.md
+│   └── asdm-prd-execution.md
+└── spec/
+    ├── feature-prd-spec.md
+    ├── task-prd-spec.md
+    ├── feature-list.md
+    └── task-list.md
+```
+
+## Output Directory
+
+```
+.asdm/prds/
+├── index.md
+├── features/
+│   └── feature-list.md
+├── tasks/
+│   └── task-list.md
+├── planning/
+└── execution/
+```
+
+## Quick Start
+
+```shell
+# 1. Install the toolset
+Follow instructions in .asdm/toolsets/prd-builder/INSTALL.md
+
+# 2. Start planning
+Follow the instructions in .asdm/toolsets/prd-builder/actions/asdm-prd-planning.md
+
+# 3. Break down requirements
+Follow the instructions in .asdm/toolsets/prd-builder/actions/asdm-prd-breakdown.md
+
+# 4. Execute and track
+Follow the instructions in .asdm/toolsets/prd-builder/actions/asdm-prd-execution.md
+```
+
+## Integration
+
+- Works with Context Builder for codebase grounding
+- Export compatible with project management tools
+- Supports iterative planning cycles
+
+## License
+
+Copyright (c) 2024 LeansoftX.com. All rights reserved.
+>>>>>>> experiment01
