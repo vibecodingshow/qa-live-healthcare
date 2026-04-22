@@ -12,318 +12,327 @@
 
 | 类别     | Total | TODO | In Progress | Done | Blocked | Cancelled |
 |----------|-------|------|-------------|------|---------|-----------|
-| 前端     | 5     | 5    | 0           | 0    | 0       | 0         |
-| 后端     | 3     | 3    | 0           | 0    | 0       | 0         |
-| 测试     | 2     | 2    | 0           | 0    | 0       | 0         |
+| 核心任务 | 5     | 5    | 0           | 0    | 0       | 0         |
+| 辅助任务 | 5     | 5    | 0           | 0    | 0       | 0         |
 | **总计** | **10**| **10**| **0**      | **0**| **0**   | **0**     |
 
 ---
 
 ## Task Registry
 
-### 前端任务
+### 核心任务 (高优先级)
 
-| Task ID | Task Name | Description | Assignee | Priority | Status |
-|---------|-----------|-------------|---------|----------|--------|
-| FEAT-001-TASK-01 | 设计预约数据模型 | 定义 Appointment 和 AppointmentSlot 接口，扩展 Doctor 接口增加排班字段 | | High | TODO |
-| FEAT-001-TASK-02 | 实现预约 Store API | 在 store/index.ts 中实现预约相关的状态管理和业务逻辑方法 | | High | TODO |
-| FEAT-001-TASK-03 | 开发预约首页 | 实现 Appointment.vue 页面，包含医生搜索、筛选功能 | | High | TODO |
-| FEAT-001-TASK-04 | 开发预约页面 | 实现 AppointmentBook.vue 页面，包含日期选择、时间段选择、预约表单 | | High | TODO |
-| FEAT-001-TASK-05 | 开发我的预约页面 | 实现 MyAppointments.vue 页面，展示预约记录列表，支持取消预约 | | Medium | TODO |
+| Task ID | Task Name | Description | Assignee | Priority | Status | Dependencies |
+|---------|-----------|-------------|---------|----------|--------|--------------|
+| TASK-FEAT-001-001 | 医生列表查询 | 实现预约首页医生列表查询，支持科室筛选和搜索 | | High | TODO | 无 |
+| TASK-FEAT-001-002 | 号源选择 | 实现号源选择功能，日历展示可预约日期，时段选择 | | High | TODO | TASK-001 |
+| TASK-FEAT-001-003 | 患者信息填写 | 实现患者信息表单，姓名和手机号验证 | | High | TODO | TASK-002 |
+| TASK-FEAT-001-004 | 预约提交 | 实现预约提交，防冲突检测，号源更新 | | High | TODO | TASK-002, TASK-003 |
+| TASK-FEAT-001-005 | 订单查询 | 实现我的预约页面，查看和取消预约 | | High | TODO | TASK-004 |
 
-### 后端任务
+### 辅助任务 (中优先级)
 
-| Task ID | Task Name | Description | Assignee | Priority | Status |
-|---------|-----------|-------------|---------|----------|--------|
-| FEAT-001-TASK-06 | 预约数据持久化 | 在 localStorage 中实现预约数据的增删改查 | | High | TODO |
-| FEAT-001-TASK-07 | 医生排班数据管理 | 实现医生排班数据的读取和更新功能 | | High | TODO |
-| FEAT-001-TASK-08 | 路由配置 | 在 router/index.ts 中添加预约相关路由配置 | | Medium | TODO |
-
-### 测试任务
-
-| Task ID | Task Name | Description | Assignee | Priority | Status |
-|---------|-----------|-------------|---------|----------|--------|
-| FEAT-001-TASK-09 | 预约功能单元测试 | 编写预约 Store API 的单元测试用例 | | Medium | TODO |
-| FEAT-001-TASK-10 | 预约页面功能测试 | 手动测试预约流程的完整链路 | | Medium | TODO |
+| Task ID | Task Name | Description | Assignee | Priority | Status | Dependencies |
+|---------|-----------|-------------|---------|----------|--------|--------------|
+| TASK-FEAT-001-006 | 医生端审核 | 实现医生预约管理，查看患者列表，标记到诊 | | Medium | TODO | TASK-004 |
+| TASK-FEAT-001-007 | 消息通知 | 实现预约成功/取消通知，就诊提醒 | | Medium | TODO | TASK-004, TASK-005 |
+| TASK-FEAT-001-008 | 数据统计 | 实现首页和医生端统计数据展示 | | Medium | TODO | TASK-004 |
+| TASK-FEAT-001-009 | 异常处理 | 实现异常处理机制，网络/冲突/验证异常处理 | | Medium | TODO | TASK-001~008 |
+| TASK-FEAT-001-010 | 回归测试 | 执行完整链路测试，验证功能完整性 | | Medium | TODO | TASK-001~009 |
 
 ---
 
 ## Task Details
 
-### 前端任务详情
+### TASK-FEAT-001-001: 医生列表查询
 
-#### FEAT-001-TASK-01: 设计预约数据模型
-
-**Task ID**: FEAT-001-TASK-01  
-**Task Name**: 设计预约数据模型  
-**Category**: 前端  
-**Assignee**:  
+**Task ID**: TASK-FEAT-001-001  
+**Task Name**: 医生列表查询  
+**Category**: 核心任务  
+**Assignee**:   
 **Priority**: High  
 **Status**: TODO
 
-**Description**:
-定义预约功能所需的数据结构，包括 AppointmentSlot（预约时段）和 Appointment（预约记录）接口，扩展现有的 Doctor 接口增加排班相关字段。
+**PRD Document**: [TASK-FEAT-001-001-医生列表查询-prd.md](./TASK-FEAT-001-001-医生列表查询-prd.md)
 
-**Deliverables**:
-- `src/types/appointment.ts` - 预约相关类型定义文件
-- AppointmentSlot 接口定义
-- Appointment 接口定义
-- 扩展 Doctor 接口的排班字段
+**Dependencies**: 无
 
-**Dependencies**: 无  
-**Estimated Effort**: 1 小时
+**Estimated Effort**: 0.5 人天
 
----
-
-#### FEAT-001-TASK-02: 实现预约 Store API
-
-**Task ID**: FEAT-001-TASK-02  
-**Task Name**: 实现预约 Store API  
-**Category**: 前端  
-**Assignee**:  
-**Priority**: High  
-**Status**: TODO
-
-**Description**:
-在 store/index.ts 中扩展预约相关的状态管理和业务逻辑方法，包括预约创建、取消、查询等功能。
-
-**Deliverables**:
-- 预约相关状态 (appointments, slots)
-- addAppointment() - 创建预约
-- cancelAppointment() - 取消预约
-- getAppointmentsByPatient() - 获取患者预约列表
-- getAppointmentsByDoctor() - 获取医生预约列表
-- getAvailableSlots() - 获取可用时段
-- markAppointmentCompleted() - 标记已完成
-
-**Dependencies**: FEAT-001-TASK-01 (数据模型)  
-**Estimated Effort**: 2 小时
-
----
-
-#### FEAT-001-TASK-03: 开发预约首页
-
-**Task ID**: FEAT-001-TASK-03  
-**Task Name**: 开发预约首页  
-**Category**: 前端  
-**Assignee**:  
-**Priority**: High  
-**Status**: TODO
-
-**Description**:
-创建 `src/views/appointment/Appointment.vue` 页面，实现预约首页功能：医生搜索、科室筛选、在线预约入口。
-
-**Deliverables**:
+**Key Deliverables**:
 - `src/views/appointment/Appointment.vue`
-- 医生卡片列表组件
-- 科室筛选下拉框
-- 预约入口按钮
-
-**Dependencies**: FEAT-001-TASK-01, FEAT-001-TASK-02  
-**Estimated Effort**: 2 小时
+- `src/components/appointment/DoctorCard.vue`
 
 ---
 
-#### FEAT-001-TASK-04: 开发预约页面
+### TASK-FEAT-001-002: 号源选择
 
-**Task ID**: FEAT-001-TASK-04  
-**Task Name**: 开发预约页面  
-**Category**: 前端  
-**Assignee**:  
+**Task ID**: TASK-FEAT-001-002  
+**Task Name**: 号源选择  
+**Category**: 核心任务  
+**Assignee**:   
 **Priority**: High  
 **Status**: TODO
 
-**Description**:
-创建 `src/views/appointment/AppointmentBook.vue` 页面，实现完整的预约流程：选择日期 → 选择时段 → 填写信息 → 确认预约。
+**PRD Document**: [TASK-FEAT-001-002-号源选择-prd.md](./TASK-FEAT-001-002-号源选择-prd.md)
 
-**Deliverables**:
+**Dependencies**: TASK-FEAT-001-001
+
+**Estimated Effort**: 1 人天
+
+**Key Deliverables**:
 - `src/views/appointment/AppointmentBook.vue`
-- 日期选择组件 (使用 Ant Design DatePicker)
-- 时段选择组件 (上午/下午时段卡片)
-- 患者信息表单 (姓名、手机号)
-- 预约确认对话框
-
-**Dependencies**: FEAT-001-TASK-01, FEAT-001-TASK-02  
-**Estimated Effort**: 3 小时
+- `src/components/appointment/SlotCalendar.vue`
+- `src/components/appointment/TimeSlotPicker.vue`
 
 ---
 
-#### FEAT-001-TASK-05: 开发我的预约页面
+### TASK-FEAT-001-003: 患者信息填写
 
-**Task ID**: FEAT-001-TASK-05  
-**Task Name**: 开发我的预约页面  
-**Category**: 前端  
-**Assignee**:  
-**Priority**: Medium  
+**Task ID**: TASK-FEAT-001-003  
+**Task Name**: 患者信息填写  
+**Category**: 核心任务  
+**Assignee**:   
+**Priority**: High  
 **Status**: TODO
 
-**Description**:
-创建 `src/views/appointment/MyAppointments.vue` 页面，展示患者的预约记录列表，支持查看详情和取消预约。
+**PRD Document**: [TASK-FEAT-001-003-患者信息填写-prd.md](./TASK-FEAT-001-003-患者信息填写-prd.md)
 
-**Deliverables**:
+**Dependencies**: TASK-FEAT-001-002
+
+**Estimated Effort**: 0.5 人天
+
+**Key Deliverables**:
+- AppointmentBook.vue 表单部分
+- 表单验证逻辑
+
+---
+
+### TASK-FEAT-001-004: 预约提交
+
+**Task ID**: TASK-FEAT-001-004  
+**Task Name**: 预约提交  
+**Category**: 核心任务  
+**Assignee**:   
+**Priority**: High  
+**Status**: TODO
+
+**PRD Document**: [TASK-FEAT-001-004-预约提交-prd.md](./TASK-FEAT-001-004-预约提交-prd.md)
+
+**Dependencies**: TASK-FEAT-001-002, TASK-FEAT-001-003
+
+**Estimated Effort**: 1 人天
+
+**Key Deliverables**:
+- 预约确认页组件
+- addAppointment() Store 方法
+- 冲突检测逻辑
+- 预约成功结果页
+
+---
+
+### TASK-FEAT-001-005: 订单查询
+
+**Task ID**: TASK-FEAT-001-005  
+**Task Name**: 订单查询  
+**Category**: 核心任务  
+**Assignee**:   
+**Priority**: High  
+**Status**: TODO
+
+**PRD Document**: [TASK-FEAT-001-005-订单查询-prd.md](./TASK-FEAT-001-005-订单查询-prd.md)
+
+**Dependencies**: TASK-FEAT-001-004
+
+**Estimated Effort**: 0.5 人天
+
+**Key Deliverables**:
 - `src/views/appointment/MyAppointments.vue`
-- 预约记录列表 (按状态分类：待就诊、已完成、已取消)
-- 预约详情展示卡片
+- `src/components/appointment/AppointmentCard.vue`
 - 取消预约功能
 
-**Dependencies**: FEAT-001-TASK-02  
-**Estimated Effort**: 2 小时
-
 ---
 
-### 后端任务详情
+### TASK-FEAT-001-006: 医生端审核
 
-#### FEAT-001-TASK-06: 预约数据持久化
-
-**Task ID**: FEAT-001-TASK-06  
-**Task Name**: 预约数据持久化  
-**Category**: 后端  
-**Assignee**:  
-**Priority**: High  
-**Status**: TODO
-
-**Description**:
-在 localStorage 中实现预约数据的增删改查，包括预约创建、状态更新、冲突检测等逻辑。
-
-**Deliverables**:
-- 预约数据的 localStorage 存储
-- 预约冲突检测逻辑
-- 预约时段占用计数更新
-
-**Dependencies**: FEAT-001-TASK-01  
-**Estimated Effort**: 2 小时
-
----
-
-#### FEAT-001-TASK-07: 医生排班数据管理
-
-**Task ID**: FEAT-001-TASK-07  
-**Task Name**: 医生排班数据管理  
-**Category**: 后端  
-**Assignee**:  
-**Priority**: High  
-**Status**: TODO
-
-**Description**:
-实现医生排班数据的读取和更新功能，支持医生设置出诊日期、时段、最大接诊人数等。
-
-**Deliverables**:
-- 排班数据读取方法
-- 排班数据更新方法
-- 可用时段计算逻辑
-
-**Dependencies**: FEAT-001-TASK-01  
-**Estimated Effort**: 1.5 小时
-
----
-
-#### FEAT-001-TASK-08: 路由配置
-
-**Task ID**: FEAT-001-TASK-08  
-**Task Name**: 路由配置  
-**Category**: 后端  
-**Assignee**:  
+**Task ID**: TASK-FEAT-001-006  
+**Task Name**: 医生端审核  
+**Category**: 辅助任务  
+**Assignee**:   
 **Priority**: Medium  
 **Status**: TODO
 
-**Description**:
-在 `src/router/index.ts` 中添加预约相关路由配置。
+**PRD Document**: [TASK-FEAT-001-006-医生端审核-prd.md](./TASK-FEAT-001-006-医生端审核-prd.md)
 
-**Deliverables**:
-- `/appointment` - 预约首页
-- `/appointment/book/:doctorId` - 预约医生页面
-- `/appointment/my` - 我的预约页面
+**Dependencies**: TASK-FEAT-001-004
 
-**Dependencies**: FEAT-001-TASK-03, FEAT-001-TASK-04, FEAT-001-TASK-05  
-**Estimated Effort**: 0.5 小时
+**Estimated Effort**: 0.5 人天
 
----
-
-### 测试任务详情
-
-#### FEAT-001-TASK-09: 预约功能单元测试
-
-**Task ID**: FEAT-001-TASK-09  
-**Task Name**: 预约功能单元测试  
-**Category**: 测试  
-**Assignee**:  
-**Priority**: Medium  
-**Status**: TODO
-
-**Description**:
-编写预约 Store API 的单元测试用例，覆盖正常流程和异常场景。
-
-**Deliverables**:
-- addAppointment 测试用例
-- cancelAppointment 测试用例
-- 预约冲突检测测试用例
-- 时段可用性测试用例
-
-**Dependencies**: FEAT-001-TASK-02, FEAT-001-TASK-06  
-**Estimated Effort**: 2 小时
+**Key Deliverables**:
+- `src/views/doctor/DoctorAppointments.vue`
+- 患者列表组件
+- 到诊标记功能
 
 ---
 
-#### FEAT-001-TASK-10: 预约页面功能测试
+### TASK-FEAT-001-007: 消息通知
 
-**Task ID**: FEAT-001-TASK-10  
-**Task Name**: 预约页面功能测试  
-**Category**: 测试  
-**Assignee**:  
+**Task ID**: TASK-FEAT-001-007  
+**Task Name**: 消息通知  
+**Category**: 辅助任务  
+**Assignee**:   
 **Priority**: Medium  
 **Status**: TODO
 
-**Description**:
-手动测试预约流程的完整链路，包括正向流程和异常场景。
+**PRD Document**: [TASK-FEAT-001-007-消息通知-prd.md](./TASK-FEAT-001-007-消息通知-prd.md)
 
-**Test Scenarios**:
-- 正常预约流程测试
-- 预约冲突场景测试
-- 取消预约功能测试
-- 表单验证测试
-- 移动端适配测试
+**Dependencies**: TASK-FEAT-001-004, TASK-FEAT-001-005
 
-**Dependencies**: FEAT-001-TASK-03, FEAT-001-TASK-04, FEAT-001-TASK-05  
-**Estimated Effort**: 1.5 小时
+**Estimated Effort**: 0.25 人天
+
+**Key Deliverables**:
+- `src/services/notifyService.ts`
+- 预约成功通知
+- 取消预约通知
+
+---
+
+### TASK-FEAT-001-008: 数据统计
+
+**Task ID**: TASK-FEAT-001-008  
+**Task Name**: 数据统计  
+**Category**: 辅助任务  
+**Assignee**:   
+**Priority**: Medium  
+**Status**: TODO
+
+**PRD Document**: [TASK-FEAT-001-008-数据统计-prd.md](./TASK-FEAT-001-008-数据统计-prd.md)
+
+**Dependencies**: TASK-FEAT-001-004
+
+**Estimated Effort**: 0.25 人天
+
+**Key Deliverables**:
+- Store 统计方法
+- 首页统计卡片
+- 医生端统计集成
+
+---
+
+### TASK-FEAT-001-009: 异常处理
+
+**Task ID**: TASK-FEAT-001-009  
+**Task Name**: 异常处理  
+**Category**: 辅助任务  
+**Assignee**:   
+**Priority**: Medium  
+**Status**: TODO
+
+**PRD Document**: [TASK-FEAT-001-009-异常处理-prd.md](./TASK-FEAT-001-009-异常处理-prd.md)
+
+**Dependencies**: TASK-FEAT-001-001 ~ TASK-FEAT-001-008
+
+**Estimated Effort**: 0.5 人天
+
+**Key Deliverables**:
+- `src/utils/errors.ts`
+- `src/utils/errorHandler.ts`
+- 全局异常处理集成
+
+---
+
+### TASK-FEAT-001-010: 回归测试
+
+**Task ID**: TASK-FEAT-001-010  
+**Task Name**: 回归测试  
+**Category**: 辅助任务  
+**Assignee**:   
+**Priority**: Medium  
+**Status**: TODO
+
+**PRD Document**: [TASK-FEAT-001-010-回归测试-prd.md](./TASK-FEAT-001-010-回归测试-prd.md)
+
+**Dependencies**: TASK-FEAT-001-001 ~ TASK-FEAT-001-009
+
+**Estimated Effort**: 1 人天
+
+**Key Deliverables**:
+- 端到端测试报告
+- 功能点测试清单
+- 异常场景测试结果
+- 兼容性测试报告
 
 ---
 
 ## Task Execution Order
 
-### 阶段一：数据层 (可并行)
-1. FEAT-001-TASK-01 - 设计预约数据模型
-2. FEAT-001-TASK-06 - 预约数据持久化
-3. FEAT-001-TASK-07 - 医生排班数据管理
-
-### 阶段二：业务层 (依赖阶段一)
-4. FEAT-001-TASK-02 - 实现预约 Store API
-
-### 阶段三：前端开发 (依赖阶段二)
-5. FEAT-001-TASK-03 - 开发预约首页
-6. FEAT-001-TASK-04 - 开发预约页面
-7. FEAT-001-TASK-05 - 开发我的预约页面
-8. FEAT-001-TASK-08 - 路由配置
-
-### 阶段四：测试 (依赖阶段三)
-9. FEAT-001-TASK-09 - 预约功能单元测试
-10. FEAT-001-TASK-10 - 预约页面功能测试
+```
+阶段一 (核心链路)
+─────────────────────────────────────────────────────
+[TASK-001] ──┬──> [TASK-002] ──> [TASK-003] ──> [TASK-004]
+             │                                    │
+             │                                    ▼
+             │                               [TASK-005]
+             │                                    │
+阶段二 (辅助)  │                                    ▼
+             │                               [TASK-006]
+             │                                    │
+             ▼                                    ▼
+          [TASK-007]                        [TASK-008]
+             │
+             ▼
+          [TASK-009]
+             │
+             ▼
+阶段三 (收尾)
+             │
+             ▼
+         [TASK-010]
+```
 
 ---
 
-## 任务进度汇总
+## Total Estimated Effort
 
-| Task ID | Category | Priority | Status | Progress |
-|---------|----------|----------|--------|----------|
-| FEAT-001-TASK-01 | 前端 | High | TODO | 0% |
-| FEAT-001-TASK-02 | 前端 | High | TODO | 0% |
-| FEAT-001-TASK-03 | 前端 | High | TODO | 0% |
-| FEAT-001-TASK-04 | 前端 | High | TODO | 0% |
-| FEAT-001-TASK-05 | 前端 | Medium | TODO | 0% |
-| FEAT-001-TASK-06 | 后端 | High | TODO | 0% |
-| FEAT-001-TASK-07 | 后端 | High | TODO | 0% |
-| FEAT-001-TASK-08 | 后端 | Medium | TODO | 0% |
-| FEAT-001-TASK-09 | 测试 | Medium | TODO | 0% |
-| FEAT-001-TASK-10 | 测试 | Medium | TODO | 0% |
+| 类别 | 任务数 | 工时合计 |
+|------|--------|----------|
+| 核心任务 | 5 | 3.5 人天 |
+| 辅助任务 | 5 | 2.5 人天 |
+| **总计** | **10** | **6 人天** |
+
+---
+
+## Progress Tracking
+
+| Task ID | Priority | Status | Progress | Completed Date |
+|---------|----------|--------|----------|----------------|
+| TASK-FEAT-001-001 | High | TODO | 0% | - |
+| TASK-FEAT-001-002 | High | TODO | 0% | - |
+| TASK-FEAT-001-003 | High | TODO | 0% | - |
+| TASK-FEAT-001-004 | High | TODO | 0% | - |
+| TASK-FEAT-001-005 | High | TODO | 0% | - |
+| TASK-FEAT-001-006 | Medium | TODO | 0% | - |
+| TASK-FEAT-001-007 | Medium | TODO | 0% | - |
+| TASK-FEAT-001-008 | Medium | TODO | 0% | - |
+| TASK-FEAT-001-009 | Medium | TODO | 0% | - |
+| TASK-FEAT-001-010 | Medium | TODO | 0% | - |
+
+---
+
+## PRD Document Index
+
+| # | Task ID | PRD Document |
+|---|---------|--------------|
+| 1 | TASK-FEAT-001-001 | [TASK-FEAT-001-001-医生列表查询-prd.md](./TASK-FEAT-001-001-医生列表查询-prd.md) |
+| 2 | TASK-FEAT-001-002 | [TASK-FEAT-001-002-号源选择-prd.md](./TASK-FEAT-001-002-号源选择-prd.md) |
+| 3 | TASK-FEAT-001-003 | [TASK-FEAT-001-003-患者信息填写-prd.md](./TASK-FEAT-001-003-患者信息填写-prd.md) |
+| 4 | TASK-FEAT-001-004 | [TASK-FEAT-001-004-预约提交-prd.md](./TASK-FEAT-001-004-预约提交-prd.md) |
+| 5 | TASK-FEAT-001-005 | [TASK-FEAT-001-005-订单查询-prd.md](./TASK-FEAT-001-005-订单查询-prd.md) |
+| 6 | TASK-FEAT-001-006 | [TASK-FEAT-001-006-医生端审核-prd.md](./TASK-FEAT-001-006-医生端审核-prd.md) |
+| 7 | TASK-FEAT-001-007 | [TASK-FEAT-001-007-消息通知-prd.md](./TASK-FEAT-001-007-消息通知-prd.md) |
+| 8 | TASK-FEAT-001-008 | [TASK-FEAT-001-008-数据统计-prd.md](./TASK-FEAT-001-008-数据统计-prd.md) |
+| 9 | TASK-FEAT-001-009 | [TASK-FEAT-001-009-异常处理-prd.md](./TASK-FEAT-001-009-异常处理-prd.md) |
+| 10 | TASK-FEAT-001-010 | [TASK-FEAT-001-010-回归测试-prd.md](./TASK-FEAT-001-010-回归测试-prd.md) |
 
 ---
 
