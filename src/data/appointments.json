@@ -1,0 +1,37 @@
+[
+  {
+    "id": "appointment_001",
+    "patientId": "patient001",
+    "doctorId": "doc001",
+    "scheduleId": "schedule_001",
+    "appointmentTime": "2026-04-22T09:00:00.000Z",
+    "status": "confirmed",
+    "symptoms": "胸闷、心悸，持续一周",
+    "notes": "建议做心电图检查",
+    "createdAt": "2026-04-21T10:00:00.000Z",
+    "updatedAt": "2026-04-21T14:30:00.000Z"
+  },
+  {
+    "id": "appointment_002",
+    "patientId": "patient002",
+    "doctorId": "doc002",
+    "scheduleId": "schedule_002",
+    "appointmentTime": "2026-04-22T10:30:00.000Z",
+    "status": "pending",
+    "symptoms": "儿童发烧38.5度，咳嗽",
+    "createdAt": "2026-04-21T11:20:00.000Z",
+    "updatedAt": "2026-04-21T11:20:00.000Z"
+  },
+  {
+    "id": "appointment_003",
+    "patientId": "patient003",
+    "doctorId": "doc003",
+    "scheduleId": "schedule_003",
+    "appointmentTime": "2026-04-23T14:00:00.000Z",
+    "status": "completed",
+    "symptoms": "膝关节疼痛，运动后加重",
+    "notes": "诊断为轻度关节炎，建议休息和物理治疗",
+    "createdAt": "2026-04-20T09:15:00.000Z",
+    "updatedAt": "2026-04-23T15:30:00.000Z"
+  }
+]
