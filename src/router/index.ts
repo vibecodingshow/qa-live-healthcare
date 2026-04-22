@@ -5,6 +5,8 @@ import DoctorLogin from '../views/DoctorLogin.vue';
 import DoctorRoom from '../views/DoctorRoom.vue';
 import Doctors from '../views/Doctors.vue';
 import About from '../views/About.vue';
+import AppointmentCreate from '../views/AppointmentCreate.vue';
+import MyAppointments from '../views/MyAppointments.vue';
 
 const routes: RouteRecordRaw[] = [
   {
@@ -41,6 +43,21 @@ const routes: RouteRecordRaw[] = [
     path: '/doctor/room/:username',
     name: 'DoctorRoom',
     component: DoctorRoom,
+  },
+  {
+    path: '/appointment/create',
+    name: 'AppointmentCreate',
+    component: AppointmentCreate,
+  },
+  {
+    path: '/appointment/create/:doctorId',
+    name: 'AppointmentCreateWithDoctor',
+    component: AppointmentCreate,
+  },
+  {
+    path: '/my-appointments',
+    name: 'MyAppointments',
+    component: MyAppointments,
   },
 ];
 

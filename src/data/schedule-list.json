@@ -1,0 +1,64 @@
+{
+  "schedules": [
+    {
+      "id": "sched001",
+      "doctorId": "doc001",
+      "date": "2026-04-22",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "isAvailable": true,
+      "maxAppointments": 6,
+      "currentAppointments": 2
+    },
+    {
+      "id": "sched002",
+      "doctorId": "doc001",
+      "date": "2026-04-22",
+      "startTime": "14:00",
+      "endTime": "17:00",
+      "isAvailable": true,
+      "maxAppointments": 6,
+      "currentAppointments": 0
+    },
+    {
+      "id": "sched003",
+      "doctorId": "doc001",
+      "date": "2026-04-23",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "isAvailable": true,
+      "maxAppointments": 6,
+      "currentAppointments": 0
+    },
+    {
+      "id": "sched004",
+      "doctorId": "doc002",
+      "date": "2026-04-22",
+      "startTime": "14:00",
+      "endTime": "18:00",
+      "isAvailable": true,
+      "maxAppointments": 8,
+      "currentAppointments": 1
+    },
+    {
+      "id": "sched005",
+      "doctorId": "doc002",
+      "date": "2026-04-24",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "isAvailable": true,
+      "maxAppointments": 6,
+      "currentAppointments": 0
+    },
+    {
+      "id": "sched006",
+      "doctorId": "doc003",
+      "date": "2026-04-22",
+      "startTime": "08:00",
+      "endTime": "11:00",
+      "isAvailable": false,
+      "maxAppointments": 6,
+      "currentAppointments": 0
+    }
+  ]
+}

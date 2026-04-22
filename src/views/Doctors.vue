@@ -32,14 +32,23 @@
             </div>
           </div>
           <div class="card-footer">
-            <a-button
-              type="primary"
-              block
-              :disabled="!doctor.isActive"
-              @click="goToConsultation(doctor)"
-            >
-              {{ doctor.isActive ? '进入诊室' : '暂未开放' }}
-            </a-button>
+            <a-space direction="vertical" style="width: 100%" :size="8">
+              <a-button
+                type="primary"
+                block
+                @click="goToAppointment(doctor)"
+              >
+                <CalendarOutlined />
+                预约挂号
+              </a-button>
+              <a-button
+                :disabled="!doctor.isActive"
+                @click="goToConsultation(doctor)"
+                block
+              >
+                {{ doctor.isActive ? '进入诊室' : '暂未开放' }}
+              </a-button>
+            </a-space>
           </div>
         </a-card>
       </div>
@@ -50,11 +59,16 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useRouter } from 'vue-router';
+import { CalendarOutlined } from '@ant-design/icons-vue';
 import { store, Doctor } from '../store';
 
 const router = useRouter();
 
 const allDoctors = computed(() => store.state.doctors);
+
+const goToAppointment = (doctor: Doctor) => {
+  router.push(`/appointment/create/${doctor.id}`);
+};
 
 const goToConsultation = (doctor: Doctor) => {
   router.push(`/consultation/${doctor.username}`);
