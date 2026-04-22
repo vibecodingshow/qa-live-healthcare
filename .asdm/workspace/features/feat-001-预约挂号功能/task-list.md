@@ -17,8 +17,9 @@
 | P0 Tasks | 15 |
 | P1 Tasks | 4 |
 | P2 Tasks | 2 |
-| Pending | 21 |
+| Pending | 14 |
 | In Progress | 0 |
+| PRD Ready | 7 |
 | Completed | 0 |
 
 ---
@@ -27,13 +28,13 @@
 
 | ID | Task | Feature | Priority | Status | Estimate | Assignee | Dependencies |
 |----|------|---------|----------|--------|----------|----------|---------------|
-| TASK-001 | 医生排班列表页面开发 | FEAT-001 | P0 | Pending | - | - | - |
-| TASK-002 | 医生详情页排班展示 | FEAT-001 | P0 | Pending | - | - | TASK-001 |
-| TASK-003 | 排班日历视图组件 | FEAT-001 | P0 | Pending | - | - | TASK-001 |
-| TASK-004 | 号源实时查询API | FEAT-001 | P0 | Pending | - | - | - |
-| TASK-005 | 号源状态颜色标识UI | FEAT-001 | P0 | Pending | - | - | TASK-004 |
-| TASK-006 | 时段选择组件 | FEAT-001 | P0 | Pending | - | - | TASK-004 |
-| TASK-007 | 号源余量更新机制 | FEAT-001 | P0 | Pending | - | - | TASK-004 |
+| TASK-001 | 医生排班列表页面开发 | FEAT-001 | P0 | PRD Ready | 4h | - | - |
+| TASK-002 | 医生详情页排班展示 | FEAT-001 | P0 | PRD Ready | 6h | - | TASK-001 |
+| TASK-003 | 排班日历视图组件 | FEAT-001 | P0 | PRD Ready | 8h | - | TASK-001 |
+| TASK-004 | 号源实时查询API | FEAT-001 | P0 | PRD Ready | 8h | - | - |
+| TASK-005 | 号源状态颜色标识UI | FEAT-001 | P0 | PRD Ready | 4h | - | TASK-004 |
+| TASK-006 | 时段选择组件 | FEAT-001 | P0 | PRD Ready | 6h | - | TASK-004 |
+| TASK-007 | 号源余量更新机制 | FEAT-001 | P0 | PRD Ready | 12h | - | TASK-004 |
 | TASK-008 | 预约表单页面 | FEAT-001 | P0 | Pending | - | - | TASK-006 |
 | TASK-009 | 预约人选择/新增 | FEAT-001 | P0 | Pending | - | - | TASK-008 |
 | TASK-010 | 预约信息确认页 | FEAT-001 | P0 | Pending | - | - | TASK-008 |
@@ -57,11 +58,11 @@
 
 | ID | Task | Priority | Status | Dependencies |
 |----|------|----------|--------|--------------|
-| TASK-001 | 医生排班列表页面开发 | P0 | Pending | - |
-| TASK-002 | 医生详情页排班展示 | P0 | Pending | TASK-001 |
-| TASK-003 | 排班日历视图组件 | P0 | Pending | TASK-001 |
+| TASK-001 | 医生排班列表页面开发 | P0 | PRD Ready | - |
+| TASK-002 | 医生详情页排班展示 | P0 | PRD Ready | TASK-001 |
+| TASK-003 | 排班日历视图组件 | P0 | PRD Ready | TASK-001 |
 
-**Module Progress:** 0% (0/3)
+**Module Progress:** 100% (3/3) - PRD Ready
 
 ---
 
@@ -69,12 +70,12 @@
 
 | ID | Task | Priority | Status | Dependencies |
 |----|------|----------|--------|--------------|
-| TASK-004 | 号源实时查询API | P0 | Pending | - |
-| TASK-005 | 号源状态颜色标识UI | P0 | Pending | TASK-004 |
-| TASK-006 | 时段选择组件 | P0 | Pending | TASK-004 |
-| TASK-007 | 号源余量更新机制 | P0 | Pending | TASK-004 |
+| TASK-004 | 号源实时查询API | P0 | PRD Ready | - |
+| TASK-005 | 号源状态颜色标识UI | P0 | PRD Ready | TASK-004 |
+| TASK-006 | 时段选择组件 | P0 | PRD Ready | TASK-004 |
+| TASK-007 | 号源余量更新机制 | P0 | PRD Ready | TASK-004 |
 
-**Module Progress:** 0% (0/4)
+**Module Progress:** 100% (4/4) - PRD Ready
 
 ---
 
@@ -134,9 +135,9 @@
 
 | ID | Task | Module | Status |
 |----|------|--------|--------|
-| TASK-001 | 医生排班列表页面开发 | SUB-001 | Pending |
-| TASK-002 | 医生详情页排班展示 | SUB-001 | Pending |
-| TASK-003 | 排班日历视图组件 | SUB-001 | Pending |
+| TASK-001 | 医生排班列表页面开发 | SUB-001 | PRD Ready |
+| TASK-002 | 医生详情页排班展示 | SUB-001 | PRD Ready |
+| TASK-003 | 排班日历视图组件 | SUB-001 | PRD Ready |
 | TASK-004 | 号源实时查询API | SUB-002 | Pending |
 | TASK-005 | 号源状态颜色标识UI | SUB-002 | Pending |
 | TASK-006 | 时段选择组件 | SUB-002 | Pending |
