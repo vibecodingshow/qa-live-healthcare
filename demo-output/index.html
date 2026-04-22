@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASDM Demo Builder 演示站点</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 头部区域 -->
+        <header class="header">
+            <h1 class="site-title">ASDM Demo Builder 演示站点</h1>
+            <p class="site-subtitle">基于 demo-installation-guide.md 构建</p>
+            <div class="controls">
+                <button id="playBtn" class="play-button" title="开始全屏演示">
+                    <span class="play-icon">▶</span>
+                    <span>开始演示</span>
+                </button>
+                <div class="progress-indicator">
+                    <span class="progress-text">总共有 <span id="pageCount">10</span> 个页面</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- 页面导航区域 -->
+        <nav class="page-navigation">
+            <h2>页面列表</h2>
+            <div class="page-grid" id="pageGrid">
+                <div class="page-item" data-page="1">
+                    <div class="page-thumbnail">1</div>
+                    <div class="page-title">概述</div>
+                </div>
+                <div class="page-item" data-page="2">
+                    <div class="page-thumbnail">2</div>
+                    <div class="page-title">安装步骤</div>
+                </div>
+                <div class="page-item" data-page="3">
+                    <div class="page-thumbnail">3</div>
+                    <div class="page-title">使用方法</div>
+                </div>
+                <div class="page-item" data-page="4">
+                    <div class="page-thumbnail">4</div>
+                    <div class="page-title">功能特性</div>
+                </div>
+                <div class="page-item" data-page="5">
+                    <div class="page-thumbnail">5</div>
+                    <div class="page-title">输出结构</div>
+                </div>
+                <div class="page-item" data-page="6">
+                    <div class="page-thumbnail">6</div>
+                    <div class="page-title">自定义配置</div>
+                </div>
+                <div class="page-item" data-page="7">
+                    <div class="page-thumbnail">7</div>
+                    <div class="page-title">故障排除</div>
+                </div>
+                <div class="page-item" data-page="8">
+                    <div class="page-thumbnail">8</div>
+                    <div class="page-title">示例演示</div>
+                </div>
+                <div class="page-item" data-page="9">
+                    <div class="page-thumbnail">9</div>
+                    <div class="page-title">技术架构</div>
+                </div>
+                <div class="page-item" data-page="10">
+                    <div class="page-thumbnail">10</div>
+                    <div class="page-title">扩展开发</div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 键盘导航提示 -->
+        <div class="keyboard-hints">
+            <h3>键盘快捷键</h3>
+            <div class="hint-grid">
+                <div class="hint-item">
+                    <kbd>←</kbd>
+                    <span>上一页</span>
+                </div>
+                <div class="hint-item">
+                    <kbd>→</kbd>
+                    <span>下一页</span>
+                </div>
+                <div class="hint-item">
+                    <kbd>空格</kbd>
+                    <span>播放/暂停</span>
+                </div>
+                <div class="hint-item">
+                    <kbd>ESC</kbd>
+                    <span>退出全屏</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 演示模式容器 -->
+    <div id="presentationMode" class="presentation-mode hidden">
+        <div class="presentation-header">
+            <span class="current-page" id="currentPage">页面 1/10</span>
+            <span class="presentation-title">ASDM Demo Builder</span>
+            <button id="exitPresentation" class="exit-button">退出演示</button>
+        </div>
+        <iframe id="presentationFrame" class="presentation-frame"></iframe>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/player.js"></script>
+</body>
+</html>
