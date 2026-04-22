@@ -38,17 +38,34 @@ export interface TimeSlot {
 }
 
 /**
+ * 预约状态类型
+ */
+export type APPOINTMENT_STATUS = 'pending' | 'confirmed' | 'completed' | 'cancelled' | 'no_show';
+
+/**
  * 预约模型
  */
 export interface Appointment {
   id: string;
   patientId: string;
+  patientName: string;
+  patientAge: number;
+  patientGender: 'male' | 'female';
+  patientPhone: string;
   doctorId: string;
+  doctorName: string;
+  doctorAvatar?: string;
+  doctorTitle?: string;
+  department: string;
   scheduleId: string;
-  appointmentTime: string;          // ISO 8601格式
-  status: 'pending' | 'confirmed' | 'completed' | 'cancelled';
+  appointmentDate: string;          // YYYY-MM-DD
+  startTime: string;                // HH:mm
+  endTime: string;                  // HH:mm
+  duration: number;                 // 分钟
+  status: APPOINTMENT_STATUS;
   symptoms: string;                 // 症状描述
-  notes?: string;                   // 医生备注
+  notes?: string;                   // 备注信息
+  location?: string;                // 就诊地点
   cancelReason?: string;            // 取消原因
   createdAt: string;
   updatedAt: string;
@@ -126,5 +143,51 @@ export const APPOINTMENT_STATUS_DESCRIPTIONS = {
   pending: { label: '待确认', color: 'orange' },
   confirmed: { label: '已确认', color: 'green' },
   completed: { label: '已完成', color: 'blue' },
-  cancelled: { label: '已取消', color: 'red' }
+  cancelled: { label: '已取消', color: 'red' },
+  no_show: { label: '未就诊', color: 'gray' }
 } as const;
+
+/**
+ * 预约查询参数
+ */
+export interface AppointmentQueryParams {
+  page?: number;
+  pageSize?: number;
+  status?: APPOINTMENT_STATUS | 'all';
+  searchKeyword?: string;
+  startDate?: string;
+  endDate?: string;
+  doctorId?: string;
+  department?: string;
+  duration?: number;
+  sortBy?: string;
+}
+
+/**
+ * 预约更新参数
+ */
+export interface AppointmentUpdateParams {
+  status?: APPOINTMENT_STATUS;
+  notes?: string;
+  cancelReason?: string;
+}
+
+/**
+ * 分页响应类型
+ */
+export interface PaginationResponse<T> {
+  data: T[];
+  total: number;
+  page: number;
+  pageSize: number;
+  totalPages: number;
+}
+
+/**
+ * 分页信息
+ */
+export interface PaginationInfo {
+  currentPage: number;
+  pageSize: number;
+  total: number;
+}
