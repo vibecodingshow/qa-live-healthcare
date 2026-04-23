@@ -1,5 +1,34 @@
-# Vue 3 + TypeScript + Vite
+# 面试要求
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Fork当前项目到你自己的github账号，并在自己的账号下完成以下操作
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## 技术要求
+
+### 分支要求
+
+创建特性分支，自己命名这个分支，在分支内完成以下编码/测试/文档编写过程。并在完成后将分支推送到你自己代码库。
+
+### 编码要求
+
+1. 给web端的首页添加中英文切换能力，在页面右上角添加语言切换下拉菜单，在用户选择 **中文/English** 选项时动态切换页面显示内容到对应语言。中英文语言资源文件需要保存在 `web/qa-web/src/locales` 目录中。只需要处理首页本身，无需处理其他页面。
+2. 当前应用的数据全部使用json文件的方式在前端项目中存储，请将医生相关的数据使用mysql数据库存储。具体要求如下：
+    - 创建 docker-compose.yml 用于创建mysql数据库，并挂接phpmyadmin作为数据库服务器管理界面
+    - 在 qa-service-user 服务中创建可以支持前端 [医生页面](web/qa-web/src/views/Doctors.vue) 显示医生列表所需要的api
+    - 完成前后端联调
+
+### 测试要求
+
+1. 使用 curl 构建对于以上医生列表页面的 api 的测试用例脚本
+2. 提供 API_TEST.md 用于说明以上 api 测试的执行
+
+### 文档要求
+
+1. 生成 /docs/api.md 文档，用于对 qa-service-user 服务中的所有api测试进行说明
+
+## 面试流程要求
+
+针对以上 **技术要求** 部分完成对应的代码编写，测试编写和文档编写；以上所有内容需要全部使用AI Coding提示词的方式完成，不得直接编码（可以对AI生成的代码/文档进行手工调整）。完成以上编码后，基于你的分支创建指向main分支的PR，并发送PR链接。
+
+完成以上代码编写过程后，请联系我并演示你的 AI Coding 编码过程，演示过程中需要你从main分支拉取新的分支，基于新的分支输入提示词，重现整个 编码/测试/文档 的生成过程。
+
+面试时间要求：面试者需要在2天内完成以上面试流程。
