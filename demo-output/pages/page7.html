@@ -1,0 +1,30 @@
+<div class="page-content">
+    <h1>自定义配置</h1>
+    
+    <h2>修改样式</h2>
+    <p>编辑 <code>.asdm/toolsets/demo-builder/templates/demo-styles.css</code> 文件来自定义演示站点的外观。</p>
+    <pre><code>/* 示例：修改主题颜色 */
+:root {
+    --primary-color: #your-color;
+    --secondary-color: #your-secondary-color;
+}</code></pre>
+    
+    <h2>修改模板</h2>
+    <p>编辑 <code>.asdm/toolsets/demo-builder/templates/demo-template.html</code> 文件来自定义页面结构。</p>
+    
+    <h2>修改交互逻辑</h2>
+    <p>编辑 <code>.asdm/toolsets/demo-builder/templates/demo-script.js</code> 文件来自定义交互行为。</p>
+    <pre><code>// 示例：添加自定义键盘快捷键
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'p') {
+        // 自定义功能
+    }
+});</code></pre>
+    
+    <h2>配置选项</h2>
+    <ul>
+        <li><strong>主题配置</strong> - 修改颜色、字体、间距等</li>
+        <li><strong>布局配置</strong> - 调整页面结构和布局</li>
+        <li><strong>功能配置</strong> - 启用或禁用特定功能</li>
+    </ul>
+</div>

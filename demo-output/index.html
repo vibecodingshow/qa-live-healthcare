@@ -8,104 +8,81 @@
 </head>
 <body>
     <div class="container">
-        <!-- 头部区域 -->
         <header class="header">
-            <h1 class="site-title">ASDM Demo Builder 演示站点</h1>
-            <p class="site-subtitle">基于 demo-installation-guide.md 构建</p>
-            <div class="controls">
-                <button id="playBtn" class="play-button" title="开始全屏演示">
-                    <span class="play-icon">▶</span>
-                    <span>开始演示</span>
-                </button>
-                <div class="progress-indicator">
-                    <span class="progress-text">总共有 <span id="pageCount">10</span> 个页面</span>
-                </div>
-            </div>
+            <h1>ASDM Demo Builder 演示站点</h1>
+            <p class="subtitle">基于 demo-installation-guide.md 构建</p>
         </header>
 
-        <!-- 页面导航区域 -->
-        <nav class="page-navigation">
-            <h2>页面列表</h2>
-            <div class="page-grid" id="pageGrid">
-                <div class="page-item" data-page="1">
-                    <div class="page-thumbnail">1</div>
-                    <div class="page-title">概述</div>
-                </div>
-                <div class="page-item" data-page="2">
-                    <div class="page-thumbnail">2</div>
-                    <div class="page-title">安装步骤</div>
-                </div>
-                <div class="page-item" data-page="3">
-                    <div class="page-thumbnail">3</div>
-                    <div class="page-title">使用方法</div>
-                </div>
-                <div class="page-item" data-page="4">
-                    <div class="page-thumbnail">4</div>
-                    <div class="page-title">功能特性</div>
-                </div>
-                <div class="page-item" data-page="5">
-                    <div class="page-thumbnail">5</div>
-                    <div class="page-title">输出结构</div>
-                </div>
-                <div class="page-item" data-page="6">
-                    <div class="page-thumbnail">6</div>
-                    <div class="page-title">自定义配置</div>
-                </div>
-                <div class="page-item" data-page="7">
-                    <div class="page-thumbnail">7</div>
-                    <div class="page-title">故障排除</div>
-                </div>
-                <div class="page-item" data-page="8">
-                    <div class="page-thumbnail">8</div>
-                    <div class="page-title">示例演示</div>
-                </div>
-                <div class="page-item" data-page="9">
-                    <div class="page-thumbnail">9</div>
-                    <div class="page-title">技术架构</div>
-                </div>
-                <div class="page-item" data-page="10">
-                    <div class="page-thumbnail">10</div>
-                    <div class="page-title">扩展开发</div>
+        <main class="main-content">
+            <div class="play-controls">
+                <button id="playBtn" class="play-button" aria-label="开始演示">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    开始演示
+                </button>
+                <div class="keyboard-hint">
+                    提示：使用 <kbd>←</kbd> <kbd>→</kbd> 键切换页面，<kbd>ESC</kbd> 退出全屏
                 </div>
             </div>
-        </nav>
 
-        <!-- 键盘导航提示 -->
-        <div class="keyboard-hints">
-            <h3>键盘快捷键</h3>
-            <div class="hint-grid">
-                <div class="hint-item">
-                    <kbd>←</kbd>
-                    <span>上一页</span>
+            <div class="pages-overview">
+                <h2>演示页面概览</h2>
+                <div class="pages-grid" id="pagesGrid">
+                    <!-- 页面缩略图将通过 JavaScript 动态生成 -->
                 </div>
-                <div class="hint-item">
-                    <kbd>→</kbd>
-                    <span>下一页</span>
+            </div>
+
+            <div class="progress-indicator">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
                 </div>
-                <div class="hint-item">
-                    <kbd>空格</kbd>
-                    <span>播放/暂停</span>
+                <div class="progress-text">
+                    <span id="currentPage">1</span> / <span id="totalPages">10</span>
                 </div>
-                <div class="hint-item">
-                    <kbd>ESC</kbd>
-                    <span>退出全屏</span>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>基于 ASDM Demo Builder 工具集构建</p>
+        </footer>
+    </div>
+
+    <!-- 演示模式模态框 -->
+    <div id="presentationModal" class="presentation-modal hidden">
+        <div class="presentation-container">
+            <div class="presentation-header">
+                <button id="exitPresentation" class="exit-button" aria-label="退出演示">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                    </svg>
+                </button>
+                <div class="presentation-title" id="presentationTitle"></div>
+                <div class="presentation-progress">
+                    <span id="presentationCurrent">1</span> / <span id="presentationTotal">10</span>
                 </div>
+            </div>
+            
+            <div class="presentation-content" id="presentationContent">
+                <!-- 页面内容将通过 JavaScript 动态加载 -->
+            </div>
+            
+            <div class="presentation-navigation">
+                <button id="prevPage" class="nav-button" aria-label="上一页">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                    </svg>
+                </button>
+                <button id="nextPage" class="nav-button" aria-label="下一页">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                    </svg>
+                </button>
             </div>
         </div>
     </div>
 
-    <!-- 演示模式容器 -->
-    <div id="presentationMode" class="presentation-mode hidden">
-        <div class="presentation-header">
-            <span class="current-page" id="currentPage">页面 1/10</span>
-            <span class="presentation-title">ASDM Demo Builder</span>
-            <button id="exitPresentation" class="exit-button">退出演示</button>
-        </div>
-        <iframe id="presentationFrame" class="presentation-frame"></iframe>
-    </div>
-
-    <script src="assets/js/main.js"></script>
     <script src="assets/js/navigation.js"></script>
-    <script src="assets/js/player.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
