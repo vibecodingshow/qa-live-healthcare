@@ -1,0 +1,28 @@
+<div class="page-content">
+    <h1>安装步骤</h1>
+    
+    <h2>1. 验证工具集结构</h2>
+    <p>工具集已创建在以下位置：</p>
+    <pre><code>.asdm/toolsets/demo-builder/
+├── README.md                 # 工具集说明文档
+├── INSTALL.md                # 安装指南
+├── actions/
+│   └── asdm-build-demo.md     # 构建指令
+├── templates/
+│   ├── demo-template.html     # 演示站点模板
+│   ├── demo-styles.css        # 样式文件
+│   └── demo-script.js         # 交互脚本
+├── scripts/
+│   ├── build-demo.js          # 构建脚本
+│   └── asdm-build-demo.js     # 命令行接口
+└── examples/
+    └── sample-demo.md         # 示例文件</code></pre>
+    
+    <h2>2. CodeBuddy 命令集成</h2>
+    <p>已创建 CodeBuddy 命令文件：</p>
+    <pre><code>.codebuddy/commands/asdm-build-demo.md</code></pre>
+    
+    <h2>3. 测试安装</h2>
+    <p>使用示例文件测试工具集：</p>
+    <pre><code>node .asdm/toolsets/demo-builder/scripts/build-demo.js .asdm/toolsets/demo-builder/examples/sample-demo.md</code></pre>
+</div>

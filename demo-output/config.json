@@ -1,0 +1,42 @@
+{
+  "title": "ASDM Demo Builder 演示站点",
+  "description": "基于 demo-installation-guide.md 构建的交互式演示站点",
+  "version": "1.0.0",
+  "author": "ASDM Team",
+  "sourceFile": "demo-installation-guide.md",
+  "theme": {
+    "primaryColor": "#2563eb",
+    "secondaryColor": "#64748b",
+    "backgroundColor": "#f8fafc",
+    "textColor": "#1e293b"
+  },
+  "navigation": {
+    "keyboard": true,
+    "touch": true,
+    "mouse": true
+  },
+  "pages": [
+    { "id": 1, "title": "ASDM Demo Builder 工具集安装指南", "file": "pages/page1.html" },
+    { "id": 2, "title": "概述", "file": "pages/page2.html" },
+    { "id": 3, "title": "安装步骤", "file": "pages/page3.html" },
+    { "id": 4, "title": "使用方法", "file": "pages/page4.html" },
+    { "id": 5, "title": "功能特性", "file": "pages/page5.html" },
+    { "id": 6, "title": "输出结构", "file": "pages/page6.html" },
+    { "id": 7, "title": "自定义配置", "file": "pages/page7.html" },
+    { "id": 8, "title": "故障排除", "file": "pages/page8.html" },
+    { "id": 9, "title": "示例演示", "file": "pages/page9.html" },
+    { "id": 10, "title": "技术架构", "file": "pages/page10.html" }
+  ],
+  "features": {
+    "fullscreen": true,
+    "keyboardNavigation": true,
+    "touchSwipe": true,
+    "responsive": true,
+    "progressIndicator": true
+  },
+  "buildInfo": {
+    "buildDate": "2026-04-23",
+    "builder": "ASDM Demo Builder",
+    "builderVersion": "1.0.0"
+  }
+}

@@ -1,0 +1,36 @@
+<div class="page-content">
+    <h1>示例演示</h1>
+    
+    <h2>快速开始</h2>
+    <p>工具集包含一个完整的示例文件，可以立即测试：</p>
+    <pre><code># 构建示例演示
+node .asdm/toolsets/demo-builder/scripts/build-demo.js .asdm/toolsets/demo-builder/examples/sample-demo.md
+
+# 在浏览器中打开演示
+open demo-output/index.html</code></pre>
+    
+    <h2>使用 CodeBuddy 命令</h2>
+    <pre><code># 使用示例文件构建演示
+/asdm-build-demo .asdm/toolsets/demo-builder/examples/sample-demo.md
+
+# 预览生成的演示
+/asdm-preview-demo</code></pre>
+    
+    <h2>创建自定义演示</h2>
+    <p>基于自己的 Markdown 文件创建演示：</p>
+    <pre><code># 1. 准备 Markdown 文件
+# 2. 确保包含 H1 标题
+# 3. 运行构建命令
+/asdm-build-demo ./your-file.md
+
+# 4. 自定义演示
+/asdm-customize-demo</code></pre>
+    
+    <h2>最佳实践</h2>
+    <ul>
+        <li>使用清晰的 H1 标题结构</li>
+        <li>保持内容简洁明了</li>
+        <li>添加代码示例和截图</li>
+        <li>测试所有交互功能</li>
+    </ul>
+</div>

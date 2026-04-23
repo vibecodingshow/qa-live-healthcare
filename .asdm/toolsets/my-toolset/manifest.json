@@ -1,0 +1,13 @@
+{
+  "registry_id": "my-toolset",
+  "name": "My Toolset",
+  "description": "用户可以使用一个 markdown文件作为输入完成此演示站点的搭建，站点本身可以使用任何技术栈",
+  "scenario": "从 Markdown 文档生成交互式演示站点，支持全屏播放和键盘导航",
+  "version": "0.0.1",
+  "configType": "toolset",
+  "commands": [
+    "asdm-build-demo",
+    "asdm-preview-demo",
+    "asdm-customize-demo"
+  ]
+}

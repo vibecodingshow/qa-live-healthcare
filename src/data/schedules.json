@@ -1,0 +1,235 @@
+[
+  {
+    "id": "schedule_001",
+    "doctorId": "doc001",
+    "date": "2026-04-22",
+    "timeSlots": [
+      {
+        "id": "slot_001",
+        "scheduleId": "schedule_001",
+        "startTime": "09:00",
+        "endTime": "09:30",
+        "isBooked": true,
+        "appointmentId": "appointment_001",
+        "maxCapacity": 1,
+        "currentCapacity": 1,
+        "isAvailable": false
+      },
+      {
+        "id": "slot_002",
+        "scheduleId": "schedule_001",
+        "startTime": "09:30",
+        "endTime": "10:00",
+        "isBooked": false,
+        "maxCapacity": 1,
+        "currentCapacity": 0,
+        "isAvailable": true
+      },
+      {
+        "id": "slot_003",
+        "scheduleId": "schedule_001",
+        "startTime": "10:00",
+        "endTime": "10:30",
+        "isBooked": false,
+        "maxCapacity": 1,
+        "currentCapacity": 0,
+        "isAvailable": true
+      },
+      {
+        "id": "slot_004",
+        "scheduleId": "schedule_001",
+        "startTime": "14:00",
+        "endTime": "14:30",
+        "isBooked": false,
+        "maxCapacity": 1,
+        "currentCapacity": 0,
+        "isAvailable": true
+      },
+      {
+        "id": "slot_005",
+        "scheduleId": "schedule_001",
+        "startTime": "14:30",
+        "endTime": "15:00",
+        "isBooked": false,
+        "maxCapacity": 1,
+        "currentCapacity": 0,
+        "isAvailable": true
+      }
+    ],
+    "isAvailable": true,
+    "totalSlots": 5,
+    "bookedSlots": 1,
+    "availableSlots": 4,
+    "createdAt": "2026-04-20T08:00:00.000Z",
+    "updatedAt": "2026-04-21T14:30:00.000Z",
+    "createdBy": "system"
+  },
+  {
+    "id": "schedule_002",
+    "doctorId": "doc002",
+    "date": "2026-04-22",
+    "timeSlots": [
+      {
+        "id": "slot_006",
+        "scheduleId": "schedule_002",
+        "startTime": "10:30",
+        "endTime": "11:00",
+        "isBooked": true,
+        "appointmentId": "appointment_002",
+        "maxCapacity": 1,
+        "currentCapacity": 1,
+        "isAvailable": false
+      },
+      {
+        "id": "slot_007",
+        "scheduleId": "schedule_002",
+        "startTime": "11:00",
+        "endTime": "11:30",
+        "isBooked": false,
+        "maxCapacity": 1,
+        "currentCapacity": 0,
+        "isAvailable": true
+      },
+      {
+        "id": "slot_008",
+        "scheduleId": "schedule_002",
+        "startTime": "14:00",
+        "endTime": "14:30",
+        "isBooked": false,
+        "maxCapacity": 1,
+        "currentCapacity": 0,
+        "isAvailable": true
+      }
+    ],
+    "isAvailable": true,
+    "totalSlots": 3,
+    "bookedSlots": 1,
+    "availableSlots": 2,
+    "createdAt": "2026-04-20T08:00:00.000Z",
+    "updatedAt": "2026-04-21T11:20:00.000Z",
+    "createdBy": "system"
+  },
+  {
+    "id": "schedule_003",
+    "doctorId": "doc003",
+    "date": "2026-04-23",
+    "timeSlots": [
+      {
+        "id": "slot_009",
+        "scheduleId": "schedule_003",
+        "startTime": "14:00",
+        "endTime": "14:30",
+        "isBooked": true,
+        "appointmentId": "appointment_003",
+        "maxCapacity": 1,
+        "currentCapacity": 1,
+        "isAvailable": false
+      },
+      {
+        "id": "slot_010",
+        "scheduleId": "schedule_003",
+        "startTime": "14:30",
+        "endTime": "15:00",
+        "isBooked": false,
+        "maxCapacity": 1,
+        "currentCapacity": 0,
+        "isAvailable": true
+      },
+      {
+        "id": "slot_011",
+        "scheduleId": "schedule_003",
+        "startTime": "15:00",
+        "endTime": "15:30",
+        "isBooked": false,
+        "maxCapacity": 1,
+        "currentCapacity": 0,
+        "isAvailable": true
+      }
+    ],
+    "isAvailable": true,
+    "totalSlots": 3,
+    "bookedSlots": 1,
+    "availableSlots": 2,
+    "createdAt": "2026-04-21T08:00:00.000Z",
+    "updatedAt": "2026-04-23T15:30:00.000Z",
+    "createdBy": "system"
+  },
+  {
+    "id": "schedule_004",
+    "doctorId": "doc004",
+    "date": "2026-04-24",
+    "timeSlots": [
+      {
+        "id": "slot_012",
+        "scheduleId": "schedule_004",
+        "startTime": "09:00",
+        "endTime": "09:30",
+        "isBooked": false,
+        "maxCapacity": 1,
+        "currentCapacity": 0,
+        "isAvailable": true
+      },
+      {
+        "id": "slot_013",
+        "scheduleId": "schedule_004",
+        "startTime": "09:30",
+        "endTime": "10:00",
+        "isBooked": false,
+        "maxCapacity": 1,
+        "currentCapacity": 0,
+        "isAvailable": true
+      }
+    ],
+    "isAvailable": false,
+    "totalSlots": 2,
+    "bookedSlots": 0,
+    "availableSlots": 2,
+    "createdAt": "2026-04-21T08:00:00.000Z",
+    "updatedAt": "2026-04-21T08:00:00.000Z",
+    "createdBy": "system"
+  },
+  {
+    "id": "schedule_005",
+    "doctorId": "doc005",
+    "date": "2026-04-25",
+    "timeSlots": [
+      {
+        "id": "slot_014",
+        "scheduleId": "schedule_005",
+        "startTime": "10:00",
+        "endTime": "10:30",
+        "isBooked": false,
+        "maxCapacity": 1,
+        "currentCapacity": 0,
+        "isAvailable": true
+      },
+      {
+        "id": "slot_015",
+        "scheduleId": "schedule_005",
+        "startTime": "10:30",
+        "endTime": "11:00",
+        "isBooked": false,
+        "maxCapacity": 1,
+        "currentCapacity": 0,
+        "isAvailable": true
+      },
+      {
+        "id": "slot_016",
+        "scheduleId": "schedule_005",
+        "startTime": "14:00",
+        "endTime": "14:30",
+        "isBooked": false,
+        "maxCapacity": 1,
+        "currentCapacity": 0,
+        "isAvailable": true
+      }
+    ],
+    "isAvailable": true,
+    "totalSlots": 3,
+    "bookedSlots": 0,
+    "availableSlots": 3,
+    "createdAt": "2026-04-21T08:00:00.000Z",
+    "updatedAt": "2026-04-21T08:00:00.000Z",
+    "createdBy": "system"
+  }
+]

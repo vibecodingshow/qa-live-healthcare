@@ -1,0 +1,30 @@
+<div class="page-content">
+    <h1>故障排除</h1>
+    
+    <h2>常见问题</h2>
+    
+    <h3>1. 命令未找到</h3>
+    <ul>
+        <li>确保 <code>.codebuddy/commands/asdm-build-demo.md</code> 文件存在</li>
+        <li>检查文件权限</li>
+        <li>重启 CodeBuddy IDE</li>
+    </ul>
+    
+    <h3>2. Markdown 文件解析失败</h3>
+    <ul>
+        <li>确保文件包含至少一个 H1 标题</li>
+        <li>检查文件编码（推荐 UTF-8）</li>
+        <li>验证 Markdown 语法正确性</li>
+    </ul>
+    
+    <h3>3. 输出目录权限问题</h3>
+    <ul>
+        <li>确保对输出目录有写入权限</li>
+        <li>尝试使用不同的输出目录</li>
+        <li>以管理员身份运行命令</li>
+    </ul>
+    
+    <h2>调试模式</h2>
+    <p>添加 <code>--verbose</code> 参数获取详细日志：</p>
+    <pre><code>node .asdm/toolsets/demo-builder/scripts/build-demo.js file.md --verbose</code></pre>
+</div>
