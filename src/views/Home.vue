@@ -22,6 +22,10 @@
           <a-button type="primary" size="large" @click="navigateTo('/consultation')">
             立即问诊
           </a-button>
+          <a-button type="default" size="large" @click="navigateTo('/appointment')">
+            <CalendarOutlined />
+            预约挂号
+          </a-button>
           <a-button size="large" @click="navigateTo('/doctors')">
             查看医生
           </a-button>
@@ -113,7 +117,8 @@ import {
   TeamOutlined,
   FileTextOutlined,
   ClockCircleOutlined,
-  UserOutlined
+  UserOutlined,
+  CalendarOutlined
 } from '@ant-design/icons-vue';
 
 const router = useRouter();

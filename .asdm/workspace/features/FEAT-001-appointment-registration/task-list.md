@@ -9,8 +9,8 @@
 ## Summary
 
 | Total Tasks | TODO | In Progress | Done | Blocked | Cancelled |
-|-------------|------|-------------|------|---------|-----------|
-| 9           | 9    | 0           | 0    | 0       | 0         |
+|:-----------:|-----:|------------:|-----:|--------:|----------:|
+| 9           | 0    | 0           | 9    | 0       | 0         |
 
 ## Task Summary
 
@@ -21,7 +21,7 @@
 **Description**: 为预约挂号功能创建 TypeScript 类型定义，包括 Appointment、DoctorSchedule、TimeSlot 等核心数据模型
 **Priority**: High
 **Category**: 分析与设计
-**Status**: TODO
+**Status**: DONE
 
 ### TASK-002: 预约状态枚举和工具函数
 
@@ -30,7 +30,7 @@
 **Description**: 创建预约状态枚举、预约状态流转工具函数、日期时间处理工具
 **Priority**: High
 **Category**: 代码实现
-**Status**: TODO
+**Status**: DONE
 **Depends on**: TASK-001
 
 ### TASK-003: 患者端 - 医生列表页面
@@ -40,7 +40,7 @@
 **Description**: 实现患者端的医生列表页面，支持按科室筛选和医生姓名搜索
 **Priority**: High
 **Category**: 代码实现
-**Status**: TODO
+**Status**: DONE
 **Depends on**: TASK-001, TASK-002
 
 ### TASK-004: 患者端 - 医生详情和预约页面
@@ -50,7 +50,7 @@
 **Description**: 实现医生详情页面和预约时段选择、预约确认功能
 **Priority**: High
 **Category**: 代码实现
-**Status**: TODO
+**Status**: DONE
 **Depends on**: TASK-001, TASK-002, TASK-003
 
 ### TASK-005: 患者端 - 我的预约页面
@@ -60,7 +60,7 @@
 **Description**: 实现患者端的预约记录列表页面，支持预约详情查看和取消预约
 **Priority**: High
 **Category**: 代码实现
-**Status**: TODO
+**Status**: DONE
 **Depends on**: TASK-001, TASK-002, TASK-006
 
 ### TASK-006: 患者端 - API 接口实现
@@ -70,7 +70,7 @@
 **Description**: 实现患者端相关的 API 接口（医生列表、预约创建、预约管理等）
 **Priority**: High
 **Category**: 代码实现
-**Status**: TODO
+**Status**: DONE
 **Depends on**: TASK-001, TASK-002
 
 ### TASK-007: 医生端 - 预约管理页面
@@ -80,7 +80,7 @@
 **Description**: 实现医生端的预约列表页面，支持预约确认、拒绝操作和统计信息展示
 **Priority**: High
 **Category**: 代码实现
-**Status**: TODO
+**Status**: DONE
 **Depends on**: TASK-001, TASK-002, TASK-009
 
 ### TASK-008: 医生端 - 排班设置页面
@@ -90,7 +90,7 @@
 **Description**: 实现医生端的排班设置页面，支持出诊时间设置和可预约人数配置
 **Priority**: High
 **Category**: 代码实现
-**Status**: TODO
+**Status**: DONE
 **Depends on**: TASK-001, TASK-002, TASK-009
 
 ### TASK-009: 医生端 - API 接口实现
@@ -100,7 +100,7 @@
 **Description**: 实现医生端相关的 API 接口（预约列表、排班管理等）
 **Priority**: High
 **Category**: 代码实现
-**Status**: TODO
+**Status**: DONE
 **Depends on**: TASK-001, TASK-002
 
 ---
@@ -113,15 +113,15 @@
 
 | Task ID | Task Name | Status | Task PRD | Created Date |
 |---------|-----------|--------|----------|--------------|
-| TASK-001 | 数据模型和类型定义 | TODO | ✅ Generated | 2026-04-22 |
-| TASK-002 | 预约状态枚举和工具函数 | TODO | ✅ Generated | 2026-04-22 |
-| TASK-003 | 患者端 - 医生列表页面 | TODO | ✅ Generated | 2026-04-22 |
-| TASK-004 | 患者端 - 医生详情和预约页面 | TODO | ✅ Generated | 2026-04-22 |
-| TASK-005 | 患者端 - 我的预约页面 | TODO | ✅ Generated | 2026-04-22 |
-| TASK-006 | 患者端 - API 接口实现 | TODO | ✅ Generated | 2026-04-22 |
-| TASK-007 | 医生端 - 预约管理页面 | TODO | ✅ Generated | 2026-04-22 |
-| TASK-008 | 医生端 - 排班设置页面 | TODO | ✅ Generated | 2026-04-22 |
-| TASK-009 | 医生端 - API 接口实现 | TODO | ✅ Generated | 2026-04-22 |
+| TASK-001 | 数据模型和类型定义 | DONE | ✅ Generated | 2026-04-22 |
+| TASK-002 | 预约状态枚举和工具函数 | DONE | ✅ Generated | 2026-04-22 |
+| TASK-003 | 患者端 - 医生列表页面 | DONE | ✅ Generated | 2026-04-22 |
+| TASK-004 | 患者端 - 医生详情和预约页面 | DONE | ✅ Generated | 2026-04-22 |
+| TASK-005 | 患者端 - 我的预约页面 | IN PROGRESS | ✅ Generated | 2026-04-22 |
+| TASK-006 | 患者端 - API 接口实现 | DONE | ✅ Generated | 2026-04-22 |
+| TASK-007 | 医生端 - 预约管理页面 | DONE | ✅ Generated | 2026-04-22 |
+| TASK-008 | 医生端 - 排班设置页面 | DONE | ✅ Generated | 2026-04-22 |
+| TASK-009 | 医生端 - API 接口实现 | DONE | ✅ Generated | 2026-04-22 |
 
 ## 下一步行动
 

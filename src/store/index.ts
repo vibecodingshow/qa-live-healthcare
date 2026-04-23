@@ -14,6 +14,9 @@ export interface Doctor {
   experience: string;
   specialties: string[];
   isActive: boolean;
+  weeklySchedule?: string[];
+  expertise?: string[];
+  bio?: string;
 }
 
 export interface Patient {
@@ -22,6 +25,7 @@ export interface Patient {
   birthday: string;
   phone: string;
   gender: string;
+  age?: number;
 }
 
 export interface Question {
@@ -72,19 +76,29 @@ export const store = {
   },
 
   verifyPatient(name: string, birthday: string): Patient {
+    // 首先尝试查找已存在的患者
     let patient = state.patients.find(
       p => p.name === name && p.birthday === birthday
     );
 
     if (!patient) {
-      patient = {
-        id: `patient${Date.now()}`,
-        name,
-        birthday,
-        phone: '',
-        gender: '',
-      };
-      state.patients.push(patient);
+      // 根据姓名和生日生成稳定的 ID，同名同生日的患者使用相同的 ID
+      const normalizedName = name.trim().toLowerCase();
+      const stableId = `patient_${normalizedName}_${birthday.replace(/-/g, '')}`;
+      
+      // 检查是否已有使用此稳定 ID 的患者（可能在其他地方创建过）
+      patient = state.patients.find(p => p.id === stableId);
+      
+      if (!patient) {
+        patient = {
+          id: stableId,
+          name,
+          birthday,
+          phone: '',
+          gender: '',
+        };
+        state.patients.push(patient);
+      }
     }
 
     state.currentPatient = patient;

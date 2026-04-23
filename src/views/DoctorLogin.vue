@@ -45,7 +45,7 @@
 
       <a-alert
         message="测试账号提示"
-        description="用户名: dr-zhang-wei, 密码: 123456"
+        description="可用医生账号: dr-zhang-wei / dr-li-na / dr-wang-qiang / dr-chen-jie，密码: 123456"
         type="info"
         show-icon
         closable

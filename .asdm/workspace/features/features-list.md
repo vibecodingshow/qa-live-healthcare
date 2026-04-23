@@ -7,13 +7,13 @@
 
 | Total | Planned | In Progress | Completed | Cancelled |
 |-------|---------|------------|-----------|-----------|
-| 1     | 1       | 0          | 0         | 0         |
+| 1     | 0       | 0          | 1         | 0         |
 
 ## Feature Registry
 
 | Feature ID | Feature Name      | Status   | Description                                           | Priority | Tasks | Progress | Created     | Updated     |
 |------------|-------------------|----------|-------------------------------------------------------|----------|-------|----------|-------------|-------------|
-| FEAT-001   | 预约挂号功能       | PLANNED  | 为患者和医生提供线下门诊预约服务，支持双向预约管理     | High     | 0     | 0%       | 2026-04-22  | 2026-04-22  |
+| FEAT-001   | 预约挂号功能       | COMPLETED  | 为患者和医生提供线下门诊预约服务，支持双向预约管理     | High     | 9     | 100%       | 2026-04-22  | 2026-04-22  |
 
 ## Features Details
 
@@ -21,7 +21,7 @@
 
 **Feature ID**: FEAT-001  
 **Feature Name**: 预约挂号功能  
-**Status**: PLANNED  
+**Status**: COMPLETED  
 **Created Date**: 2026-04-22  
 **Last Updated**: 2026-04-22  
 
