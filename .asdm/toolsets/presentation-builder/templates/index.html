@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>演示构建器 - 选择文件</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>📊 演示构建器</h1>
+      <p class="subtitle">将 Markdown 文件转换为全屏演示站点</p>
+    </header>
+
+    <main class="main">
+      <div class="upload-area" id="uploadArea">
+        <div class="upload-icon">📁</div>
+        <h2>选择或拖拽 Markdown 文件</h2>
+        <p>支持 .md 文件</p>
+        <input type="file" id="fileInput" accept=".md,.markdown" hidden>
+        <button class="btn btn-primary" onclick="document.getElementById('fileInput').click()">
+          选择文件
+        </button>
+      </div>
+
+      <div class="template-info">
+        <h3>📖 使用说明</h3>
+        <ul>
+          <li><code>#</code> 一级标题 = 一页演示</li>
+          <li><code>##</code> / <code>###</code> = 页面内容</li>
+          <li>按 <kbd>←</kbd> <kbd>→</kbd> 左右键翻页</li>
+          <li>点击播放按钮进入全屏</li>
+        </ul>
+      </div>
+
+      <div class="template-preview">
+        <h3>🎨 示例 Markdown 结构</h3>
+        <pre><code># 第一页标题
+
+## 内容标题
+
+这是第一页的内容
+
+---
+
+# 第二页标题
+
+## 第二页内容
+
+使用 **Markdown** 语法</code></pre>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>Powered by Presentation Builder</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // 文件选择处理
+    document.getElementById('fileInput').addEventListener('change', async (e) => {
+      const file = e.target.files[0];
+      if (file) {
+        const content = await file.text();
+        localStorage.setItem('presentationMarkdown', content);
+        window.location.href = 'demo.html';
+      }
+    });
+
+    // 拖拽处理
+    const uploadArea = document.getElementById('uploadArea');
+    uploadArea.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      uploadArea.classList.add('dragover');
+    });
+    uploadArea.addEventListener('dragleave', () => {
+      uploadArea.classList.remove('dragover');
+    });
+    uploadArea.addEventListener('drop', async (e) => {
+      e.preventDefault();
+      uploadArea.classList.remove('dragover');
+      const file = e.dataTransfer.files[0];
+      if (file && (file.name.endsWith('.md') || file.name.endsWith('.markdown'))) {
+        const content = await file.text();
+        localStorage.setItem('presentationMarkdown', content);
+        window.location.href = 'demo.html';
+      }
+    });
+  </script>
+</body>
+</html>

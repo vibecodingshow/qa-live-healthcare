@@ -1,0 +1,11 @@
+{
+  "name": "presentation-builder",
+  "version": "1.0.0",
+  "description": "Build fullscreen presentation sites from Markdown",
+  "enabled": true,
+  "commands": [
+    "asdm-build-demo"
+  ],
+  "installed": true,
+  "installedAt": "2026-04-22"
+}
