@@ -1,0 +1,3138 @@
+[
+  {
+    "id": "slot_doc001_2026-04-23_0800-0830",
+    "doctorId": "doc001",
+    "date": "2026-04-23",
+    "timeSlot": "08:00-08:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-23_0800-0830",
+    "doctorId": "doc002",
+    "date": "2026-04-23",
+    "timeSlot": "08:00-08:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-23_0800-0830",
+    "doctorId": "doc003",
+    "date": "2026-04-23",
+    "timeSlot": "08:00-08:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-23_0800-0830",
+    "doctorId": "doc005",
+    "date": "2026-04-23",
+    "timeSlot": "08:00-08:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-23_0830-0900",
+    "doctorId": "doc001",
+    "date": "2026-04-23",
+    "timeSlot": "08:30-09:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-23_0830-0900",
+    "doctorId": "doc002",
+    "date": "2026-04-23",
+    "timeSlot": "08:30-09:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-23_0830-0900",
+    "doctorId": "doc003",
+    "date": "2026-04-23",
+    "timeSlot": "08:30-09:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-23_0830-0900",
+    "doctorId": "doc005",
+    "date": "2026-04-23",
+    "timeSlot": "08:30-09:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-23_0900-0930",
+    "doctorId": "doc001",
+    "date": "2026-04-23",
+    "timeSlot": "09:00-09:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-23_0900-0930",
+    "doctorId": "doc002",
+    "date": "2026-04-23",
+    "timeSlot": "09:00-09:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-23_0900-0930",
+    "doctorId": "doc003",
+    "date": "2026-04-23",
+    "timeSlot": "09:00-09:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-23_0900-0930",
+    "doctorId": "doc005",
+    "date": "2026-04-23",
+    "timeSlot": "09:00-09:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-23_0930-1000",
+    "doctorId": "doc001",
+    "date": "2026-04-23",
+    "timeSlot": "09:30-10:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-23_0930-1000",
+    "doctorId": "doc002",
+    "date": "2026-04-23",
+    "timeSlot": "09:30-10:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-23_0930-1000",
+    "doctorId": "doc003",
+    "date": "2026-04-23",
+    "timeSlot": "09:30-10:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-23_0930-1000",
+    "doctorId": "doc005",
+    "date": "2026-04-23",
+    "timeSlot": "09:30-10:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-23_1000-1030",
+    "doctorId": "doc001",
+    "date": "2026-04-23",
+    "timeSlot": "10:00-10:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-23_1000-1030",
+    "doctorId": "doc002",
+    "date": "2026-04-23",
+    "timeSlot": "10:00-10:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-23_1000-1030",
+    "doctorId": "doc003",
+    "date": "2026-04-23",
+    "timeSlot": "10:00-10:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-23_1000-1030",
+    "doctorId": "doc005",
+    "date": "2026-04-23",
+    "timeSlot": "10:00-10:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-23_1030-1100",
+    "doctorId": "doc001",
+    "date": "2026-04-23",
+    "timeSlot": "10:30-11:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-23_1030-1100",
+    "doctorId": "doc002",
+    "date": "2026-04-23",
+    "timeSlot": "10:30-11:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-23_1030-1100",
+    "doctorId": "doc003",
+    "date": "2026-04-23",
+    "timeSlot": "10:30-11:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-23_1030-1100",
+    "doctorId": "doc005",
+    "date": "2026-04-23",
+    "timeSlot": "10:30-11:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-23_1100-1130",
+    "doctorId": "doc001",
+    "date": "2026-04-23",
+    "timeSlot": "11:00-11:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-23_1100-1130",
+    "doctorId": "doc002",
+    "date": "2026-04-23",
+    "timeSlot": "11:00-11:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-23_1100-1130",
+    "doctorId": "doc003",
+    "date": "2026-04-23",
+    "timeSlot": "11:00-11:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-23_1100-1130",
+    "doctorId": "doc005",
+    "date": "2026-04-23",
+    "timeSlot": "11:00-11:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-23_1130-1200",
+    "doctorId": "doc001",
+    "date": "2026-04-23",
+    "timeSlot": "11:30-12:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-23_1130-1200",
+    "doctorId": "doc002",
+    "date": "2026-04-23",
+    "timeSlot": "11:30-12:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-23_1130-1200",
+    "doctorId": "doc003",
+    "date": "2026-04-23",
+    "timeSlot": "11:30-12:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-23_1130-1200",
+    "doctorId": "doc005",
+    "date": "2026-04-23",
+    "timeSlot": "11:30-12:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-23_1400-1430",
+    "doctorId": "doc001",
+    "date": "2026-04-23",
+    "timeSlot": "14:00-14:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-23_1400-1430",
+    "doctorId": "doc002",
+    "date": "2026-04-23",
+    "timeSlot": "14:00-14:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-23_1400-1430",
+    "doctorId": "doc003",
+    "date": "2026-04-23",
+    "timeSlot": "14:00-14:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-23_1400-1430",
+    "doctorId": "doc005",
+    "date": "2026-04-23",
+    "timeSlot": "14:00-14:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-23_1430-1500",
+    "doctorId": "doc001",
+    "date": "2026-04-23",
+    "timeSlot": "14:30-15:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-23_1430-1500",
+    "doctorId": "doc002",
+    "date": "2026-04-23",
+    "timeSlot": "14:30-15:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-23_1430-1500",
+    "doctorId": "doc003",
+    "date": "2026-04-23",
+    "timeSlot": "14:30-15:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-23_1430-1500",
+    "doctorId": "doc005",
+    "date": "2026-04-23",
+    "timeSlot": "14:30-15:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-23_1500-1530",
+    "doctorId": "doc001",
+    "date": "2026-04-23",
+    "timeSlot": "15:00-15:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-23_1500-1530",
+    "doctorId": "doc002",
+    "date": "2026-04-23",
+    "timeSlot": "15:00-15:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-23_1500-1530",
+    "doctorId": "doc003",
+    "date": "2026-04-23",
+    "timeSlot": "15:00-15:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-23_1500-1530",
+    "doctorId": "doc005",
+    "date": "2026-04-23",
+    "timeSlot": "15:00-15:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-23_1530-1600",
+    "doctorId": "doc001",
+    "date": "2026-04-23",
+    "timeSlot": "15:30-16:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-23_1530-1600",
+    "doctorId": "doc002",
+    "date": "2026-04-23",
+    "timeSlot": "15:30-16:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-23_1530-1600",
+    "doctorId": "doc003",
+    "date": "2026-04-23",
+    "timeSlot": "15:30-16:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-23_1530-1600",
+    "doctorId": "doc005",
+    "date": "2026-04-23",
+    "timeSlot": "15:30-16:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-23_1600-1630",
+    "doctorId": "doc001",
+    "date": "2026-04-23",
+    "timeSlot": "16:00-16:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-23_1600-1630",
+    "doctorId": "doc002",
+    "date": "2026-04-23",
+    "timeSlot": "16:00-16:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-23_1600-1630",
+    "doctorId": "doc003",
+    "date": "2026-04-23",
+    "timeSlot": "16:00-16:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-23_1600-1630",
+    "doctorId": "doc005",
+    "date": "2026-04-23",
+    "timeSlot": "16:00-16:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-23_1630-1700",
+    "doctorId": "doc001",
+    "date": "2026-04-23",
+    "timeSlot": "16:30-17:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-23_1630-1700",
+    "doctorId": "doc002",
+    "date": "2026-04-23",
+    "timeSlot": "16:30-17:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-23_1630-1700",
+    "doctorId": "doc003",
+    "date": "2026-04-23",
+    "timeSlot": "16:30-17:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-23_1630-1700",
+    "doctorId": "doc005",
+    "date": "2026-04-23",
+    "timeSlot": "16:30-17:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-24_0800-0830",
+    "doctorId": "doc001",
+    "date": "2026-04-24",
+    "timeSlot": "08:00-08:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-24_0800-0830",
+    "doctorId": "doc002",
+    "date": "2026-04-24",
+    "timeSlot": "08:00-08:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-24_0800-0830",
+    "doctorId": "doc003",
+    "date": "2026-04-24",
+    "timeSlot": "08:00-08:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-24_0800-0830",
+    "doctorId": "doc005",
+    "date": "2026-04-24",
+    "timeSlot": "08:00-08:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-24_0830-0900",
+    "doctorId": "doc001",
+    "date": "2026-04-24",
+    "timeSlot": "08:30-09:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-24_0830-0900",
+    "doctorId": "doc002",
+    "date": "2026-04-24",
+    "timeSlot": "08:30-09:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-24_0830-0900",
+    "doctorId": "doc003",
+    "date": "2026-04-24",
+    "timeSlot": "08:30-09:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-24_0830-0900",
+    "doctorId": "doc005",
+    "date": "2026-04-24",
+    "timeSlot": "08:30-09:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-24_0900-0930",
+    "doctorId": "doc001",
+    "date": "2026-04-24",
+    "timeSlot": "09:00-09:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-24_0900-0930",
+    "doctorId": "doc002",
+    "date": "2026-04-24",
+    "timeSlot": "09:00-09:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-24_0900-0930",
+    "doctorId": "doc003",
+    "date": "2026-04-24",
+    "timeSlot": "09:00-09:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-24_0900-0930",
+    "doctorId": "doc005",
+    "date": "2026-04-24",
+    "timeSlot": "09:00-09:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-24_0930-1000",
+    "doctorId": "doc001",
+    "date": "2026-04-24",
+    "timeSlot": "09:30-10:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-24_0930-1000",
+    "doctorId": "doc002",
+    "date": "2026-04-24",
+    "timeSlot": "09:30-10:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-24_0930-1000",
+    "doctorId": "doc003",
+    "date": "2026-04-24",
+    "timeSlot": "09:30-10:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-24_0930-1000",
+    "doctorId": "doc005",
+    "date": "2026-04-24",
+    "timeSlot": "09:30-10:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-24_1000-1030",
+    "doctorId": "doc001",
+    "date": "2026-04-24",
+    "timeSlot": "10:00-10:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-24_1000-1030",
+    "doctorId": "doc002",
+    "date": "2026-04-24",
+    "timeSlot": "10:00-10:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-24_1000-1030",
+    "doctorId": "doc003",
+    "date": "2026-04-24",
+    "timeSlot": "10:00-10:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-24_1000-1030",
+    "doctorId": "doc005",
+    "date": "2026-04-24",
+    "timeSlot": "10:00-10:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-24_1030-1100",
+    "doctorId": "doc001",
+    "date": "2026-04-24",
+    "timeSlot": "10:30-11:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-24_1030-1100",
+    "doctorId": "doc002",
+    "date": "2026-04-24",
+    "timeSlot": "10:30-11:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-24_1030-1100",
+    "doctorId": "doc003",
+    "date": "2026-04-24",
+    "timeSlot": "10:30-11:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-24_1030-1100",
+    "doctorId": "doc005",
+    "date": "2026-04-24",
+    "timeSlot": "10:30-11:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-24_1100-1130",
+    "doctorId": "doc001",
+    "date": "2026-04-24",
+    "timeSlot": "11:00-11:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-24_1100-1130",
+    "doctorId": "doc002",
+    "date": "2026-04-24",
+    "timeSlot": "11:00-11:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-24_1100-1130",
+    "doctorId": "doc003",
+    "date": "2026-04-24",
+    "timeSlot": "11:00-11:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-24_1100-1130",
+    "doctorId": "doc005",
+    "date": "2026-04-24",
+    "timeSlot": "11:00-11:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-24_1130-1200",
+    "doctorId": "doc001",
+    "date": "2026-04-24",
+    "timeSlot": "11:30-12:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-24_1130-1200",
+    "doctorId": "doc002",
+    "date": "2026-04-24",
+    "timeSlot": "11:30-12:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-24_1130-1200",
+    "doctorId": "doc003",
+    "date": "2026-04-24",
+    "timeSlot": "11:30-12:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-24_1130-1200",
+    "doctorId": "doc005",
+    "date": "2026-04-24",
+    "timeSlot": "11:30-12:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-24_1400-1430",
+    "doctorId": "doc001",
+    "date": "2026-04-24",
+    "timeSlot": "14:00-14:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-24_1400-1430",
+    "doctorId": "doc002",
+    "date": "2026-04-24",
+    "timeSlot": "14:00-14:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-24_1400-1430",
+    "doctorId": "doc003",
+    "date": "2026-04-24",
+    "timeSlot": "14:00-14:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-24_1400-1430",
+    "doctorId": "doc005",
+    "date": "2026-04-24",
+    "timeSlot": "14:00-14:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-24_1430-1500",
+    "doctorId": "doc001",
+    "date": "2026-04-24",
+    "timeSlot": "14:30-15:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-24_1430-1500",
+    "doctorId": "doc002",
+    "date": "2026-04-24",
+    "timeSlot": "14:30-15:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-24_1430-1500",
+    "doctorId": "doc003",
+    "date": "2026-04-24",
+    "timeSlot": "14:30-15:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-24_1430-1500",
+    "doctorId": "doc005",
+    "date": "2026-04-24",
+    "timeSlot": "14:30-15:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-24_1500-1530",
+    "doctorId": "doc001",
+    "date": "2026-04-24",
+    "timeSlot": "15:00-15:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-24_1500-1530",
+    "doctorId": "doc002",
+    "date": "2026-04-24",
+    "timeSlot": "15:00-15:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-24_1500-1530",
+    "doctorId": "doc003",
+    "date": "2026-04-24",
+    "timeSlot": "15:00-15:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-24_1500-1530",
+    "doctorId": "doc005",
+    "date": "2026-04-24",
+    "timeSlot": "15:00-15:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-24_1530-1600",
+    "doctorId": "doc001",
+    "date": "2026-04-24",
+    "timeSlot": "15:30-16:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-24_1530-1600",
+    "doctorId": "doc002",
+    "date": "2026-04-24",
+    "timeSlot": "15:30-16:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-24_1530-1600",
+    "doctorId": "doc003",
+    "date": "2026-04-24",
+    "timeSlot": "15:30-16:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-24_1530-1600",
+    "doctorId": "doc005",
+    "date": "2026-04-24",
+    "timeSlot": "15:30-16:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-24_1600-1630",
+    "doctorId": "doc001",
+    "date": "2026-04-24",
+    "timeSlot": "16:00-16:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-24_1600-1630",
+    "doctorId": "doc002",
+    "date": "2026-04-24",
+    "timeSlot": "16:00-16:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-24_1600-1630",
+    "doctorId": "doc003",
+    "date": "2026-04-24",
+    "timeSlot": "16:00-16:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-24_1600-1630",
+    "doctorId": "doc005",
+    "date": "2026-04-24",
+    "timeSlot": "16:00-16:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-24_1630-1700",
+    "doctorId": "doc001",
+    "date": "2026-04-24",
+    "timeSlot": "16:30-17:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-24_1630-1700",
+    "doctorId": "doc002",
+    "date": "2026-04-24",
+    "timeSlot": "16:30-17:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-24_1630-1700",
+    "doctorId": "doc003",
+    "date": "2026-04-24",
+    "timeSlot": "16:30-17:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-24_1630-1700",
+    "doctorId": "doc005",
+    "date": "2026-04-24",
+    "timeSlot": "16:30-17:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-25_0800-0830",
+    "doctorId": "doc001",
+    "date": "2026-04-25",
+    "timeSlot": "08:00-08:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-25_0800-0830",
+    "doctorId": "doc002",
+    "date": "2026-04-25",
+    "timeSlot": "08:00-08:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-25_0800-0830",
+    "doctorId": "doc003",
+    "date": "2026-04-25",
+    "timeSlot": "08:00-08:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-25_0800-0830",
+    "doctorId": "doc005",
+    "date": "2026-04-25",
+    "timeSlot": "08:00-08:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-25_0830-0900",
+    "doctorId": "doc001",
+    "date": "2026-04-25",
+    "timeSlot": "08:30-09:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-25_0830-0900",
+    "doctorId": "doc002",
+    "date": "2026-04-25",
+    "timeSlot": "08:30-09:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-25_0830-0900",
+    "doctorId": "doc003",
+    "date": "2026-04-25",
+    "timeSlot": "08:30-09:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-25_0830-0900",
+    "doctorId": "doc005",
+    "date": "2026-04-25",
+    "timeSlot": "08:30-09:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-25_0900-0930",
+    "doctorId": "doc001",
+    "date": "2026-04-25",
+    "timeSlot": "09:00-09:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-25_0900-0930",
+    "doctorId": "doc002",
+    "date": "2026-04-25",
+    "timeSlot": "09:00-09:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-25_0900-0930",
+    "doctorId": "doc003",
+    "date": "2026-04-25",
+    "timeSlot": "09:00-09:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-25_0900-0930",
+    "doctorId": "doc005",
+    "date": "2026-04-25",
+    "timeSlot": "09:00-09:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-25_0930-1000",
+    "doctorId": "doc001",
+    "date": "2026-04-25",
+    "timeSlot": "09:30-10:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-25_0930-1000",
+    "doctorId": "doc002",
+    "date": "2026-04-25",
+    "timeSlot": "09:30-10:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-25_0930-1000",
+    "doctorId": "doc003",
+    "date": "2026-04-25",
+    "timeSlot": "09:30-10:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-25_0930-1000",
+    "doctorId": "doc005",
+    "date": "2026-04-25",
+    "timeSlot": "09:30-10:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-25_1000-1030",
+    "doctorId": "doc001",
+    "date": "2026-04-25",
+    "timeSlot": "10:00-10:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-25_1000-1030",
+    "doctorId": "doc002",
+    "date": "2026-04-25",
+    "timeSlot": "10:00-10:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-25_1000-1030",
+    "doctorId": "doc003",
+    "date": "2026-04-25",
+    "timeSlot": "10:00-10:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-25_1000-1030",
+    "doctorId": "doc005",
+    "date": "2026-04-25",
+    "timeSlot": "10:00-10:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-25_1030-1100",
+    "doctorId": "doc001",
+    "date": "2026-04-25",
+    "timeSlot": "10:30-11:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-25_1030-1100",
+    "doctorId": "doc002",
+    "date": "2026-04-25",
+    "timeSlot": "10:30-11:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-25_1030-1100",
+    "doctorId": "doc003",
+    "date": "2026-04-25",
+    "timeSlot": "10:30-11:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-25_1030-1100",
+    "doctorId": "doc005",
+    "date": "2026-04-25",
+    "timeSlot": "10:30-11:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-25_1100-1130",
+    "doctorId": "doc001",
+    "date": "2026-04-25",
+    "timeSlot": "11:00-11:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-25_1100-1130",
+    "doctorId": "doc002",
+    "date": "2026-04-25",
+    "timeSlot": "11:00-11:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-25_1100-1130",
+    "doctorId": "doc003",
+    "date": "2026-04-25",
+    "timeSlot": "11:00-11:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-25_1100-1130",
+    "doctorId": "doc005",
+    "date": "2026-04-25",
+    "timeSlot": "11:00-11:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-25_1130-1200",
+    "doctorId": "doc001",
+    "date": "2026-04-25",
+    "timeSlot": "11:30-12:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-25_1130-1200",
+    "doctorId": "doc002",
+    "date": "2026-04-25",
+    "timeSlot": "11:30-12:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-25_1130-1200",
+    "doctorId": "doc003",
+    "date": "2026-04-25",
+    "timeSlot": "11:30-12:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-25_1130-1200",
+    "doctorId": "doc005",
+    "date": "2026-04-25",
+    "timeSlot": "11:30-12:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-25_1400-1430",
+    "doctorId": "doc001",
+    "date": "2026-04-25",
+    "timeSlot": "14:00-14:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-25_1400-1430",
+    "doctorId": "doc002",
+    "date": "2026-04-25",
+    "timeSlot": "14:00-14:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-25_1400-1430",
+    "doctorId": "doc003",
+    "date": "2026-04-25",
+    "timeSlot": "14:00-14:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-25_1400-1430",
+    "doctorId": "doc005",
+    "date": "2026-04-25",
+    "timeSlot": "14:00-14:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-25_1430-1500",
+    "doctorId": "doc001",
+    "date": "2026-04-25",
+    "timeSlot": "14:30-15:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-25_1430-1500",
+    "doctorId": "doc002",
+    "date": "2026-04-25",
+    "timeSlot": "14:30-15:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-25_1430-1500",
+    "doctorId": "doc003",
+    "date": "2026-04-25",
+    "timeSlot": "14:30-15:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-25_1430-1500",
+    "doctorId": "doc005",
+    "date": "2026-04-25",
+    "timeSlot": "14:30-15:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-25_1500-1530",
+    "doctorId": "doc001",
+    "date": "2026-04-25",
+    "timeSlot": "15:00-15:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-25_1500-1530",
+    "doctorId": "doc002",
+    "date": "2026-04-25",
+    "timeSlot": "15:00-15:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-25_1500-1530",
+    "doctorId": "doc003",
+    "date": "2026-04-25",
+    "timeSlot": "15:00-15:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-25_1500-1530",
+    "doctorId": "doc005",
+    "date": "2026-04-25",
+    "timeSlot": "15:00-15:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-25_1530-1600",
+    "doctorId": "doc001",
+    "date": "2026-04-25",
+    "timeSlot": "15:30-16:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-25_1530-1600",
+    "doctorId": "doc002",
+    "date": "2026-04-25",
+    "timeSlot": "15:30-16:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-25_1530-1600",
+    "doctorId": "doc003",
+    "date": "2026-04-25",
+    "timeSlot": "15:30-16:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-25_1530-1600",
+    "doctorId": "doc005",
+    "date": "2026-04-25",
+    "timeSlot": "15:30-16:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-25_1600-1630",
+    "doctorId": "doc001",
+    "date": "2026-04-25",
+    "timeSlot": "16:00-16:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-25_1600-1630",
+    "doctorId": "doc002",
+    "date": "2026-04-25",
+    "timeSlot": "16:00-16:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-25_1600-1630",
+    "doctorId": "doc003",
+    "date": "2026-04-25",
+    "timeSlot": "16:00-16:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-25_1600-1630",
+    "doctorId": "doc005",
+    "date": "2026-04-25",
+    "timeSlot": "16:00-16:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-25_1630-1700",
+    "doctorId": "doc001",
+    "date": "2026-04-25",
+    "timeSlot": "16:30-17:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-25_1630-1700",
+    "doctorId": "doc002",
+    "date": "2026-04-25",
+    "timeSlot": "16:30-17:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-25_1630-1700",
+    "doctorId": "doc003",
+    "date": "2026-04-25",
+    "timeSlot": "16:30-17:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-25_1630-1700",
+    "doctorId": "doc005",
+    "date": "2026-04-25",
+    "timeSlot": "16:30-17:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-26_0800-0830",
+    "doctorId": "doc001",
+    "date": "2026-04-26",
+    "timeSlot": "08:00-08:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-26_0800-0830",
+    "doctorId": "doc002",
+    "date": "2026-04-26",
+    "timeSlot": "08:00-08:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-26_0800-0830",
+    "doctorId": "doc003",
+    "date": "2026-04-26",
+    "timeSlot": "08:00-08:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-26_0800-0830",
+    "doctorId": "doc005",
+    "date": "2026-04-26",
+    "timeSlot": "08:00-08:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-26_0830-0900",
+    "doctorId": "doc001",
+    "date": "2026-04-26",
+    "timeSlot": "08:30-09:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-26_0830-0900",
+    "doctorId": "doc002",
+    "date": "2026-04-26",
+    "timeSlot": "08:30-09:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-26_0830-0900",
+    "doctorId": "doc003",
+    "date": "2026-04-26",
+    "timeSlot": "08:30-09:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-26_0830-0900",
+    "doctorId": "doc005",
+    "date": "2026-04-26",
+    "timeSlot": "08:30-09:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-26_0900-0930",
+    "doctorId": "doc001",
+    "date": "2026-04-26",
+    "timeSlot": "09:00-09:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-26_0900-0930",
+    "doctorId": "doc002",
+    "date": "2026-04-26",
+    "timeSlot": "09:00-09:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-26_0900-0930",
+    "doctorId": "doc003",
+    "date": "2026-04-26",
+    "timeSlot": "09:00-09:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-26_0900-0930",
+    "doctorId": "doc005",
+    "date": "2026-04-26",
+    "timeSlot": "09:00-09:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-26_0930-1000",
+    "doctorId": "doc001",
+    "date": "2026-04-26",
+    "timeSlot": "09:30-10:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-26_0930-1000",
+    "doctorId": "doc002",
+    "date": "2026-04-26",
+    "timeSlot": "09:30-10:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-26_0930-1000",
+    "doctorId": "doc003",
+    "date": "2026-04-26",
+    "timeSlot": "09:30-10:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-26_0930-1000",
+    "doctorId": "doc005",
+    "date": "2026-04-26",
+    "timeSlot": "09:30-10:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-26_1000-1030",
+    "doctorId": "doc001",
+    "date": "2026-04-26",
+    "timeSlot": "10:00-10:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-26_1000-1030",
+    "doctorId": "doc002",
+    "date": "2026-04-26",
+    "timeSlot": "10:00-10:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-26_1000-1030",
+    "doctorId": "doc003",
+    "date": "2026-04-26",
+    "timeSlot": "10:00-10:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-26_1000-1030",
+    "doctorId": "doc005",
+    "date": "2026-04-26",
+    "timeSlot": "10:00-10:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-26_1030-1100",
+    "doctorId": "doc001",
+    "date": "2026-04-26",
+    "timeSlot": "10:30-11:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-26_1030-1100",
+    "doctorId": "doc002",
+    "date": "2026-04-26",
+    "timeSlot": "10:30-11:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-26_1030-1100",
+    "doctorId": "doc003",
+    "date": "2026-04-26",
+    "timeSlot": "10:30-11:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-26_1030-1100",
+    "doctorId": "doc005",
+    "date": "2026-04-26",
+    "timeSlot": "10:30-11:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-26_1100-1130",
+    "doctorId": "doc001",
+    "date": "2026-04-26",
+    "timeSlot": "11:00-11:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-26_1100-1130",
+    "doctorId": "doc002",
+    "date": "2026-04-26",
+    "timeSlot": "11:00-11:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-26_1100-1130",
+    "doctorId": "doc003",
+    "date": "2026-04-26",
+    "timeSlot": "11:00-11:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-26_1100-1130",
+    "doctorId": "doc005",
+    "date": "2026-04-26",
+    "timeSlot": "11:00-11:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-26_1130-1200",
+    "doctorId": "doc001",
+    "date": "2026-04-26",
+    "timeSlot": "11:30-12:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-26_1130-1200",
+    "doctorId": "doc002",
+    "date": "2026-04-26",
+    "timeSlot": "11:30-12:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-26_1130-1200",
+    "doctorId": "doc003",
+    "date": "2026-04-26",
+    "timeSlot": "11:30-12:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-26_1130-1200",
+    "doctorId": "doc005",
+    "date": "2026-04-26",
+    "timeSlot": "11:30-12:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-26_1400-1430",
+    "doctorId": "doc001",
+    "date": "2026-04-26",
+    "timeSlot": "14:00-14:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-26_1400-1430",
+    "doctorId": "doc002",
+    "date": "2026-04-26",
+    "timeSlot": "14:00-14:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-26_1400-1430",
+    "doctorId": "doc003",
+    "date": "2026-04-26",
+    "timeSlot": "14:00-14:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-26_1400-1430",
+    "doctorId": "doc005",
+    "date": "2026-04-26",
+    "timeSlot": "14:00-14:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-26_1430-1500",
+    "doctorId": "doc001",
+    "date": "2026-04-26",
+    "timeSlot": "14:30-15:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-26_1430-1500",
+    "doctorId": "doc002",
+    "date": "2026-04-26",
+    "timeSlot": "14:30-15:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-26_1430-1500",
+    "doctorId": "doc003",
+    "date": "2026-04-26",
+    "timeSlot": "14:30-15:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-26_1430-1500",
+    "doctorId": "doc005",
+    "date": "2026-04-26",
+    "timeSlot": "14:30-15:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-26_1500-1530",
+    "doctorId": "doc001",
+    "date": "2026-04-26",
+    "timeSlot": "15:00-15:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-26_1500-1530",
+    "doctorId": "doc002",
+    "date": "2026-04-26",
+    "timeSlot": "15:00-15:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-26_1500-1530",
+    "doctorId": "doc003",
+    "date": "2026-04-26",
+    "timeSlot": "15:00-15:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-26_1500-1530",
+    "doctorId": "doc005",
+    "date": "2026-04-26",
+    "timeSlot": "15:00-15:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-26_1530-1600",
+    "doctorId": "doc001",
+    "date": "2026-04-26",
+    "timeSlot": "15:30-16:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-26_1530-1600",
+    "doctorId": "doc002",
+    "date": "2026-04-26",
+    "timeSlot": "15:30-16:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-26_1530-1600",
+    "doctorId": "doc003",
+    "date": "2026-04-26",
+    "timeSlot": "15:30-16:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-26_1530-1600",
+    "doctorId": "doc005",
+    "date": "2026-04-26",
+    "timeSlot": "15:30-16:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-26_1600-1630",
+    "doctorId": "doc001",
+    "date": "2026-04-26",
+    "timeSlot": "16:00-16:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-26_1600-1630",
+    "doctorId": "doc002",
+    "date": "2026-04-26",
+    "timeSlot": "16:00-16:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-26_1600-1630",
+    "doctorId": "doc003",
+    "date": "2026-04-26",
+    "timeSlot": "16:00-16:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-26_1600-1630",
+    "doctorId": "doc005",
+    "date": "2026-04-26",
+    "timeSlot": "16:00-16:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-26_1630-1700",
+    "doctorId": "doc001",
+    "date": "2026-04-26",
+    "timeSlot": "16:30-17:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-26_1630-1700",
+    "doctorId": "doc002",
+    "date": "2026-04-26",
+    "timeSlot": "16:30-17:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-26_1630-1700",
+    "doctorId": "doc003",
+    "date": "2026-04-26",
+    "timeSlot": "16:30-17:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-26_1630-1700",
+    "doctorId": "doc005",
+    "date": "2026-04-26",
+    "timeSlot": "16:30-17:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-27_0800-0830",
+    "doctorId": "doc001",
+    "date": "2026-04-27",
+    "timeSlot": "08:00-08:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-27_0800-0830",
+    "doctorId": "doc002",
+    "date": "2026-04-27",
+    "timeSlot": "08:00-08:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-27_0800-0830",
+    "doctorId": "doc003",
+    "date": "2026-04-27",
+    "timeSlot": "08:00-08:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-27_0800-0830",
+    "doctorId": "doc005",
+    "date": "2026-04-27",
+    "timeSlot": "08:00-08:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-27_0830-0900",
+    "doctorId": "doc001",
+    "date": "2026-04-27",
+    "timeSlot": "08:30-09:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-27_0830-0900",
+    "doctorId": "doc002",
+    "date": "2026-04-27",
+    "timeSlot": "08:30-09:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-27_0830-0900",
+    "doctorId": "doc003",
+    "date": "2026-04-27",
+    "timeSlot": "08:30-09:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-27_0830-0900",
+    "doctorId": "doc005",
+    "date": "2026-04-27",
+    "timeSlot": "08:30-09:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-27_0900-0930",
+    "doctorId": "doc001",
+    "date": "2026-04-27",
+    "timeSlot": "09:00-09:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-27_0900-0930",
+    "doctorId": "doc002",
+    "date": "2026-04-27",
+    "timeSlot": "09:00-09:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-27_0900-0930",
+    "doctorId": "doc003",
+    "date": "2026-04-27",
+    "timeSlot": "09:00-09:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-27_0900-0930",
+    "doctorId": "doc005",
+    "date": "2026-04-27",
+    "timeSlot": "09:00-09:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-27_0930-1000",
+    "doctorId": "doc001",
+    "date": "2026-04-27",
+    "timeSlot": "09:30-10:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-27_0930-1000",
+    "doctorId": "doc002",
+    "date": "2026-04-27",
+    "timeSlot": "09:30-10:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-27_0930-1000",
+    "doctorId": "doc003",
+    "date": "2026-04-27",
+    "timeSlot": "09:30-10:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-27_0930-1000",
+    "doctorId": "doc005",
+    "date": "2026-04-27",
+    "timeSlot": "09:30-10:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-27_1000-1030",
+    "doctorId": "doc001",
+    "date": "2026-04-27",
+    "timeSlot": "10:00-10:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-27_1000-1030",
+    "doctorId": "doc002",
+    "date": "2026-04-27",
+    "timeSlot": "10:00-10:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-27_1000-1030",
+    "doctorId": "doc003",
+    "date": "2026-04-27",
+    "timeSlot": "10:00-10:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-27_1000-1030",
+    "doctorId": "doc005",
+    "date": "2026-04-27",
+    "timeSlot": "10:00-10:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-27_1030-1100",
+    "doctorId": "doc001",
+    "date": "2026-04-27",
+    "timeSlot": "10:30-11:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-27_1030-1100",
+    "doctorId": "doc002",
+    "date": "2026-04-27",
+    "timeSlot": "10:30-11:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-27_1030-1100",
+    "doctorId": "doc003",
+    "date": "2026-04-27",
+    "timeSlot": "10:30-11:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-27_1030-1100",
+    "doctorId": "doc005",
+    "date": "2026-04-27",
+    "timeSlot": "10:30-11:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-27_1100-1130",
+    "doctorId": "doc001",
+    "date": "2026-04-27",
+    "timeSlot": "11:00-11:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-27_1100-1130",
+    "doctorId": "doc002",
+    "date": "2026-04-27",
+    "timeSlot": "11:00-11:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-27_1100-1130",
+    "doctorId": "doc003",
+    "date": "2026-04-27",
+    "timeSlot": "11:00-11:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-27_1100-1130",
+    "doctorId": "doc005",
+    "date": "2026-04-27",
+    "timeSlot": "11:00-11:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-27_1130-1200",
+    "doctorId": "doc001",
+    "date": "2026-04-27",
+    "timeSlot": "11:30-12:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-27_1130-1200",
+    "doctorId": "doc002",
+    "date": "2026-04-27",
+    "timeSlot": "11:30-12:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-27_1130-1200",
+    "doctorId": "doc003",
+    "date": "2026-04-27",
+    "timeSlot": "11:30-12:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-27_1130-1200",
+    "doctorId": "doc005",
+    "date": "2026-04-27",
+    "timeSlot": "11:30-12:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-27_1400-1430",
+    "doctorId": "doc001",
+    "date": "2026-04-27",
+    "timeSlot": "14:00-14:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-27_1400-1430",
+    "doctorId": "doc002",
+    "date": "2026-04-27",
+    "timeSlot": "14:00-14:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-27_1400-1430",
+    "doctorId": "doc003",
+    "date": "2026-04-27",
+    "timeSlot": "14:00-14:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-27_1400-1430",
+    "doctorId": "doc005",
+    "date": "2026-04-27",
+    "timeSlot": "14:00-14:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-27_1430-1500",
+    "doctorId": "doc001",
+    "date": "2026-04-27",
+    "timeSlot": "14:30-15:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-27_1430-1500",
+    "doctorId": "doc002",
+    "date": "2026-04-27",
+    "timeSlot": "14:30-15:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-27_1430-1500",
+    "doctorId": "doc003",
+    "date": "2026-04-27",
+    "timeSlot": "14:30-15:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-27_1430-1500",
+    "doctorId": "doc005",
+    "date": "2026-04-27",
+    "timeSlot": "14:30-15:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-27_1500-1530",
+    "doctorId": "doc001",
+    "date": "2026-04-27",
+    "timeSlot": "15:00-15:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-27_1500-1530",
+    "doctorId": "doc002",
+    "date": "2026-04-27",
+    "timeSlot": "15:00-15:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-27_1500-1530",
+    "doctorId": "doc003",
+    "date": "2026-04-27",
+    "timeSlot": "15:00-15:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-27_1500-1530",
+    "doctorId": "doc005",
+    "date": "2026-04-27",
+    "timeSlot": "15:00-15:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-27_1530-1600",
+    "doctorId": "doc001",
+    "date": "2026-04-27",
+    "timeSlot": "15:30-16:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-27_1530-1600",
+    "doctorId": "doc002",
+    "date": "2026-04-27",
+    "timeSlot": "15:30-16:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-27_1530-1600",
+    "doctorId": "doc003",
+    "date": "2026-04-27",
+    "timeSlot": "15:30-16:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-27_1530-1600",
+    "doctorId": "doc005",
+    "date": "2026-04-27",
+    "timeSlot": "15:30-16:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-27_1600-1630",
+    "doctorId": "doc001",
+    "date": "2026-04-27",
+    "timeSlot": "16:00-16:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-27_1600-1630",
+    "doctorId": "doc002",
+    "date": "2026-04-27",
+    "timeSlot": "16:00-16:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-27_1600-1630",
+    "doctorId": "doc003",
+    "date": "2026-04-27",
+    "timeSlot": "16:00-16:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-27_1600-1630",
+    "doctorId": "doc005",
+    "date": "2026-04-27",
+    "timeSlot": "16:00-16:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-27_1630-1700",
+    "doctorId": "doc001",
+    "date": "2026-04-27",
+    "timeSlot": "16:30-17:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-27_1630-1700",
+    "doctorId": "doc002",
+    "date": "2026-04-27",
+    "timeSlot": "16:30-17:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-27_1630-1700",
+    "doctorId": "doc003",
+    "date": "2026-04-27",
+    "timeSlot": "16:30-17:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-27_1630-1700",
+    "doctorId": "doc005",
+    "date": "2026-04-27",
+    "timeSlot": "16:30-17:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-28_0800-0830",
+    "doctorId": "doc001",
+    "date": "2026-04-28",
+    "timeSlot": "08:00-08:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-28_0800-0830",
+    "doctorId": "doc002",
+    "date": "2026-04-28",
+    "timeSlot": "08:00-08:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-28_0800-0830",
+    "doctorId": "doc003",
+    "date": "2026-04-28",
+    "timeSlot": "08:00-08:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-28_0800-0830",
+    "doctorId": "doc005",
+    "date": "2026-04-28",
+    "timeSlot": "08:00-08:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-28_0830-0900",
+    "doctorId": "doc001",
+    "date": "2026-04-28",
+    "timeSlot": "08:30-09:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-28_0830-0900",
+    "doctorId": "doc002",
+    "date": "2026-04-28",
+    "timeSlot": "08:30-09:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-28_0830-0900",
+    "doctorId": "doc003",
+    "date": "2026-04-28",
+    "timeSlot": "08:30-09:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-28_0830-0900",
+    "doctorId": "doc005",
+    "date": "2026-04-28",
+    "timeSlot": "08:30-09:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-28_0900-0930",
+    "doctorId": "doc001",
+    "date": "2026-04-28",
+    "timeSlot": "09:00-09:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-28_0900-0930",
+    "doctorId": "doc002",
+    "date": "2026-04-28",
+    "timeSlot": "09:00-09:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-28_0900-0930",
+    "doctorId": "doc003",
+    "date": "2026-04-28",
+    "timeSlot": "09:00-09:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-28_0900-0930",
+    "doctorId": "doc005",
+    "date": "2026-04-28",
+    "timeSlot": "09:00-09:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-28_0930-1000",
+    "doctorId": "doc001",
+    "date": "2026-04-28",
+    "timeSlot": "09:30-10:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-28_0930-1000",
+    "doctorId": "doc002",
+    "date": "2026-04-28",
+    "timeSlot": "09:30-10:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-28_0930-1000",
+    "doctorId": "doc003",
+    "date": "2026-04-28",
+    "timeSlot": "09:30-10:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-28_0930-1000",
+    "doctorId": "doc005",
+    "date": "2026-04-28",
+    "timeSlot": "09:30-10:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-28_1000-1030",
+    "doctorId": "doc001",
+    "date": "2026-04-28",
+    "timeSlot": "10:00-10:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-28_1000-1030",
+    "doctorId": "doc002",
+    "date": "2026-04-28",
+    "timeSlot": "10:00-10:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-28_1000-1030",
+    "doctorId": "doc003",
+    "date": "2026-04-28",
+    "timeSlot": "10:00-10:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-28_1000-1030",
+    "doctorId": "doc005",
+    "date": "2026-04-28",
+    "timeSlot": "10:00-10:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-28_1030-1100",
+    "doctorId": "doc001",
+    "date": "2026-04-28",
+    "timeSlot": "10:30-11:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-28_1030-1100",
+    "doctorId": "doc002",
+    "date": "2026-04-28",
+    "timeSlot": "10:30-11:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-28_1030-1100",
+    "doctorId": "doc003",
+    "date": "2026-04-28",
+    "timeSlot": "10:30-11:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-28_1030-1100",
+    "doctorId": "doc005",
+    "date": "2026-04-28",
+    "timeSlot": "10:30-11:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-28_1100-1130",
+    "doctorId": "doc001",
+    "date": "2026-04-28",
+    "timeSlot": "11:00-11:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-28_1100-1130",
+    "doctorId": "doc002",
+    "date": "2026-04-28",
+    "timeSlot": "11:00-11:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-28_1100-1130",
+    "doctorId": "doc003",
+    "date": "2026-04-28",
+    "timeSlot": "11:00-11:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-28_1100-1130",
+    "doctorId": "doc005",
+    "date": "2026-04-28",
+    "timeSlot": "11:00-11:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-28_1130-1200",
+    "doctorId": "doc001",
+    "date": "2026-04-28",
+    "timeSlot": "11:30-12:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-28_1130-1200",
+    "doctorId": "doc002",
+    "date": "2026-04-28",
+    "timeSlot": "11:30-12:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-28_1130-1200",
+    "doctorId": "doc003",
+    "date": "2026-04-28",
+    "timeSlot": "11:30-12:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-28_1130-1200",
+    "doctorId": "doc005",
+    "date": "2026-04-28",
+    "timeSlot": "11:30-12:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-28_1400-1430",
+    "doctorId": "doc001",
+    "date": "2026-04-28",
+    "timeSlot": "14:00-14:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-28_1400-1430",
+    "doctorId": "doc002",
+    "date": "2026-04-28",
+    "timeSlot": "14:00-14:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-28_1400-1430",
+    "doctorId": "doc003",
+    "date": "2026-04-28",
+    "timeSlot": "14:00-14:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-28_1400-1430",
+    "doctorId": "doc005",
+    "date": "2026-04-28",
+    "timeSlot": "14:00-14:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-28_1430-1500",
+    "doctorId": "doc001",
+    "date": "2026-04-28",
+    "timeSlot": "14:30-15:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-28_1430-1500",
+    "doctorId": "doc002",
+    "date": "2026-04-28",
+    "timeSlot": "14:30-15:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-28_1430-1500",
+    "doctorId": "doc003",
+    "date": "2026-04-28",
+    "timeSlot": "14:30-15:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-28_1430-1500",
+    "doctorId": "doc005",
+    "date": "2026-04-28",
+    "timeSlot": "14:30-15:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-28_1500-1530",
+    "doctorId": "doc001",
+    "date": "2026-04-28",
+    "timeSlot": "15:00-15:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-28_1500-1530",
+    "doctorId": "doc002",
+    "date": "2026-04-28",
+    "timeSlot": "15:00-15:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-28_1500-1530",
+    "doctorId": "doc003",
+    "date": "2026-04-28",
+    "timeSlot": "15:00-15:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-28_1500-1530",
+    "doctorId": "doc005",
+    "date": "2026-04-28",
+    "timeSlot": "15:00-15:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-28_1530-1600",
+    "doctorId": "doc001",
+    "date": "2026-04-28",
+    "timeSlot": "15:30-16:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-28_1530-1600",
+    "doctorId": "doc002",
+    "date": "2026-04-28",
+    "timeSlot": "15:30-16:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-28_1530-1600",
+    "doctorId": "doc003",
+    "date": "2026-04-28",
+    "timeSlot": "15:30-16:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-28_1530-1600",
+    "doctorId": "doc005",
+    "date": "2026-04-28",
+    "timeSlot": "15:30-16:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-28_1600-1630",
+    "doctorId": "doc001",
+    "date": "2026-04-28",
+    "timeSlot": "16:00-16:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-28_1600-1630",
+    "doctorId": "doc002",
+    "date": "2026-04-28",
+    "timeSlot": "16:00-16:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-28_1600-1630",
+    "doctorId": "doc003",
+    "date": "2026-04-28",
+    "timeSlot": "16:00-16:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-28_1600-1630",
+    "doctorId": "doc005",
+    "date": "2026-04-28",
+    "timeSlot": "16:00-16:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-28_1630-1700",
+    "doctorId": "doc001",
+    "date": "2026-04-28",
+    "timeSlot": "16:30-17:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-28_1630-1700",
+    "doctorId": "doc002",
+    "date": "2026-04-28",
+    "timeSlot": "16:30-17:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-28_1630-1700",
+    "doctorId": "doc003",
+    "date": "2026-04-28",
+    "timeSlot": "16:30-17:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-28_1630-1700",
+    "doctorId": "doc005",
+    "date": "2026-04-28",
+    "timeSlot": "16:30-17:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-29_0800-0830",
+    "doctorId": "doc001",
+    "date": "2026-04-29",
+    "timeSlot": "08:00-08:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-29_0800-0830",
+    "doctorId": "doc002",
+    "date": "2026-04-29",
+    "timeSlot": "08:00-08:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-29_0800-0830",
+    "doctorId": "doc003",
+    "date": "2026-04-29",
+    "timeSlot": "08:00-08:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-29_0800-0830",
+    "doctorId": "doc005",
+    "date": "2026-04-29",
+    "timeSlot": "08:00-08:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-29_0830-0900",
+    "doctorId": "doc001",
+    "date": "2026-04-29",
+    "timeSlot": "08:30-09:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-29_0830-0900",
+    "doctorId": "doc002",
+    "date": "2026-04-29",
+    "timeSlot": "08:30-09:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-29_0830-0900",
+    "doctorId": "doc003",
+    "date": "2026-04-29",
+    "timeSlot": "08:30-09:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-29_0830-0900",
+    "doctorId": "doc005",
+    "date": "2026-04-29",
+    "timeSlot": "08:30-09:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-29_0900-0930",
+    "doctorId": "doc001",
+    "date": "2026-04-29",
+    "timeSlot": "09:00-09:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-29_0900-0930",
+    "doctorId": "doc002",
+    "date": "2026-04-29",
+    "timeSlot": "09:00-09:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-29_0900-0930",
+    "doctorId": "doc003",
+    "date": "2026-04-29",
+    "timeSlot": "09:00-09:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-29_0900-0930",
+    "doctorId": "doc005",
+    "date": "2026-04-29",
+    "timeSlot": "09:00-09:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-29_0930-1000",
+    "doctorId": "doc001",
+    "date": "2026-04-29",
+    "timeSlot": "09:30-10:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-29_0930-1000",
+    "doctorId": "doc002",
+    "date": "2026-04-29",
+    "timeSlot": "09:30-10:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-29_0930-1000",
+    "doctorId": "doc003",
+    "date": "2026-04-29",
+    "timeSlot": "09:30-10:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-29_0930-1000",
+    "doctorId": "doc005",
+    "date": "2026-04-29",
+    "timeSlot": "09:30-10:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-29_1000-1030",
+    "doctorId": "doc001",
+    "date": "2026-04-29",
+    "timeSlot": "10:00-10:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-29_1000-1030",
+    "doctorId": "doc002",
+    "date": "2026-04-29",
+    "timeSlot": "10:00-10:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-29_1000-1030",
+    "doctorId": "doc003",
+    "date": "2026-04-29",
+    "timeSlot": "10:00-10:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-29_1000-1030",
+    "doctorId": "doc005",
+    "date": "2026-04-29",
+    "timeSlot": "10:00-10:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-29_1030-1100",
+    "doctorId": "doc001",
+    "date": "2026-04-29",
+    "timeSlot": "10:30-11:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-29_1030-1100",
+    "doctorId": "doc002",
+    "date": "2026-04-29",
+    "timeSlot": "10:30-11:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-29_1030-1100",
+    "doctorId": "doc003",
+    "date": "2026-04-29",
+    "timeSlot": "10:30-11:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-29_1030-1100",
+    "doctorId": "doc005",
+    "date": "2026-04-29",
+    "timeSlot": "10:30-11:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-29_1100-1130",
+    "doctorId": "doc001",
+    "date": "2026-04-29",
+    "timeSlot": "11:00-11:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-29_1100-1130",
+    "doctorId": "doc002",
+    "date": "2026-04-29",
+    "timeSlot": "11:00-11:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-29_1100-1130",
+    "doctorId": "doc003",
+    "date": "2026-04-29",
+    "timeSlot": "11:00-11:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-29_1100-1130",
+    "doctorId": "doc005",
+    "date": "2026-04-29",
+    "timeSlot": "11:00-11:30",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-29_1130-1200",
+    "doctorId": "doc001",
+    "date": "2026-04-29",
+    "timeSlot": "11:30-12:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-29_1130-1200",
+    "doctorId": "doc002",
+    "date": "2026-04-29",
+    "timeSlot": "11:30-12:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-29_1130-1200",
+    "doctorId": "doc003",
+    "date": "2026-04-29",
+    "timeSlot": "11:30-12:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-29_1130-1200",
+    "doctorId": "doc005",
+    "date": "2026-04-29",
+    "timeSlot": "11:30-12:00",
+    "period": "morning",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-29_1400-1430",
+    "doctorId": "doc001",
+    "date": "2026-04-29",
+    "timeSlot": "14:00-14:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-29_1400-1430",
+    "doctorId": "doc002",
+    "date": "2026-04-29",
+    "timeSlot": "14:00-14:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-29_1400-1430",
+    "doctorId": "doc003",
+    "date": "2026-04-29",
+    "timeSlot": "14:00-14:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-29_1400-1430",
+    "doctorId": "doc005",
+    "date": "2026-04-29",
+    "timeSlot": "14:00-14:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-29_1430-1500",
+    "doctorId": "doc001",
+    "date": "2026-04-29",
+    "timeSlot": "14:30-15:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-29_1430-1500",
+    "doctorId": "doc002",
+    "date": "2026-04-29",
+    "timeSlot": "14:30-15:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-29_1430-1500",
+    "doctorId": "doc003",
+    "date": "2026-04-29",
+    "timeSlot": "14:30-15:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-29_1430-1500",
+    "doctorId": "doc005",
+    "date": "2026-04-29",
+    "timeSlot": "14:30-15:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-29_1500-1530",
+    "doctorId": "doc001",
+    "date": "2026-04-29",
+    "timeSlot": "15:00-15:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-29_1500-1530",
+    "doctorId": "doc002",
+    "date": "2026-04-29",
+    "timeSlot": "15:00-15:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-29_1500-1530",
+    "doctorId": "doc003",
+    "date": "2026-04-29",
+    "timeSlot": "15:00-15:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-29_1500-1530",
+    "doctorId": "doc005",
+    "date": "2026-04-29",
+    "timeSlot": "15:00-15:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-29_1530-1600",
+    "doctorId": "doc001",
+    "date": "2026-04-29",
+    "timeSlot": "15:30-16:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-29_1530-1600",
+    "doctorId": "doc002",
+    "date": "2026-04-29",
+    "timeSlot": "15:30-16:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-29_1530-1600",
+    "doctorId": "doc003",
+    "date": "2026-04-29",
+    "timeSlot": "15:30-16:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-29_1530-1600",
+    "doctorId": "doc005",
+    "date": "2026-04-29",
+    "timeSlot": "15:30-16:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-29_1600-1630",
+    "doctorId": "doc001",
+    "date": "2026-04-29",
+    "timeSlot": "16:00-16:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-29_1600-1630",
+    "doctorId": "doc002",
+    "date": "2026-04-29",
+    "timeSlot": "16:00-16:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-29_1600-1630",
+    "doctorId": "doc003",
+    "date": "2026-04-29",
+    "timeSlot": "16:00-16:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-29_1600-1630",
+    "doctorId": "doc005",
+    "date": "2026-04-29",
+    "timeSlot": "16:00-16:30",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc001_2026-04-29_1630-1700",
+    "doctorId": "doc001",
+    "date": "2026-04-29",
+    "timeSlot": "16:30-17:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc002_2026-04-29_1630-1700",
+    "doctorId": "doc002",
+    "date": "2026-04-29",
+    "timeSlot": "16:30-17:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc003_2026-04-29_1630-1700",
+    "doctorId": "doc003",
+    "date": "2026-04-29",
+    "timeSlot": "16:30-17:00",
+    "period": "afternoon",
+    "status": "available"
+  },
+  {
+    "id": "slot_doc005_2026-04-29_1630-1700",
+    "doctorId": "doc005",
+    "date": "2026-04-29",
+    "timeSlot": "16:30-17:00",
+    "period": "afternoon",
+    "status": "available"
+  }
+]

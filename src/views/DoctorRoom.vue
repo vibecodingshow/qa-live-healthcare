@@ -29,65 +29,133 @@
         />
       </div>
 
-      <div class="questions-section">
-        <div class="section-header">
-          <h2>待响应问题 ({{ pendingQuestions.length }})</h2>
-          <a-button type="primary" @click="refreshQuestions">
-            <ReloadOutlined />
-            刷新
-          </a-button>
-        </div>
+      <a-tabs v-model:activeKey="activeTab">
+        <a-tab-pane key="questions" tab="问诊管理">
+          <div class="questions-section">
+            <div class="section-header">
+              <h2>待响应问题 ({{ pendingQuestions.length }})</h2>
+              <a-button type="primary" @click="refreshQuestions">
+                <ReloadOutlined />
+                刷新
+              </a-button>
+            </div>
 
-        <a-empty v-if="pendingQuestions.length === 0" description="暂无待响应问题" />
+            <a-empty v-if="pendingQuestions.length === 0" description="暂无待响应问题" />
 
-        <div v-else class="questions-list">
-          <div
-            v-for="question in pendingQuestions"
-            :key="question.id"
-            class="question-card"
-          >
-            <div class="question-header">
-              <div class="patient-info">
-                <UserOutlined class="patient-icon" />
-                <span class="patient-name">{{ question.patientName }}</span>
+            <div v-else class="questions-list">
+              <div
+                v-for="question in pendingQuestions"
+                :key="question.id"
+                class="question-card"
+              >
+                <div class="question-header">
+                  <div class="patient-info">
+                    <UserOutlined class="patient-icon" />
+                    <span class="patient-name">{{ question.patientName }}</span>
+                  </div>
+                  <span class="submit-time">{{ formatTime(question.submitTime) }}</span>
+                </div>
+                <div class="question-content">
+                  <p>{{ question.question }}</p>
+                </div>
+                <div class="question-actions">
+                  <a-button type="primary" @click="showAnswerModal(question)">
+                    <EditOutlined />
+                    文字回复
+                  </a-button>
+                  <a-button @click="markAsAnswered(question.id)">
+                    <CheckOutlined />
+                    标记已解答
+                  </a-button>
+                </div>
               </div>
-              <span class="submit-time">{{ formatTime(question.submitTime) }}</span>
-            </div>
-            <div class="question-content">
-              <p>{{ question.question }}</p>
-            </div>
-            <div class="question-actions">
-              <a-button type="primary" @click="showAnswerModal(question)">
-                <EditOutlined />
-                文字回复
-              </a-button>
-              <a-button @click="markAsAnswered(question.id)">
-                <CheckOutlined />
-                标记已解答
-              </a-button>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div class="answered-section">
-        <h2>已解答问题 ({{ answeredQuestions.length }})</h2>
-        <a-collapse v-if="answeredQuestions.length > 0" accordion>
-          <a-collapse-panel
-            v-for="question in answeredQuestions"
-            :key="question.id"
-            :header="`${question.patientName}: ${question.question.substring(0, 50)}...`"
-          >
-            <div class="answered-content">
-              <p class="question-text"><strong>问题:</strong> {{ question.question }}</p>
-              <p class="answer-text"><strong>回复:</strong> {{ question.answer }}</p>
-              <p class="answer-time">回复时间: {{ formatTime(question.answerTime!) }}</p>
+          <div class="answered-section">
+            <h2>已解答问题 ({{ answeredQuestions.length }})</h2>
+            <a-collapse v-if="answeredQuestions.length > 0" accordion>
+              <a-collapse-panel
+                v-for="question in answeredQuestions"
+                :key="question.id"
+                :header="`${question.patientName}: ${question.question.substring(0, 50)}...`"
+              >
+                <div class="answered-content">
+                  <p class="question-text"><strong>问题:</strong> {{ question.question }}</p>
+                  <p class="answer-text"><strong>回复:</strong> {{ question.answer }}</p>
+                  <p class="answer-time">回复时间: {{ formatTime(question.answerTime!) }}</p>
+                </div>
+              </a-collapse-panel>
+            </a-collapse>
+            <a-empty v-else description="暂无已解答问题" />
+          </div>
+        </a-tab-pane>
+
+        <a-tab-pane key="appointments" tab="预约管理">
+          <div class="appointments-section">
+            <a-empty v-if="groupedAppointments.length === 0" description="暂无预约记录" />
+
+            <div v-else class="appointment-groups">
+              <div v-for="[date, appointments] in groupedAppointments" :key="date" class="date-group">
+                <a-divider>{{ date }}</a-divider>
+                <div class="appointment-cards">
+                  <div v-for="apt in appointments" :key="apt.id" class="appointment-card">
+                    <div class="appointment-info">
+                      <div class="appointment-patient">
+                        <UserOutlined class="patient-icon" />
+                        <span class="patient-name">{{ apt.patientName }}</span>
+                      </div>
+                      <span class="appointment-time">{{ apt.timeSlot }}</span>
+                      <a-tag
+                        :color="apt.status === 'pending' ? 'orange' : apt.status === 'confirmed' ? 'green' : 'red'"
+                      >
+                        {{ apt.status === 'pending' ? '待确认' : apt.status === 'confirmed' ? '已确认' : '已取消' }}
+                      </a-tag>
+                    </div>
+                    <div class="appointment-actions">
+                      <template v-if="apt.status === 'pending'">
+                        <a-button type="primary" size="small" @click="confirmAppointment(apt.id)">确认</a-button>
+                        <a-button size="small" @click="showCancelModal(apt)">取消</a-button>
+                      </template>
+                      <template v-else-if="apt.status === 'confirmed'">
+                        <a-button size="small" @click="showCancelModal(apt)">取消</a-button>
+                      </template>
+                      <template v-else>
+                        <span class="cancel-reason">取消原因: {{ apt.cancelReason }}</span>
+                      </template>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </a-collapse-panel>
-        </a-collapse>
-        <a-empty v-else description="暂无已解答问题" />
-      </div>
+          </div>
+        </a-tab-pane>
+      </a-tabs>
     </div>
+
+    <a-modal
+      v-model:open="cancelModalVisible"
+      title="取消预约"
+      @ok="submitCancel"
+      @cancel="closeCancelModal"
+      :confirmLoading="cancelling"
+    >
+      <div class="modal-content">
+        <div class="question-info">
+          <p><strong>患者:</strong> {{ selectedAppointment?.patientName }}</p>
+          <p><strong>时段:</strong> {{ selectedAppointment?.date }} {{ selectedAppointment?.timeSlot }}</p>
+        </div>
+        <a-form-item label="取消原因" required>
+          <a-textarea
+            v-model:value="cancelReason"
+            :rows="4"
+            :maxlength="200"
+            placeholder="请输入取消原因..."
+            show-count
+          />
+        </a-form-item>
+      </div>
+    </a-modal>
 
     <a-modal
       v-model:open="answerModalVisible"
@@ -126,7 +194,7 @@ import {
   EditOutlined,
   CheckOutlined
 } from '@ant-design/icons-vue';
-import { store, Question } from '../store';
+import { store, Question, Appointment } from '../store';
 
 const route = useRoute();
 const router = useRouter();
@@ -151,6 +219,27 @@ const answerModalVisible = ref(false);
 const selectedQuestion = ref<Question | null>(null);
 const answerText = ref('');
 const submitting = ref(false);
+
+const activeTab = ref('questions');
+
+const groupedAppointments = computed(() => {
+  if (!currentDoctor.value) return [];
+  const appointments = store.getAppointmentsByDoctor(currentDoctor.value.id);
+  const groups: Record<string, Appointment[]> = {};
+  appointments.forEach(apt => {
+    if (!groups[apt.date]) groups[apt.date] = [];
+    groups[apt.date].push(apt);
+  });
+  Object.values(groups).forEach(group => {
+    group.sort((a, b) => a.timeSlot.localeCompare(b.timeSlot));
+  });
+  return Object.entries(groups).sort(([a], [b]) => b.localeCompare(a));
+});
+
+const cancelModalVisible = ref(false);
+const selectedAppointment = ref<Appointment | null>(null);
+const cancelReason = ref('');
+const cancelling = ref(false);
 
 onMounted(() => {
   if (!currentDoctor.value || currentDoctor.value.username !== username) {
@@ -211,6 +300,39 @@ const submitAnswer = () => {
 const markAsAnswered = (questionId: string) => {
   store.markQuestionAsAnswered(questionId);
   message.success('已标记为已解答');
+};
+
+const confirmAppointment = (appointmentId: string) => {
+  store.confirmAppointment(appointmentId);
+  message.success('预约已确认');
+};
+
+const showCancelModal = (appointment: Appointment) => {
+  selectedAppointment.value = appointment;
+  cancelReason.value = '';
+  cancelModalVisible.value = true;
+};
+
+const closeCancelModal = () => {
+  cancelModalVisible.value = false;
+  selectedAppointment.value = null;
+  cancelReason.value = '';
+};
+
+const submitCancel = () => {
+  if (!cancelReason.value.trim()) {
+    message.error('请输入取消原因');
+    return;
+  }
+  cancelling.value = true;
+  setTimeout(() => {
+    if (selectedAppointment.value) {
+      store.cancelAppointment(selectedAppointment.value.id, cancelReason.value);
+      message.success('预约已取消');
+      closeCancelModal();
+    }
+    cancelling.value = false;
+  }, 300);
 };
 </script>
 
@@ -380,6 +502,60 @@ const markAsAnswered = (questionId: string) => {
 .modal-content .question-info p {
   margin: 8px 0;
   line-height: 1.6;
+}
+
+.appointments-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.appointment-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.date-group :deep(.ant-divider) {
+  margin: 8px 0 16px;
+}
+
+.appointment-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.appointment-card {
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  padding: 16px;
+  background: #fafafa;
+}
+
+.appointment-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.appointment-time {
+  font-size: 14px;
+  color: #666;
+}
+
+.cancel-reason {
+  font-size: 13px;
+  color: #999;
+  font-style: italic;
+}
+
+.appointment-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
 }
 
 @media (max-width: 768px) {

@@ -2,6 +2,8 @@ import { reactive } from 'vue';
 import doctorData from '../data/doctor-user-list.json';
 import patientData from '../data/patient-user.json';
 import questionData from '../data/question-list.json';
+import appointmentListData from '../data/appointment-list.json';
+import slotData from '../data/appointment-slots.json';
 
 export interface Doctor {
   id: string;
@@ -37,12 +39,39 @@ export interface Question {
   answerTime: string | null;
 }
 
+// 预约记录接口
+export interface Appointment {
+  id: string;
+  patientId: string;
+  patientName: string;
+  doctorId: string;
+  doctorName: string;
+  date: string;        // YYYY-MM-DD
+  timeSlot: string;    // HH:mm-HH:mm
+  status: 'pending' | 'confirmed' | 'cancelled';
+  cancelReason: string;
+  createdAt: string;   // ISO 8601
+  updatedAt: string;   // ISO 8601
+}
+
+// 排班时段接口
+export interface AppointmentSlot {
+  id: string;
+  doctorId: string;
+  date: string;        // YYYY-MM-DD
+  timeSlot: string;    // HH:mm-HH:mm
+  period: 'morning' | 'afternoon';
+  status: 'available' | 'booked';
+}
+
 interface State {
   doctors: Doctor[];
   patients: Patient[];
   questions: Question[];
   currentDoctor: Doctor | null;
   currentPatient: Patient | null;
+  appointments: Appointment[];
+  appointmentSlots: AppointmentSlot[];
 }
 
 const state = reactive<State>({
@@ -51,6 +80,8 @@ const state = reactive<State>({
   questions: questionData as Question[],
   currentDoctor: null,
   currentPatient: null,
+  appointments: appointmentListData as Appointment[],
+  appointmentSlots: slotData as AppointmentSlot[],
 });
 
 export const store = {
@@ -154,5 +185,81 @@ export const store = {
       activeSessions,
       totalSessions,
     };
+  },
+
+  // ---- 排班查询方法 ----
+
+  getSlotsByDoctor(doctorId: string): AppointmentSlot[] {
+    return state.appointmentSlots.filter(s => s.doctorId === doctorId);
+  },
+
+  getSlotsByDoctorAndDate(doctorId: string, date: string): AppointmentSlot[] {
+    return state.appointmentSlots.filter(
+      s => s.doctorId === doctorId && s.date === date
+    );
+  },
+
+  getAvailableSlotsByDoctorAndDate(doctorId: string, date: string): AppointmentSlot[] {
+    return state.appointmentSlots.filter(
+      s => s.doctorId === doctorId && s.date === date && s.status === 'available'
+    );
+  },
+
+  // ---- 预约操作方法 ----
+
+  createAppointment(data: Omit<Appointment, 'id' | 'status' | 'cancelReason' | 'createdAt' | 'updatedAt'>): Appointment | null {
+    const slot = state.appointmentSlots.find(
+      s => s.doctorId === data.doctorId && s.date === data.date && s.timeSlot === data.timeSlot
+    );
+    if (slot && slot.status !== 'available') {
+      return null;
+    }
+    const appointment: Appointment = {
+      ...data,
+      id: `apt${Date.now()}`,
+      status: 'pending',
+      cancelReason: '',
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
+    };
+    state.appointments.push(appointment);
+    if (slot) {
+      slot.status = 'booked';
+    }
+    return appointment;
+  },
+
+  confirmAppointment(appointmentId: string): void {
+    const appointment = state.appointments.find(a => a.id === appointmentId);
+    if (!appointment || appointment.status !== 'pending') return;
+    appointment.status = 'confirmed';
+    appointment.updatedAt = new Date().toISOString();
+  },
+
+  cancelAppointment(appointmentId: string, reason: string): void {
+    const appointment = state.appointments.find(a => a.id === appointmentId);
+    if (!appointment) return;
+    if (appointment.status !== 'pending' && appointment.status !== 'confirmed') return;
+    if (!reason || reason.trim().length === 0) return;
+    if (reason.length > 200) return;
+    const slot = state.appointmentSlots.find(
+      s => s.doctorId === appointment.doctorId && s.date === appointment.date && s.timeSlot === appointment.timeSlot
+    );
+    if (slot) {
+      slot.status = 'available';
+    }
+    appointment.status = 'cancelled';
+    appointment.cancelReason = reason.trim();
+    appointment.updatedAt = new Date().toISOString();
+  },
+
+  // ---- 预约查询方法 ----
+
+  getAppointmentsByDoctor(doctorId: string): Appointment[] {
+    return state.appointments.filter(a => a.doctorId === doctorId);
+  },
+
+  getAppointmentsByPatient(patientId: string): Appointment[] {
+    return state.appointments.filter(a => a.patientId === patientId);
   },
 };

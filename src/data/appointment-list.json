@@ -1,0 +1,41 @@
+[
+  {
+    "id": "apt001",
+    "patientId": "patient001",
+    "patientName": "赵明",
+    "doctorId": "doc001",
+    "doctorName": "张伟医生",
+    "date": "2026-04-23",
+    "timeSlot": "08:00-08:30",
+    "status": "pending",
+    "cancelReason": "",
+    "createdAt": "2026-04-22T10:00:00",
+    "updatedAt": "2026-04-22T10:00:00"
+  },
+  {
+    "id": "apt002",
+    "patientId": "patient002",
+    "patientName": "孙丽",
+    "doctorId": "doc002",
+    "doctorName": "李娜医生",
+    "date": "2026-04-24",
+    "timeSlot": "14:00-14:30",
+    "status": "confirmed",
+    "cancelReason": "",
+    "createdAt": "2026-04-21T09:00:00",
+    "updatedAt": "2026-04-22T08:00:00"
+  },
+  {
+    "id": "apt003",
+    "patientId": "patient001",
+    "patientName": "赵明",
+    "doctorId": "doc003",
+    "doctorName": "王强医生",
+    "date": "2026-04-22",
+    "timeSlot": "09:00-09:30",
+    "status": "cancelled",
+    "cancelReason": "患者临时有事",
+    "createdAt": "2026-04-20T15:00:00",
+    "updatedAt": "2026-04-21T10:00:00"
+  }
+]

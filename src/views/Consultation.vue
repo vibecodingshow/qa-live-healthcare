@@ -113,6 +113,44 @@
             </a-card>
           </div>
         </div>
+
+        <div class="appointments-section">
+          <div class="section-header">
+            <h2>我的预约</h2>
+          </div>
+
+          <a-empty v-if="myAppointments.length === 0" description="您还没有预约记录" />
+
+          <div v-else class="my-appointments-list">
+            <a-card
+              v-for="apt in myAppointments"
+              :key="apt.id"
+              class="appointment-item"
+            >
+              <template #title>
+                <div class="appointment-title">
+                  <span>{{ apt.doctorName }}</span>
+                  <a-tag
+                    :color="apt.status === 'pending' ? 'orange' : apt.status === 'confirmed' ? 'green' : 'red'"
+                  >
+                    {{ apt.status === 'pending' ? '待确认' : apt.status === 'confirmed' ? '已确认' : '已取消' }}
+                  </a-tag>
+                </div>
+              </template>
+              <div class="appointment-detail">
+                <p class="appointment-text"><strong>日期:</strong> {{ dayjs(apt.date).format('MM月DD日') }}</p>
+                <p class="appointment-text"><strong>时段:</strong> {{ apt.timeSlot }}</p>
+                <div v-if="apt.cancelReason" class="cancel-reason">
+                  <a-divider />
+                  <p>取消原因: {{ apt.cancelReason }}</p>
+                </div>
+              </div>
+              <template v-if="apt.status === 'pending'" #actions>
+                <a-button danger size="small" @click="cancelAppointment(apt.id)">取消预约</a-button>
+              </template>
+            </a-card>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -180,6 +218,12 @@ const currentPatient = computed(() => store.state.currentPatient);
 const myQuestions = computed(() =>
   currentPatient.value
     ? store.getQuestionsByPatient(currentPatient.value.id)
+    : []
+);
+
+const myAppointments = computed(() =>
+  currentPatient.value
+    ? store.getAppointmentsByPatient(currentPatient.value.id).sort((a, b) => b.date.localeCompare(a.date))
     : []
 );
 
@@ -300,6 +344,11 @@ const submitQuestion = () => {
 
 const formatTime = (time: string) => {
   return dayjs(time).format('YYYY-MM-DD HH:mm');
+};
+
+const cancelAppointment = (appointmentId: string) => {
+  store.cancelAppointment(appointmentId, '患者取消');
+  message.success('预约已取消');
 };
 </script>
 
@@ -459,6 +508,42 @@ const formatTime = (time: string) => {
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
+}
+
+.appointments-section {
+  padding: 24px;
+  border-top: 1px solid #e8e8e8;
+}
+
+.my-appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.appointment-item {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.appointment-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.appointment-detail {
+  line-height: 1.6;
+}
+
+.appointment-text {
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.cancel-reason p {
+  font-size: 13px;
+  color: #999;
+  margin: 0;
 }
 
 @media (max-width: 768px) {

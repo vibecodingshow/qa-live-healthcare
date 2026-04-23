@@ -11,6 +11,7 @@
         <ul>
           <li><a href="/">首页</a></li>
           <li><a href="/consultation">问诊</a></li>
+          <li><a href="/appointment">预约挂号</a></li>
           <li><a href="/doctors">医生团队</a></li>
           <li><a href="/about">关于我们</a></li>
         </ul>
