@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>演示选择器</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>演示站点生成器</h1>
+        <p class="subtitle">将 Markdown 文件转换为全屏演示</p>
+        
+        <!-- 拖拽区域 -->
+        <div class="upload-area" id="uploadArea">
+            <div class="upload-icon">📄</div>
+            <p>点击选择或拖拽 Markdown 文件</p>
+            <input type="file" id="fileInput" accept=".md,.markdown" hidden>
+        </div>
+
+        <!-- 使用说明 -->
+        <div class="instructions">
+            <h3>使用说明</h3>
+            <ul>
+                <li>点击上方区域选择 Markdown 文件</li>
+                <li>或直接拖拽 .md 文件到此处</li>
+                <li><kbd>←</kbd> <kbd>→</kbd> 切换页面</li>
+                <li>按 <kbd>F</kbd> 进入全屏模式</li>
+                <li><kbd>Esc</kbd> 退出全屏</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="assets/script.js"></script>
+    <script>
+        // 文件选择
+        const fileInput = document.getElementById('fileInput');
+        const uploadArea = document.getElementById('uploadArea');
+        
+        uploadArea.addEventListener('click', () => fileInput.click());
+        
+        fileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) loadLocalFile(file);
+        });
+        
+        // 拖拽支持
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+        
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('dragover');
+        });
+        
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                loadLocalFile(files[0]);
+            }
+        });
+    </script>
+</body>
+</html>

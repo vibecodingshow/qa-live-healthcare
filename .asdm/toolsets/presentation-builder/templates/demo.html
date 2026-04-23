@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>演示 - Presentation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="presentation" id="presentation">
+    <div class="slide-container" id="slideContainer"></div>
+    
+    <!-- 控制栏 -->
+    <div class="controls">
+      <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+      </div>
+      
+      <div class="control-buttons">
+        <button class="control-btn" id="prevBtn" title="上一页 (←)">
+          <span>◀</span>
+        </button>
+        
+        <div class="page-indicator">
+          <span id="currentPage">1</span>
+          <span>/</span>
+          <span id="totalPages">1</span>
+        </div>
+        
+        <button class="control-btn" id="nextBtn" title="下一页 (→)">
+          <span>▶</span>
+        </button>
+        
+        <button class="control-btn play-btn" id="fullscreenBtn" title="全屏 (F)">
+          <span>▶▶</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 键盘提示 -->
+    <div class="keyboard-hint" id="keyboardHint">
+      <kbd>←</kbd> <kbd>→</kbd> 翻页 | <kbd>F</kbd> 全屏 | <kbd>ESC</kbd> 退出
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    initPresentation();
+  </script>
+</body>
+</html>
