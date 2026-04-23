@@ -71,6 +71,14 @@
       </div>
     </section>
 
+    <section class="appointment-stats-section">
+      <div class="section-container">
+        <h2>预约统计</h2>
+        <p class="section-subtitle">实时更新平台预约数据</p>
+        <AppointmentStats />
+      </div>
+    </section>
+
     <section class="active-rooms">
       <h2>开放诊室</h2>
       <p class="section-subtitle">以下医生诊室正在开放,欢迎咨询</p>
@@ -115,6 +123,7 @@ import {
   ClockCircleOutlined,
   UserOutlined
 } from '@ant-design/icons-vue';
+import AppointmentStats from '../components/home/AppointmentStats.vue';
 
 const router = useRouter();
 
@@ -259,6 +268,23 @@ const navigateTo = (path: string) => {
   font-size: 16px;
   color: #666;
   margin: 4px 0 0;
+}
+
+.appointment-stats-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.section-container {
+  text-align: center;
+}
+
+.appointment-stats-section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 16px;
 }
 
 .active-rooms {
