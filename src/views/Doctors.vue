@@ -40,6 +40,15 @@
             >
               {{ doctor.isActive ? '进入诊室' : '暂未开放' }}
             </a-button>
+            <a-button
+              type="default"
+              block
+              :disabled="!doctor.isActive"
+              style="margin-top: 8px;"
+              @click="goToAppointment(doctor)"
+            >
+              立即预约
+            </a-button>
           </div>
         </a-card>
       </div>
@@ -58,6 +67,10 @@ const allDoctors = computed(() => store.state.doctors);
 
 const goToConsultation = (doctor: Doctor) => {
   router.push(`/consultation/${doctor.username}`);
+};
+
+const goToAppointment = (doctor: Doctor) => {
+  router.push({ path: '/appointment', query: { doctor: doctor.username } });
 };
 </script>
 
