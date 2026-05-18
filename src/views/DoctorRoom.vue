@@ -14,6 +14,14 @@
             <CopyOutlined />
             复制诊室链接
           </a-button>
+          <a-button @click="navigateTo('/doctor/appointments')">
+            <CalendarOutlined />
+            预约管理
+          </a-button>
+          <a-button @click="navigateTo('/doctor/schedule')">
+            <SettingOutlined />
+            排班设置
+          </a-button>
           <a-button danger @click="logout">
             <LogoutOutlined />
             退出登录
@@ -124,7 +132,9 @@ import {
   ReloadOutlined,
   UserOutlined,
   EditOutlined,
-  CheckOutlined
+  CheckOutlined,
+  CalendarOutlined,
+  SettingOutlined
 } from '@ant-design/icons-vue';
 import { store, Question } from '../store';
 
@@ -162,6 +172,10 @@ onMounted(() => {
 const copyRoomUrl = () => {
   navigator.clipboard.writeText(roomUrl.value);
   message.success('诊室链接已复制到剪贴板');
+};
+
+const navigateTo = (path: string) => {
+  router.push(path);
 };
 
 const logout = () => {
