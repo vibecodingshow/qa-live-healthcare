@@ -10,6 +10,10 @@
           </div>
         </div>
         <div class="room-actions">
+          <a-button type="primary" @click="goToSchedule">
+            <CalendarOutlined />
+            排班管理
+          </a-button>
           <a-button @click="copyRoomUrl">
             <CopyOutlined />
             复制诊室链接
@@ -124,7 +128,8 @@ import {
   ReloadOutlined,
   UserOutlined,
   EditOutlined,
-  CheckOutlined
+  CheckOutlined,
+  CalendarOutlined
 } from '@ant-design/icons-vue';
 import { store, Question } from '../store';
 
@@ -168,6 +173,10 @@ const logout = () => {
   store.logoutDoctor();
   message.success('已退出登录');
   router.push('/');
+};
+
+const goToSchedule = () => {
+  router.push('/doctor/schedule');
 };
 
 const refreshQuestions = () => {

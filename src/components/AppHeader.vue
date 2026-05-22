@@ -1,7 +1,7 @@
 <template>
   <a-layout-header class="header">
     <div class="header-content">
-      <div class="logo">
+      <div class="logo" @click="navigateTo('/')">
         <img src="https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=100" alt="QA Live Healthcare" />
         <span>QA Live Healthcare</span>
       </div>
@@ -18,27 +18,46 @@
           <TeamOutlined />
           医生
         </a-menu-item>
+        <a-menu-item key="my-appointments" @click="navigateTo('/my-appointments')">
+          <CalendarOutlined />
+          我的预约
+        </a-menu-item>
         <a-menu-item key="about" @click="navigateTo('/about')">
           <InfoCircleOutlined />
           关于
         </a-menu-item>
       </a-menu>
-      <a-button type="primary" class="login-btn" @click="navigateTo('/doctor/login')">
-        <UserOutlined />
-        医生登录
-      </a-button>
+      <div class="header-right">
+        <template v-if="currentDoctor">
+          <a-button type="primary" @click="navigateTo('/doctor/schedule')">
+            <ScheduleOutlined />
+            排班管理
+          </a-button>
+          <a-button @click="navigateTo(`/doctor/room/${currentDoctor.username}`)">
+            <UserOutlined />
+            {{ currentDoctor.name }}
+          </a-button>
+        </template>
+        <a-button v-else type="primary" class="login-btn" @click="navigateTo('/doctor/login')">
+          <UserOutlined />
+          医生登录
+        </a-button>
+      </div>
     </div>
   </a-layout-header>
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue';
+import { ref, watch, computed } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
-import { HomeOutlined, MessageOutlined, TeamOutlined, InfoCircleOutlined, UserOutlined } from '@ant-design/icons-vue';
+import { HomeOutlined, MessageOutlined, TeamOutlined, InfoCircleOutlined, UserOutlined, CalendarOutlined, ScheduleOutlined } from '@ant-design/icons-vue';
+import { store } from '../store';
 
 const router = useRouter();
 const route = useRoute();
 const selectedKeys = ref<string[]>(['home']);
+
+const currentDoctor = computed(() => store.state.currentDoctor);
 
 watch(() => route.path, (newPath) => {
   if (newPath === '/') {
@@ -47,6 +66,8 @@ watch(() => route.path, (newPath) => {
     selectedKeys.value = ['consultation'];
   } else if (newPath.startsWith('/doctors')) {
     selectedKeys.value = ['doctors'];
+  } else if (newPath.startsWith('/my-appointments')) {
+    selectedKeys.value = ['my-appointments'];
   } else if (newPath.startsWith('/about')) {
     selectedKeys.value = ['about'];
   }
@@ -116,5 +137,11 @@ const navigateTo = (path: string) => {
 .login-btn:hover {
   background: #73d13d;
   border-color: #73d13d;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 </style>

@@ -45,12 +45,82 @@ interface State {
   currentPatient: Patient | null;
 }
 
+// 从 sessionStorage 恢复登录状态
+const STORAGE_KEYS = {
+  PATIENTS: 'asdm_patients',
+} as const;
+
+const SESSION_KEYS = {
+  DOCTOR: 'doctorSession',
+  PATIENT: 'patientSession',
+  PATIENT_ID: 'currentPatientId',
+} as const;
+
+function restoreDoctorSession(): Doctor | null {
+  try {
+    const session = sessionStorage.getItem(SESSION_KEYS.DOCTOR);
+    if (session) {
+      // 恢复医生会话时，清除患者会话（互斥）
+      sessionStorage.removeItem(SESSION_KEYS.PATIENT);
+      sessionStorage.removeItem(SESSION_KEYS.PATIENT_ID);
+      return JSON.parse(session) as Doctor;
+    }
+  } catch (e) {
+    console.error('恢复医生会话失败', e);
+  }
+  return null;
+}
+
+function loadPatients(): Patient[] {
+  const merged = [...patientData] as Patient[];
+  try {
+    const saved = localStorage.getItem(STORAGE_KEYS.PATIENTS);
+    if (saved) {
+      const savedPatients = JSON.parse(saved) as Patient[];
+      // 合并：localStorage 中的新患者追加到预设列表后面（去重）
+      const existingIds = new Set(merged.map(p => p.id));
+      for (const sp of savedPatients) {
+        if (!existingIds.has(sp.id)) {
+          merged.push(sp);
+        }
+      }
+    }
+  } catch (e) {
+    console.error('加载患者数据失败', e);
+  }
+  return merged;
+}
+
+function savePatients(patients: Patient[]) {
+  try {
+    localStorage.setItem(STORAGE_KEYS.PATIENTS, JSON.stringify(patients));
+  } catch (e) {
+    console.error('保存患者数据失败', e);
+  }
+}
+
+function restorePatientSession(): Patient | null {
+  try {
+    // 如果已有医生会话，不恢复患者
+    if (sessionStorage.getItem(SESSION_KEYS.DOCTOR)) {
+      return null;
+    }
+    const session = sessionStorage.getItem(SESSION_KEYS.PATIENT);
+    if (session) {
+      return JSON.parse(session) as Patient;
+    }
+  } catch (e) {
+    console.error('恢复患者会话失败', e);
+  }
+  return null;
+}
+
 const state = reactive<State>({
   doctors: doctorData as Doctor[],
-  patients: patientData as Patient[],
+  patients: loadPatients(),
   questions: questionData as Question[],
-  currentDoctor: null,
-  currentPatient: null,
+  currentDoctor: restoreDoctorSession(),
+  currentPatient: restorePatientSession(),
 });
 
 export const store = {
@@ -61,7 +131,10 @@ export const store = {
       d => d.username === username && d.password === password
     );
     if (doctor) {
+      // 医生登录时，同时登出患者
+      this.logoutPatient();
       state.currentDoctor = doctor;
+      sessionStorage.setItem(SESSION_KEYS.DOCTOR, JSON.stringify(doctor));
       return doctor;
     }
     return null;
@@ -69,6 +142,7 @@ export const store = {
 
   logoutDoctor() {
     state.currentDoctor = null;
+    sessionStorage.removeItem(SESSION_KEYS.DOCTOR);
   },
 
   verifyPatient(name: string, birthday: string): Patient {
@@ -85,14 +159,21 @@ export const store = {
         gender: '',
       };
       state.patients.push(patient);
+      savePatients(state.patients);
     }
 
+    // 患者登录时，同时登出医生
+    this.logoutDoctor();
     state.currentPatient = patient;
+    sessionStorage.setItem(SESSION_KEYS.PATIENT, JSON.stringify(patient));
+    sessionStorage.setItem(SESSION_KEYS.PATIENT_ID, patient.id);
     return patient;
   },
 
   logoutPatient() {
     state.currentPatient = null;
+    sessionStorage.removeItem(SESSION_KEYS.PATIENT);
+    sessionStorage.removeItem(SESSION_KEYS.PATIENT_ID);
   },
 
   getQuestionsByDoctor(doctorId: string): Question[] {
@@ -155,4 +236,20 @@ export const store = {
       totalSessions,
     };
   },
+
+  /** 获取当前患者 ID（用于预约等场景） */
+  getPatientId(): string {
+    if (state.currentPatient?.id) {
+      return state.currentPatient.id;
+    }
+    const savedId = sessionStorage.getItem(SESSION_KEYS.PATIENT_ID);
+    if (savedId) {
+      return savedId;
+    }
+    const tempId = `patient_${Date.now()}`;
+    sessionStorage.setItem(SESSION_KEYS.PATIENT_ID, tempId);
+    return tempId;
+  },
 };
+
+export { SESSION_KEYS, STORAGE_KEYS };

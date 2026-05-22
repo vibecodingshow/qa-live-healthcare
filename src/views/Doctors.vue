@@ -6,6 +6,27 @@
     </div>
 
     <div class="doctors-container">
+      <!-- 科室筛选 -->
+      <div class="filter-section">
+        <a-select
+          v-model:value="selectedDepartment"
+          placeholder="按科室筛选"
+          allow-clear
+          style="width: 240px"
+          size="large"
+          @change="onDepartmentChange"
+        >
+          <a-select-option value="">全部科室</a-select-option>
+          <a-select-option
+            v-for="dept in departments"
+            :key="dept"
+            :value="dept"
+          >
+            {{ dept }}
+          </a-select-option>
+        </a-select>
+      </div>
+
       <div class="doctors-grid">
         <a-card
           v-for="doctor in allDoctors"
@@ -32,14 +53,23 @@
             </div>
           </div>
           <div class="card-footer">
-            <a-button
-              type="primary"
-              block
-              :disabled="!doctor.isActive"
-              @click="goToConsultation(doctor)"
-            >
-              {{ doctor.isActive ? '进入诊室' : '暂未开放' }}
-            </a-button>
+            <a-space direction="vertical" style="width: 100%;" fill>
+              <a-button
+                type="primary"
+                block
+                @click="goToAppointment(doctor)"
+              >
+                <CalendarOutlined />
+                预约挂号
+              </a-button>
+              <a-button
+                block
+                :disabled="!doctor.isActive"
+                @click="goToConsultation(doctor)"
+              >
+                {{ doctor.isActive ? '进入诊室' : '暂未开放' }}
+              </a-button>
+            </a-space>
           </div>
         </a-card>
       </div>
@@ -48,16 +78,38 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import { useRouter } from 'vue-router';
+import { CalendarOutlined } from '@ant-design/icons-vue';
 import { store, Doctor } from '../store';
 
 const router = useRouter();
+const selectedDepartment = ref<string>('');
 
-const allDoctors = computed(() => store.state.doctors);
+// 所有科室列表（去重）
+const departments = computed(() => {
+  const depts = store.state.doctors.map(d => d.department);
+  return [...new Set(depts)];
+});
+
+// 筛选后的医生列表
+const allDoctors = computed(() => {
+  if (!selectedDepartment.value) {
+    return store.state.doctors;
+  }
+  return store.state.doctors.filter(d => d.department === selectedDepartment.value);
+});
+
+const onDepartmentChange = () => {
+  // 切换科室时重置筛选
+};
 
 const goToConsultation = (doctor: Doctor) => {
   router.push(`/consultation/${doctor.username}`);
+};
+
+const goToAppointment = (doctor: Doctor) => {
+  router.push(`/appointment/${doctor.id}`);
 };
 </script>
 
@@ -92,6 +144,10 @@ const goToConsultation = (doctor: Doctor) => {
   max-width: 1200px;
   margin: 0 auto;
   padding: 48px 24px;
+}
+
+.filter-section {
+  margin-bottom: 24px;
 }
 
 .doctors-grid {
